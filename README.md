@@ -1,0 +1,2 @@
+# lotrdb
+LotR LCG deckbuilder
