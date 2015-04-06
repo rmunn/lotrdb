@@ -39,18 +39,21 @@
     };
     this.selectNone=function(){
       this.pack=[];
+      PACKS=this.pack; //global variable hack
     };
     this.selectAll=function(){
       this.pack=this.full.slice(0); //make a clone
+      PACKS=this.pack; //global variable hack
     };
+    PACKS=this.pack;
   });
   
   app.directive('packs', function() {
     return {
       restrict: 'E',
       templateUrl: 'packs.html',
-      controller: 'packSelect',
-      controllerAs: 'packs'
+      //controller: 'packSelect',
+      //controllerAs: 'packs'
     };
   });
   
@@ -80,15 +83,51 @@
   
   
   
+  app.filter('cardfilter', function () {
+    return function (input, scope) {
+      var output=[];
+      for (i in input){
+        if ((PACKS.indexOf(input[i].exp)>=0)
+          && (scope.hero||input[i].type!='hero')
+          && (scope.ally||input[i].type!='ally')
+          && (scope.attachment||input[i].type!='attachment')
+          && (scope.event||input[i].type!='event'))
+          {output.push(input[i]);};
+      }
+      return output;
+    };
+  });
+  
+  
   //Logic for the card selection
   app.controller('cardControl',["$http","$scope","getData",function($http,$scope,getData){
     $scope.allcards=[];
+    this.hero=true;
+    this.ally=false;
+    this.attachment=false;
+    this.event=false;
+    this.order="sphere";
     getData.async('cards.json').then(function(data) {
       for (d in data) {
         $scope.allcards.push(data[d]);
       }
     });
     this.allcards = $scope.allcards;
+    this.toggleHero = function(){
+      this.hero= !(this.hero);
+    };
+    this.toggleAlly = function(){
+      this.ally= !(this.ally);
+    };
+    this.toggleAttachment = function(){
+      this.attachment= !(this.attachment);
+    };
+    this.toggleEvent = function(){
+      this.event= !(this.event);
+    };
+    this.orderby = function(o){
+      this.order = o;
+    };
   }]);
   
   app.directive('cards', function() {

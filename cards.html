@@ -1,13 +1,36 @@
 <div ng-show="tab.isSet(1)">
   
+  <button class="filterbutton" ng-class="{selected: cards.hero}" ng-click="cards.toggleHero()">Heroes</button>
+  <button class="filterbutton" ng-class="{selected: cards.ally}" ng-click="cards.toggleAlly()">Allies</button>
+  <button class="filterbutton" ng-class="{selected: cards.attachment}" ng-click="cards.toggleAttachment()">Attachments</button>
+  <button class="filterbutton" ng-class="{selected: cards.event}" ng-click="cards.toggleEvent()">Events</button>
+  
+  <table style="width:95%;">
+    <tr>
+      <td style="font-weight: bold;width:20%"></td>
+      <td style="font-weight: bold;width:35%"><a href ng-click="cards.orderby('name')">Name</a></td>
+      <td style="font-weight: bold;width:10%;text-align:center"><a href ng-click="cards.orderby('sphere')">Sphere</a></td>
+      <td style="font-weight: bold;width:10%;text-align:center"><a href ng-click="cards.orderby('cost')">Cost</a></td>
+      <td style="font-weight: bold;width:25%"><a href ng-click="cards.orderby('type')">Type</a></td>
+    </tr>
+  </table>
+  
   <div class="cards">
     <table class="cardlist">
-      <tr ng-repeat="card in cards.allcards">
-        <td>{{card.name}}</td>
-        <td>{{card.sphere}}</td>
-        <td>{{card.cost}}</td>
-        <td>{{card.type}}</td>
-      </tr>
+      <tbody>
+        <tr ng-repeat="card in cards.allcards | cardfilter:cards | orderBy:cards.order">
+          <td style="font-size:0;width:20%;">
+            <button class="cardbutton">0</button>
+            <button class="cardbutton">1</button>
+            <button class="cardbutton" ng-hide="card.type==='hero'">2</button>
+            <button class="cardbutton" ng-hide="card.type==='hero'">3</button>
+          </td>
+          <td style=";width:35%;">{{card.name}}</td>
+          <td style=";width:10%;text-align:center"><img src="img/spheres/{{card.sphere}}.png"/></td>
+          <td style=";width:10%;text-align:center">{{card.cost}}</td>
+          <td style=";width:25%;">{{card.type}}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>

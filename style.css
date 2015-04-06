@@ -13,6 +13,26 @@
 .packbutton.selected {
   background-color: lightblue;
 }
+
+.cardbutton {
+  font-size:9px;
+  width:22px;
+  height:22px;
+}
+
+.filterbutton {
+  width: 20%;
+  border-radius: 6px;
+}
+.filterbutton:hover{
+  border-color: black;
+}
+.filterbutton.selected {
+  background-color: lightblue;
+}
+
+
+
 .body {
   margin:10px;
 }
@@ -21,7 +41,7 @@
   width: 40%;
   min-width: 350px;
   float: left;
-  background-color:lightgrey;
+  /*background-color:lightgrey;*/
   height:500px;
 }
 
@@ -30,14 +50,14 @@
   min-width: 10px;
   height: 400px;
   float: left;
-  background-color:lightgrey;
+  /*background-color:lightgrey;*/
 }
 
 .rightdiv {
   width: 40%;
-  min-width: 350px;
+  min-width: 450px;
   float: left;
-  background-color:lightgrey;
+  /*background-color:lightgrey;*/
 }
 
 .header {
@@ -48,6 +68,10 @@
 }
 
 .cards {
-  height:500px;
-  overflow:auto;
+  height:450px;
+  overflow-y:scroll;
+}
+
+.cardlist {
+  width:100%;
 }
