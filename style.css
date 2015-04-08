@@ -29,12 +29,17 @@
   height:22px;
   border-radius: 6px;
   background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee #555 #555 #eee;
 }
 .cardbutton.selected{
-  background-color: lightgrey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 .cardbutton:active{
-  background-color: grey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 
 .filterbutton {
@@ -42,15 +47,20 @@
   height: 40px;
   border-radius: 6px;
   background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee #555 #555 #eee;
 }
 .filterbutton:hover{
   border-color: black;
 }
 .filterbutton.selected {
-  background-color: lightgrey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 .filterbutton:active {
-  background-color: grey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 
 .cardpreview {
@@ -65,11 +75,11 @@
 }
 
 .leftdiv {
-  width: 20%;
+  width: 25%;
   min-width: 200px;
   float: left;
-  max-height:500px;
-  overflow-y: auto;
+  height:550px;
+  overflow-y: scroll;
 }
 
 .cardpreviewdiv {
@@ -81,7 +91,7 @@
 }
 
 .rightdiv {
-  width: 50%;
+  width: 45%;
   min-width: 450px;
   float: left;
 }
@@ -142,7 +152,7 @@ tr.head {
   color: green;
 }
 .c5neutral {
-  color: grey;
+  color: #555;
 }
 .c6baggins {
   color: yellow;

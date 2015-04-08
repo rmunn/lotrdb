@@ -183,9 +183,6 @@
       return threat;
     }
     
-    deck.countHeroes = function(){
-      return deck['1hero'].length;
-    }
     deck.countAllies = function(){
       var allies=0;
       for (var a in deck['2ally']) {
@@ -209,7 +206,7 @@
     }
     
     deck.countTotal = function() {
-      return deck.countHeroes()+deck.countAllies()+deck.countAttachments()+deck.countEvents();
+      return deck.countAllies()+deck.countAttachments()+deck.countEvents();
     }
     
     return deck;
@@ -237,14 +234,12 @@
   
   app.factory('image',function(){
     var image={};
-    image.cycle=0;
-    image.no=1;
+    image.url="";
     image.update = function(card){
-      image.cycle = card.cycle;
-      image.no = card.no;
+      image.url = card.img;
     }
     image.getUrl = function(){
-      return "img/cards/"+image.cycle+"/"+image.no+".jpg";
+      return image.url;
     }
     return image;
   });

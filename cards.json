@@ -9,7 +9,8 @@
     "hitpoints": 5,
     "cycle": 0,
     "exp": "core",
-    "no":1
+    "no":1,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/aragorn-core.jpg"
   },
   { "name": "Théodred",
     "type": "1hero",
@@ -21,7 +22,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":2
+    "no":2,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/theodred-core.jpg"
   },
   { "name": "Glóin",
     "type": "1hero",
@@ -33,7 +35,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":3
+    "no":3,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gloin-core.jpg"
   },
   { "name": "Gimli",
     "type": "1hero",
@@ -45,7 +48,8 @@
     "hitpoints": 5,
     "cycle": 0,
     "exp": "core",
-    "no":4
+    "no":4,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gimli-core.jpg"
   },
   { "name": "Legolas",
     "type": "1hero",
@@ -57,7 +61,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":5
+    "no":5,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/legolas-core.jpg"
   },
   { "name": "Thalin",
     "type": "1hero",
@@ -69,7 +74,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":6
+    "no":6,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/thalin-core.jpg"
   },
   { "name": "Éowyn",
     "type": "1hero",
@@ -81,7 +87,8 @@
     "hitpoints": 3,
     "cycle": 0,
     "exp": "core",
-    "no":7
+    "no":7,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/eowyn-core.jpg"
   },
   { "name": "Eleanor",
     "type": "1hero",
@@ -93,7 +100,8 @@
     "hitpoints": 3,
     "cycle": 0,
     "exp": "core",
-    "no":8
+    "no":8,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/eleanor-core.jpg"
   },
   { "name": "Dúnhere",
     "type": "1hero",
@@ -105,7 +113,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":9
+    "no":9,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunhere-core.jpg"
   },
   { "name": "Denethor",
     "type": "1hero",
@@ -117,7 +126,8 @@
     "hitpoints": 3,
     "cycle": 0,
     "exp": "core",
-    "no":10
+    "no":10,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/denethor-core.jpg"
   },
   { "name": "Glorfindel",
     "type": "1hero",
@@ -129,7 +139,8 @@
     "hitpoints": 5,
     "cycle": 0,
     "exp": "core",
-    "no":11
+    "no":11,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/glorfindel-core.jpg"
   },
   { "name": "Beravor",
     "type": "1hero",
@@ -141,7 +152,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":12
+    "no":12,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/beravor-core.jpg"
   },
   
   
@@ -156,7 +168,8 @@
     "hitpoints": 2,
     "cycle": 0,
     "exp": "core",
-    "no":13
+    "no":13,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/guard-of-the-citadel-core.jpg"
   },
   { "name": "Faramir",
     "type": "2ally",
@@ -168,7 +181,8 @@
     "hitpoints": 3,
     "cycle": 0,
     "exp": "core",
-    "no":14
+    "no":14,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/faramir-core.jpg"
   },
   { "name": "Son of Arnor",
     "type": "2ally",
@@ -180,7 +194,8 @@
     "hitpoints": 2,
     "cycle": 0,
     "exp": "core",
-    "no":15
+    "no":15,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/son-of-arnor-core.jpg"
   },
   { "name": "Snowbourn Scout",
     "type": "2ally",
@@ -192,7 +207,8 @@
     "hitpoints": 1,
     "cycle": 0,
     "exp": "core",
-    "no":16
+    "no":16,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/snowbourn-scout-core.jpg"
   },
   { "name": "Silverlode Archer",
     "type": "2ally",
@@ -204,7 +220,8 @@
     "hitpoints": 1,
     "cycle": 0,
     "exp": "core",
-    "no":17
+    "no":17,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/silverlode-archer-core.jpg"
   },
   { "name": "Longbeard Orc Slayer",
     "type": "2ally",
@@ -216,7 +233,8 @@
     "hitpoints": 3,
     "cycle": 0,
     "exp": "core",
-    "no":18
+    "no":18,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/longbeard-orc-slayer-core.jpg"
   },
   { "name": "Brok Ironfist",
     "type": "2ally",
@@ -228,7 +246,8 @@
     "hitpoints": 4,
     "cycle": 0,
     "exp": "core",
-    "no":19
+    "no":19,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/brok-ironfist-core.jpg"
   },
   
   { "name":       "Veteran Axehand",
@@ -241,7 +260,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         28
+    "no":         28,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/veteran-axehand-core.jpg"
   },
   { "name":       "Gondorian Spearman",
     "type":       "2ally",
@@ -253,7 +273,8 @@
     "hitpoints":  1,
     "cycle":      0,
     "exp":        "core",
-    "no":         29
+    "no":         29,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gondorian-spearman-core.jpg"
   },
   { "name":       "Horseback Archer",
     "type":       "2ally",
@@ -265,7 +286,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         30
+    "no":         30,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/horseback-archer-core.jpg"
   },
   { "name":       "Beorn",
     "type":       "2ally",
@@ -277,7 +299,8 @@
     "hitpoints":  6,
     "cycle":      0,
     "exp":        "core",
-    "no":         31
+    "no":         31,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/beorn-core.jpg"
   },
   
   { "name":       "Wandering Took",
@@ -290,7 +313,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         43
+    "no":         43,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/wandering-took-core.jpg"
   },
   { "name":       "Lórien Guide",
     "type":       "2ally",
@@ -302,7 +326,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         44
+    "no":         44,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/lorien-guide-core.jpg"
   },
   { "name":       "Northern Tracker",
     "type":       "2ally",
@@ -314,7 +339,8 @@
     "hitpoints":  3,
     "cycle":      0,
     "exp":        "core",
-    "no":         45
+    "no":         45,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/northern-tracker-core.jpg"
   },
   
   { "name":       "Daughter of the Nimrodel",
@@ -327,7 +353,8 @@
     "hitpoints":  1,
     "cycle":      0,
     "exp":        "core",
-    "no":         58
+    "no":         58,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/daughter-of-the-nimrodel-core.jpg"
   },
   { "name":       "Erebor Hammersmith",
     "type":       "2ally",
@@ -339,7 +366,8 @@
     "hitpoints":  3,
     "cycle":      0,
     "exp":        "core",
-    "no":         59
+    "no":         59,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/erebor-hammersmith-core.jpg"
   },
   { "name":       "Henamarth Riversong",
     "type":       "2ally",
@@ -351,7 +379,8 @@
     "hitpoints":  1,
     "cycle":      0,
     "exp":        "core",
-    "no":         60
+    "no":         60,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/henamarth-riversong-core.jpg"
   },
   { "name":       "Miner of the Iron Hills",
     "type":       "2ally",
@@ -363,7 +392,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         61
+    "no":         61,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/miner-of-the-iron-hills-core.jpg"
   },
   { "name":       "Gléowine",
     "type":       "2ally",
@@ -375,7 +405,8 @@
     "hitpoints":  2,
     "cycle":      0,
     "exp":        "core",
-    "no":         62
+    "no":         62,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gleowine-core.jpg"
   },
   
   
@@ -387,7 +418,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         20
+    "no":         20,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/ever-vigilant-core.jpg"
   },
   { "name":       "Common Cause",
     "type":       "4event",
@@ -395,7 +427,8 @@
     "cost":       0,
     "cycle":      0,
     "exp":        "core",
-    "no":         21
+    "no":         21,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/common-cause-core.jpg"
   },
   { "name":       "For Gonder!",
     "type":       "4event",
@@ -403,7 +436,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         22
+    "no":         22,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/sneak-attack-core.jpg"
   },
   { "name":       "Sneak Attack",
     "type":       "4event",
@@ -411,7 +445,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         23
+    "no":         23,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/sneak-attack-core.jpg"
   },
   { "name":       "Valiant Sacrifice",
     "type":       "4event",
@@ -419,7 +454,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         24
+    "no":         24,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/valiant-sacrifice-core.jpg"
   },
   { "name":       "Grim Resolve",
     "type":       "4event",
@@ -427,7 +463,8 @@
     "cost":       5,
     "cycle":      0,
     "exp":        "core",
-    "no":         25
+    "no":         25,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/grim-resolve-core.jpg"
   },
   { "name":       "Steward of Gondor",
     "type":       "3attachment",
@@ -435,7 +472,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         26
+    "no":         26,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/steward-of-gondor-core.jpg"
   },
   { "name":       "Celebrían's Stone",
     "type":       "3attachment",
@@ -443,7 +481,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         27
+    "no":         27,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/celebrians-stone-core.jpg"
   },
   
   
@@ -453,7 +492,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         32
+    "no":         32,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/blade-mastery-core.jpg"
   },
   { "name":       "Rain of Arrows",
     "type":       "4event",
@@ -461,7 +501,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         33
+    "no":         33,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/rain-of-arrows-core.jpg"
   },
   { "name":       "Feint",
     "type":       "4event",
@@ -469,7 +510,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         34
+    "no":         34,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/feint-core.jpg"
   },
   { "name":       "Quick Strike",
     "type":       "4event",
@@ -477,7 +519,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         35
+    "no":         35,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/quick-strike-core.jpg"
   },
   { "name":       "Thicket of Spears",
     "type":       "4event",
@@ -485,7 +528,8 @@
     "cost":       3,
     "cycle":      0,
     "exp":        "core",
-    "no":         36
+    "no":         36,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/thicket-of-spears-core.jpg"
   },
   { "name":       "Swift Strike",
     "type":       "4event",
@@ -493,7 +537,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         37
+    "no":         37,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/swift-strike-core.jpg"
   },
   { "name":       "Stand Together",
     "type":       "4event",
@@ -501,7 +546,8 @@
     "cost":       0,
     "cycle":      0,
     "exp":        "core",
-    "no":         38
+    "no":         38,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/stand-together-core.jpg"
   },
   { "name":       "Blade of Gondolin",
     "type":       "3attachment",
@@ -509,7 +555,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         39
+    "no":         39,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/blade-of-gondolin-core.jpg"
   },
   { "name":       "Citadel Plate",
     "type":       "3attachment",
@@ -517,7 +564,8 @@
     "cost":       4,
     "cycle":      0,
     "exp":        "core",
-    "no":         40
+    "no":         40,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/citadel-plate-core.jpg"
   },
   { "name":       "Dwarven Axe",
     "type":       "3attachment",
@@ -525,7 +573,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         41
+    "no":         41,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dwarven-axe-core.jpg"
   },
   { "name":       "Horn of Gondor",
     "type":       "3attachment",
@@ -533,7 +582,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         42
+    "no":         42,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/horn-of-gondor-core.jpg"
   },
   
   
@@ -545,7 +595,8 @@
     "cost":       3,
     "cycle":      0,
     "exp":        "core",
-    "no":         46
+    "no":         46,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/the-galadhrims-greeting-core.jpg"
   },
   { "name":       "Strength of Will",
     "type":       "4event",
@@ -553,7 +604,8 @@
     "cost":       0,
     "cycle":      0,
     "exp":        "core",
-    "no":         47
+    "no":         47,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/strength-of-will-core.jpg"
   },
   { "name":       "Hasty Stroke",
     "type":       "4event",
@@ -561,7 +613,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         48
+    "no":         48,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/hasty-stroke-core.jpg"
   },
   { "name":       "Will of the West",
     "type":       "4event",
@@ -569,7 +622,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         49
+    "no":         49,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/will-of-the-west-core.jpg"
   },
   { "name":       "A Test of Will",
     "type":       "4event",
@@ -577,7 +631,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         50
+    "no":         50,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/a-test-of-will-core.jpg"
   },
   { "name":       "Stand and Fight",
     "type":       "4event",
@@ -585,7 +640,8 @@
     "cost":       "X",
     "cycle":      0,
     "exp":        "core",
-    "no":         51
+    "no":         51,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/stand-and-fight-core.jpg"
   },
   { "name":       "A Light in the Dark",
     "type":       "4event",
@@ -593,7 +649,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         52
+    "no":         52,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/a-light-in-the-dark-core.jpg"
   },
   { "name":       "Dwarven Tomb",
     "type":       "4event",
@@ -601,7 +658,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         53
+    "no":         53,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dwarven-tomb-core.jpg"
   },
   { "name":       "Fortune or Fate",
     "type":       "4event",
@@ -609,7 +667,8 @@
     "cost":       5,
     "cycle":      0,
     "exp":        "core",
-    "no":         54
+    "no":         54,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/fortune-or-fate-core.jpg"
   },
   { "name":       "The Favor of the Lady",
     "type":       "3attachment",
@@ -617,7 +676,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         55
+    "no":         55,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/the-favor-of-the-lady-core.jpg"
   },
   { "name":       "Power in the Earth",
     "type":       "3attachment",
@@ -625,7 +685,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         56
+    "no":         56,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/power-in-the-earth-core.jpg"
   },
   { "name":       "Unexpected Courage",
     "type":       "3attachment",
@@ -633,7 +694,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         57
+    "no":         57,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/unexpected-courage-core.jpg"
   },
   
   
@@ -644,7 +706,8 @@
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
-    "no":         63
+    "no":         63,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/lore-of-imladris-core.jpg"
   },
   { "name":       "Lórien's Wealth",
     "type":       "4event",
@@ -652,7 +715,8 @@
     "cost":       3,
     "cycle":      0,
     "exp":        "core",
-    "no":         64
+    "no":         64,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/loriens-wealth-core.jpg"
   },
   { "name":       "Radagast's Cunning",
     "type":       "4event",
@@ -660,7 +724,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         65
+    "no":         65,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/radagasts-cunning-core.jpg"
   },
   { "name":       "Secret Paths",
     "type":       "4event",
@@ -668,7 +733,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         66
+    "no":         66,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/secret-paths-core.jpg"
   },
   { "name":       "Gandalf's Search",
     "type":       "4event",
@@ -676,7 +742,8 @@
     "cost":       "X",
     "cycle":      0,
     "exp":        "core",
-    "no":         67
+    "no":         67,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gandalfs-search-core.jpg"
   },
   { "name":       "Beorn's Hospitality",
     "type":       "4event",
@@ -684,7 +751,8 @@
     "cost":       5,
     "cycle":      0,
     "exp":        "core",
-    "no":         68
+    "no":         68,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/beorns-hospitality-core.jpg"
   },
   { "name":       "Forest Snare",
     "type":       "3attachment",
@@ -692,7 +760,8 @@
     "cost":       3,
     "cycle":      0,
     "exp":        "core",
-    "no":         69
+    "no":         69,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/forest-snare-core.jpg"
   },
   { "name":       "Protector of Lórien",
     "type":       "3attachment",
@@ -700,7 +769,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         70
+    "no":         70,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/protector-of-lorien-core.jpg"
   },
   { "name":       "Dark Knowledge",
     "type":       "3attachment",
@@ -708,7 +778,8 @@
     "cost":       1,
     "cycle":      0,
     "exp":        "core",
-    "no":         71
+    "no":         71,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dark-knowledge-core.jpg"
   },
   { "name":       "Self Preservation",
     "type":       "3attachment",
@@ -716,7 +787,8 @@
     "cost":       3,
     "cycle":      0,
     "exp":        "core",
-    "no":         72
+    "no":         72,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/self-preservation-core.jpg"
   },
   
   
@@ -730,7 +802,8 @@
     "hitpoints":  4,
     "cycle":      0,
     "exp":        "core",
-    "no":         73
+    "no":         73,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gandalf-core.jpg"
   },
   
     
@@ -744,7 +817,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         1
+    "no":         1,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/bilbo-baggins-thfg.jpg"
   },  
   { "name":       "Dúnedain Mark",
     "type":       "3attachment",
@@ -752,7 +826,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         2
+    "no":         2,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-mark-thfg.jpg"
   },  
   { "name":       "Campfire Tales",
     "type":       "4event",
@@ -760,7 +835,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         3
+    "no":         3,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/campfire-tales-thfg.jpg"
   },  
   { "name":       "Winged Guardian",
     "type":       "2ally",
@@ -772,7 +848,8 @@
     "hitpoints":  1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         4
+    "no":         4,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/winged-guardian-thfg.jpg"
   },  
   { "name":       "The Eagles Are Coming!",
     "type":       "4event",
@@ -780,7 +857,8 @@
     "cost":       0,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         5
+    "no":         5,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/the-eagles-are-coming-thfg.jpg"
   },  
   { "name":       "Westfold Horse-Breaker",
     "type":       "2ally",
@@ -792,7 +870,8 @@
     "hitpoints":  1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         6
+    "no":         6,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/westfold-horse-breaker-thfg.jpg"
   },  
   { "name":       "Mustering the Rohirrim",
     "type":       "4event",
@@ -800,7 +879,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         7
+    "no":         7,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/mustering-the-rohirrim-thfg.jpg"
   },  
   { "name":       "Rivendell Minstrell",
     "type":       "2ally",
@@ -812,7 +892,8 @@
     "hitpoints":  1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         8
+    "no":         8,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/rivendell-minstrel-thfg.jpg"
   },  
   { "name":       "Strider's Path",
     "type":       "4event",
@@ -820,7 +901,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         9
+    "no":         9,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/striders-path-thfg.jpg"
   },  
   { "name":       "Song of Kings",
     "type":       "3attachment",
@@ -828,7 +910,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thfg",
-    "no":         10
+    "no":         10,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/song-of-kings-thfg.jpg"
   },
   
   { "name":       "Frodo Baggins",
@@ -841,7 +924,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "catc",
-    "no":         25
+    "no":         25,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/frodo-baggins-catc.jpg"
   },
   { "name":       "Dúnedain Warning",
     "type":       "3attachment",
@@ -849,7 +933,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "catc",
-    "no":         26
+    "no":         26,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-warning-catc.jpg"
   },
   { "name":       "Second Breakfast",
     "type":       "4event",
@@ -857,7 +942,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "catc",
-    "no":         27
+    "no":         27,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/second-breakfast-catc.jpg"
   },
   { "name":       "Beorning Beekeeper",
     "type":       "2ally",
@@ -869,7 +955,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "catc",
-    "no":         28
+    "no":         28,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/beorning-beekeeper-catc.jpg"
   },
   { "name":       "Born Aloft",
     "type":       "3attachment",
@@ -877,7 +964,8 @@
     "cost":       0,
     "cycle":      1,
     "exp":        "catc",
-    "no":         29
+    "no":         29,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/born-aloft-catc.jpg"
   },
   { "name":       "Éomund",
     "type":       "2ally",
@@ -889,7 +977,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "catc",
-    "no":         30
+    "no":         30,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/eomund-catc.jpg"
   },
   { "name":       "Nor am I a Stranger",
     "type":       "3attachment",
@@ -897,7 +986,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "catc",
-    "no":         31
+    "no":         31,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/nor-am-i-a-stranger-catc.jpg"
   },
   { "name":       "Longbeard Map-Maker",
     "type":       "2ally",
@@ -909,7 +999,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "catc",
-    "no":         32
+    "no":         32,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/longbeard-map-maker-catc.jpg"
   },
   { "name":       "A Burning Brand",
     "type":       "3attachment",
@@ -917,7 +1008,8 @@
     "cost":       2,
     "cycle":      1,
     "exp":        "catc",
-    "no":         33
+    "no":         33,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/a-burning-brand-catc.jpg"
   },
   { "name":       "Song of Wisdom",
     "type":       "3attachment",
@@ -925,7 +1017,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "catc",
-    "no":         34
+    "no":         34,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/song-of-wisdom-catc.jpg"
   },
   
   { "name":       "Prince Imrahil",
@@ -938,7 +1031,8 @@
     "hitpoints":  4,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         50
+    "no":         50,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/prince-imrahil-ajtr.jpg"
   },
   { "name":       "Dúnedain Quest",
     "type":       "3attachment",
@@ -946,7 +1040,8 @@
     "cost":       2,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         51
+    "no":         51,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-quest-ajtr.jpg"
   },
   { "name":       "Parting Gifts",
     "type":       "4event",
@@ -954,7 +1049,8 @@
     "cost":       0,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         52
+    "no":         52,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/parting-gifts-ajtr.jpg"
   },
   { "name":       "Landroval",
     "type":       "2ally",
@@ -966,7 +1062,8 @@
     "hitpoints":  4,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         53
+    "no":         53,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/landroval-ajtr.jpg"
   },
   { "name":       "To the Eyrie",
     "type":       "4event",
@@ -974,7 +1071,8 @@
     "cost":       2,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         54
+    "no":         54,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/to-the-eyrie-ajtr.jpg"
   },
   { "name":       "Escort from Edoras",
     "type":       "2ally",
@@ -986,7 +1084,8 @@
     "hitpoints":  1,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         55
+    "no":         55,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/escort-from-edoras-ajtr.jpg"
   },
   { "name":       "Ancient Mathom",
     "type":       "3attachment",
@@ -994,7 +1093,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         56
+    "no":         56,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/ancient-mathom-ajtr.jpg"
   },
   { "name":       "Haldir of Lórien",
     "type":       "2ally",
@@ -1006,7 +1106,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         57
+    "no":         57,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/haldir-of-lorien-ajtr.jpg"
   },
   { "name":       "Infighting",
     "type":       "4event",
@@ -1014,7 +1115,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         58
+    "no":         58,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/infighting-ajtr.jpg"
   },
   { "name":       "Radagast",
     "type":       "2ally",
@@ -1026,7 +1128,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "ajtr",
-    "no":         59
+    "no":         59,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/radagast-ajtr.jpg"
   },
   
   { "name":       "Brand son of Bain",
@@ -1039,7 +1142,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         72
+    "no":         72,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/brand-son-of-bain-thoem.jpg"
   },
   { "name":       "Keen-eyed Took",
     "type":       "2ally",
@@ -1051,7 +1155,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         73
+    "no":         73,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/keen-eyed-took-thoem.jpg"
   },
   { "name":       "Rear Guard",
     "type":       "4event",
@@ -1059,7 +1164,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         74
+    "no":         74,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/rear-guard-thoem.jpg"
   },
   { "name":       "Descendant of Thorondor",
     "type":       "2ally",
@@ -1071,7 +1177,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         75
+    "no":         75,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/descendant-of-thorondor-thoem.jpg"
   },
   { "name":       "Meneldor's Flight",
     "type":       "4event",
@@ -1079,7 +1186,8 @@
     "cost":       0,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         76
+    "no":         76,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/meneldors-flight-thoem.jpg"
   },
   { "name":       "The Riddermark's Finest",
     "type":       "2ally",
@@ -1091,7 +1199,8 @@
     "hitpoints":  2,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         77
+    "no":         77,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/the-riddermarks-finest-thoem.jpg"
   },
   { "name":       "Ride to Ruin",
     "type":       "4event",
@@ -1099,7 +1208,8 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         78
+    "no":         78,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/ride-to-ruin-thoem.jpg"
   },
   { "name":       "Gildor Inglorion",
     "type":       "2ally",
@@ -1111,7 +1221,8 @@
     "hitpoints":  3,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         79
+    "no":         79,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gildor-inglorion-thoem.jpg"
   },
   { "name":       "Gildor's Counsel",
     "type":       "4event",
@@ -1119,7 +1230,8 @@
     "cost":       3,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         80
+    "no":         80,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/gildors-counsel-thoem.jpg"
   },
   { "name":       "Song of Travel",
     "type":       "3attachment",
@@ -1127,7 +1239,226 @@
     "cost":       1,
     "cycle":      1,
     "exp":        "thoem",
-    "no":         81
+    "no":         81,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/song-of-travel-thoem.jpg"
+  },
+  
+  { "name":       "Boromir",
+    "type":       "1hero",
+    "sphere":     "2tactics",
+    "cost":       11,
+    "willpower":  1,
+    "strength":   3,
+    "defense":    2,
+    "hitpoints":  5,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         95,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/boromir-tdm.jpg"
+  },
+  { "name":       "Dúnedain Watcher",
+    "type":       "2ally",
+    "sphere":     "1leadership",
+    "cost":       3,
+    "willpower":  1,
+    "strength":   1,
+    "defense":    1,
+    "hitpoints":  2,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         96,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-watcher-tdm.jpg"
+  },
+  { "name":       "Dúnedain Cache",
+    "type":       "3attachment",
+    "sphere":     "1leadership",
+    "cost":       2,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         97,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-cache-tdm.jpg"
+  },
+  { "name":       "Vassal of the Windlord",
+    "type":       "2ally",
+    "sphere":     "2tactics",
+    "cost":       1,
+    "willpower":  0,
+    "strength":   3,
+    "defense":    0,
+    "hitpoints":  1,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         98,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/vassal-of-the-windlord-tdm.jpg"
+  },
+  { "name":       "Song of Mocking",
+    "type":       "3attachment",
+    "sphere":     "2tactics",
+    "cost":       1,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         99,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/song-of-mocking-tdm.jpg"
+  },
+  { "name":       "Elfhelm",
+    "type":       "2ally",
+    "sphere":     "3spirit",
+    "cost":       4,
+    "willpower":  1,
+    "strength":   2,
+    "defense":    2,
+    "hitpoints":  3,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         100,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/elfhelm-tdm.jpg"
+  },
+  { "name":       "We Do Not Sleep",
+    "type":       "4event",
+    "sphere":     "3spirit",
+    "cost":       5,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         101,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/we-do-not-sleep-tdm.jpg"
+  },
+  { "name":       "Silvan Tracker",
+    "type":       "2ally",
+    "sphere":     "4lore",
+    "cost":       3,
+    "willpower":  1,
+    "strength":   1,
+    "defense":    1,
+    "hitpoints":  3,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         102,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/silvan-tracker-tdm.jpg"
+  },
+  { "name":       "Fast Hitch",
+    "type":       "3attachment",
+    "sphere":     "4lore",
+    "cost":       1,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         103,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/fast-hitch-tdm.jpg"
+  },
+  { "name":       "Song of Battle",
+    "type":       "3attachment",
+    "sphere":     "5neutral",
+    "cost":       1,
+    "cycle":      1,
+    "exp":        "tdm",
+    "no":         104,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/song-of-battle-tdm.jpg"
+  },
+  
+  { "name":       "Dain Ironfoot",
+    "type":       "1hero",
+    "sphere":     "1leadership",
+    "cost":       11,
+    "willpower":  1,
+    "strength":   2,
+    "defense":    3,
+    "hitpoints":  5,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         116,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dain-ironfoot-rtm.jpg"
+  },
+  { "name":       "Dúnedain Signal",
+    "type":       "3attachment",
+    "sphere":     "1leadership",
+    "cost":       1,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         117,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dunedain-signal-rtm.jpg"
+  },
+  { "name":       "Dawn Take You All",
+    "type":       "4event",
+    "sphere":     "1leadership",
+    "cost":       2,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         118,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/dawn-take-you-all-rtm.jpg"
+  },
+  { "name":       "Eagles of the Misty Mountains",
+    "type":       "2ally",
+    "sphere":     "2tactics",
+    "cost":       4,
+    "willpower":  2,
+    "strength":   2,
+    "defense":    2,
+    "hitpoints":  4,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         119,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/eagles-of-the-misty-mountains-rtm.jpg"
+  },
+  { "name":       "Support of the Eagles",
+    "type":       "3attachment",
+    "sphere":     "2tactics",
+    "cost":       3,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         120,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/support-of-the-eagles-rtm.jpg"
+  },
+  { "name":       "West Road Traveller",
+    "type":       "2ally",
+    "sphere":     "3spirit",
+    "cost":       2,
+    "willpower":  2,
+    "strength":   0,
+    "defense":    0,
+    "hitpoints":  1,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         121,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/west-road-traveller-rtm.jpg"
+  },
+  { "name":       "Astonishing Speed",
+    "type":       "4event",
+    "sphere":     "3spirit",
+    "cost":       3,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         122,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/astonishing-speed-rtm.jpg"
+  },
+  { "name":       "Mirkwood Runner",
+    "type":       "2ally",
+    "sphere":     "4lore",
+    "cost":       3,
+    "willpower":  1,
+    "strength":   2,
+    "defense":    0,
+    "hitpoints":  2,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         123,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/mirkwood-runner-rtm.jpg"
+  },
+  { "name":       "Rumour from the Earth",
+    "type":       "4event",
+    "sphere":     "4lore",
+    "cost":       0,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         124,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/rumour-from-the-earth-rtm.jpg"
+  },
+  { "name":       "Shadow of the Past",
+    "type":       "4event",
+    "sphere":     "5neutral",
+    "cost":       2,
+    "cycle":      1,
+    "exp":        "rtm",
+    "no":         125,
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/shadow-of-the-past-rtm.jpg"
   }
 
 ]
