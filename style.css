@@ -5,32 +5,59 @@
   border-radius: 6px;
   background-color: white;
   border-width: 1px;
-  border-color: lightgrey
+  border-color: lightgrey;
 }
 .packbutton:hover{
   border-color: black;
 }
 .packbutton.selected {
-  background-color: lightblue;
+  background-color: lightgrey;
+}
+.packbutton:active {
+  background-color: grey;
+}
+.packbutton:disabled {
+  background-color: grey;
+}
+.packbutton:disabled:hover {
+  border-color:lightgrey;
 }
 
 .cardbutton {
   font-size:9px;
   width:22px;
   height:22px;
+  border-radius: 6px;
+  background-color: #EEEEEE;
+}
+.cardbutton.selected{
+  background-color: lightgrey;
+}
+.cardbutton:active{
+  background-color: grey;
 }
 
 .filterbutton {
-  width: 20%;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
+  background-color: #EEEEEE;
 }
 .filterbutton:hover{
   border-color: black;
 }
 .filterbutton.selected {
-  background-color: lightblue;
+  background-color: lightgrey;
+}
+.filterbutton:active {
+  background-color: grey;
 }
 
+.cardpreview {
+  width: 90%;
+  height: auto;
+  border: no;
+}
 
 
 .body {
@@ -38,26 +65,25 @@
 }
 
 .leftdiv {
-  width: 40%;
-  min-width: 350px;
+  width: 20%;
+  min-width: 200px;
   float: left;
-  /*background-color:lightgrey;*/
-  height:500px;
+  max-height:500px;
+  overflow-y: auto;
 }
 
-.cardpreview {
-  width: 20%;
-  min-width: 10px;
-  height: 400px;
+.cardpreviewdiv {
+  text-align: center;
+  width:30%;
+  min-width: 200px;
   float: left;
-  /*background-color:lightgrey;*/
+  max-height:500px;
 }
 
 .rightdiv {
-  width: 40%;
+  width: 50%;
   min-width: 450px;
   float: left;
-  /*background-color:lightgrey;*/
 }
 
 .header {
@@ -74,4 +100,57 @@
 
 .cardlist {
   width:100%;
+}
+
+
+.cardrow:nth-child(even) {
+  background-color: #EEEEEE;
+}
+.cardrow:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+.cardrow:hover {
+  background-color: #CCCCFF;
+}
+
+.filterdiv {
+  font-size:0px;
+}
+
+
+table.deck {
+  padding:0;
+  margin: 0;
+  width: 100%
+}
+
+tr.head {
+  font-weight: bold;
+}
+
+.c1leadership {
+  color: purple;
+}
+.c2tactics {
+  color: red;
+}
+.c3spirit {
+  color: blue;
+}
+.c4lore {
+  color: green;
+}
+.c5neutral {
+  color: grey;
+}
+.c6baggins {
+  color: yellow;
+}
+.c7fellowship {
+  color: orange;
+}
+
+tr.card:hover {
+  background-color: lightgrey;
 }
