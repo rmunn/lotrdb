@@ -3,25 +3,24 @@
   width: 100%;
   height: 50px;
   border-radius: 6px;
-  background-color: white;
+  background-color: #EEEEEE;
   border-width: 1px;
-  border-color: lightgrey;
-}
-.packbutton:hover{
-  border-color: black;
+  border-style: solid;
+  border-color: #eee #555 #555 #eee;
 }
 .packbutton.selected {
-  background-color: lightgrey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 .packbutton:active {
-  background-color: grey;
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
 }
 .packbutton:disabled {
   background-color: grey;
+  border-color: grey;
 }
-.packbutton:disabled:hover {
-  border-color:lightgrey;
-}
+
 
 .cardbutton {
   font-size:9px;
@@ -79,7 +78,7 @@
   min-width: 200px;
   float: left;
   height:550px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .cardpreviewdiv {

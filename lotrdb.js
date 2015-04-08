@@ -94,7 +94,7 @@
   app.factory('filtersettings', function () {
     var filtersettings={};
     filtersettings.pack=["core"];
-    filtersettings.type={'1hero': true, '2ally': false, '3attachment': false, '4event': false};
+    filtersettings.type={'1hero': true, '2ally': false, '3attachment': false, '4event': false, '5quest': false};
     filtersettings.spheres={'1leadership': true, '4lore': true, '3spirit': true, '2tactics': true, '5neutral': true, '6baggins':false, '7fellowship':false};
     return filtersettings;
   });
