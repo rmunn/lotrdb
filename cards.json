@@ -430,14 +430,14 @@
     "no":         21,
     "img":        "http://www.cardgamedb.com/forums/uploads/lotr/common-cause-core.jpg"
   },
-  { "name":       "For Gonder!",
+  { "name":       "For Gondor!",
     "type":       "4event",
     "sphere":     "1leadership",
     "cost":       2,
     "cycle":      0,
     "exp":        "core",
     "no":         22,
-    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/sneak-attack-core.jpg"
+    "img":        "http://www.cardgamedb.com/forums/uploads/lotr/for-gondor-core.jpg"
   },
   { "name":       "Sneak Attack",
     "type":       "4event",

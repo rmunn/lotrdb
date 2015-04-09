@@ -146,6 +146,7 @@
     deck['2ally']=[];
     deck['3attachment']=[];
     deck['4event']=[];
+    deck['5quest']=[];
     
     deck.change = function(card,quantity){
       if (quantity>0){
@@ -204,9 +205,23 @@
       }
       return events;
     }
+    deck.countQuests = function(){
+      var quests=0;
+      for (var q in deck['5quest']) {
+        quests += deck['5quest'][q].quantity;
+      }
+      return quests;
+    }
+    deck.countHeroes = function(){
+      var heroes=0;
+      for (var h in deck['1hero']) {
+        heroes += deck['1hero'][h].quantity;
+      }
+      return heroes;
+    }
     
     deck.countTotal = function() {
-      return deck.countAllies()+deck.countAttachments()+deck.countEvents();
+      return deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests();
     }
     
     return deck;
