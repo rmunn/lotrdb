@@ -10,8 +10,9 @@ Built on Angular.js, requires nothing more than a web server.
 
 ##Todo
 ####Short term
-* Saving & loading decks (js local storage)
+* Saving & loading decks
 * Download & upload decks for persistence
+* Persistent pack selection 
 
 ####Future
 * Mobile friendliness
