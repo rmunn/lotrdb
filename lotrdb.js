@@ -313,17 +313,23 @@
   
   
   
-  app.controller('myDecks',['deck','$localStorage','translate',function(deck,$localStorage,translate){
+  app.controller('myDecks',['deck','$localStorage','translate','$scope',function(deck,$localStorage,translate,$scope){
     if (!$localStorage.decks){
       $localStorage.decks={};
     }
     this.decks = $localStorage.decks;
+    this.currentdeck = deck;
     this.deckname="";
+
+    this.numberOfDecks = function() {
+      return Object.keys(this.decks).length;
+    };
+
     this.saveDeck = function(deckname) {
       if (deck.empty()) {
         return alert('Deck is empty!');
       };
-      if (this.deckname=="") {
+      if (this.currentdeck.deckname=="") {
         return alert('Please enter a name!');
       };
       if ($localStorage.decks[deckname]!=null){
@@ -344,19 +350,24 @@
       newdeck.dateFormatted = new Date().toUTCString();
       $localStorage.decks[deckname] = newdeck;
     };
+
     this.loadDeck = function(deckname) {
       deck["1hero"] = $localStorage.decks[deckname].deck["1hero"].slice(0);
       deck["2ally"] = $localStorage.decks[deckname].deck["2ally"].slice(0);
       deck["3attachment"] = $localStorage.decks[deckname].deck["3attachment"].slice(0);
       deck["4event"] = $localStorage.decks[deckname].deck["4event"].slice(0);
       deck["5quest"] = $localStorage.decks[deckname].deck["5quest"].slice(0);
-      this.deckname = deckname;
+      deck.deckname = deckname;
     };
+
+    $scope.loadDeck = this.loadDeck;
+
     this.deleteDeck = function(deckname) {
       if (confirm('Are you sure you want to delete this deck?')) {
         delete $localStorage.decks[deckname];
       };
     };
+
     this.clearDeck = function() {
       //if (deck.empty() || confirm('Are you sure you want to clear this deck?')) {
         deck["1hero"] = [];
@@ -364,8 +375,134 @@
         deck["3attachment"] = [];
         deck["4event"] = [];
         deck["5quest"] = [];
-        this.deckname = "";
+        deck.deckname = "";
       //};
+    };
+    
+    this.download = function(filename, text) {
+      var pom = document.createElement('a');
+      pom.setAttribute('href', 'data:text/plain;charset=utf-16,' + encodeURIComponent(text));
+      pom.setAttribute('download', filename);
+
+      pom.style.display = 'none';
+      document.body.appendChild(pom);
+
+      pom.click();
+
+      document.body.removeChild(pom);
+    }
+
+    String.prototype.chunk = function(n) {
+      var ret = [];
+      for(var i=0, len=this.length; i < len; i += n) {
+       ret.push(this.substr(i, n))
+      }
+      return ret
+    };
+
+    
+    this.downloadDeck = function(deckname){
+      var text="";
+      var deck= $localStorage.decks[deckname].deck;
+      text+=deckname;
+      text+="\r\n\r\nTotal Cards: ";
+      var total = 0;
+      var types = ["2ally","3attachment","4event","5quest"]
+      for (var t in types) {
+        var type = types[t];
+        for (var i in deck[type]) {
+          total += deck[type][i].quantity;
+        }
+      }
+      text+=total;
+      text+="\r\n\r\n";
+      if (deck["1hero"].length){
+        text+="Heroes (starting threat: ";
+        var threat=0;
+        for (var i in deck["1hero"]) {
+          threat += deck["1hero"][i].cost;
+        }
+        text+=threat;
+        text+=")\r\n"
+        for (var i in deck["1hero"]) {
+          text+="  * ";
+          text+=deck["1hero"][i].name;
+          text+=" (";
+          text+=translate[deck["1hero"][i].exp];
+          text+=")\r\n";
+        }
+      }
+      for (var t in types){
+        var type = types[t];
+        if (deck[type].length){
+          switch (type){
+            case "2ally":
+              text+="Allies";
+              break;
+            case "3attachment":
+              text+="Attachments";
+              break;
+            case "4event":
+              text+="Events";
+              break;
+            case "5quest":
+              text+="Quests";
+              break;
+          }
+          text+=" (";
+          var number=0;
+          for (var i in deck[type]) {
+            number += deck[type][i].quantity;
+          }
+          text+=number;
+          text+=")\r\n"
+          for (var i in deck[type]) {
+            text+=" ";
+            text+=deck[type][i].quantity;
+            text+="x ";
+            text+=deck[type][i].name;
+            text+=" (";
+            text+=translate[deck[type][i].exp];
+            text+=")\r\n";
+          }
+        }
+
+      }
+
+      text+="\r\n\r\n\r\n\r\nDo not remove the part below, or you will be unable to upload the deck!\r\n";
+      text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
+      text+=LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname])).chunk(80).join("\r\n");
+      text+="\r\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+
+
+      this.download(deckname+".txt",text);
+    };
+
+    this.uploadDeck = function(event) {
+      var file = event.target.files[0];
+      var deckname = file.name.replace('.txt','');
+      if (file) {
+        var r = new FileReader();
+        r.onload = function(e) { 
+          var contents = e.target.result.replace(/(\r\n|\n|\r)/gm,""); //strip newlines
+          var encoded = contents.match(/\+{80}([A-Za-z0-9+\-\r\n]+)\+{80}/gm)[0];
+          encoded = encoded.replace(/\+{80}/,"");
+          var newdeck = JSON.parse(LZString.decompressFromEncodedURIComponent(encoded));
+          newdeck.deckname = deckname;
+          newdeck.dateUTC = new Date().valueOf().toString();
+          newdeck.dateFormatted = new Date().toUTCString();
+          if ($localStorage.decks[deckname]!=null){
+            if (confirm('A deck by that name exists, overwrite?')) {
+            } else{
+              return 0;
+            }
+          }
+          $localStorage.decks[deckname] = newdeck;
+          $scope.loadDeck(deckname);
+          $scope.$apply();
+        };
+        r.readAsText(file);
+      };
     };
   }]);
   
@@ -394,8 +531,8 @@
     var translate={};
     translate[""]="";
     translate.core="Core Set";
-    translate.kd="Khazad-Dûm";
-    translate.hon="Heirs of Númenor";
+    translate.kd=unescape("Khazad-D%FBm");
+    translate.hon=unescape("Heirs of N%FAmenor");
     translate.tvoi="The Voice of Isengard";
     translate.tlr="The Lost Realm";
     translate.ohuh="Over Hill and Under Hill";
@@ -407,19 +544,19 @@
     translate.otd="On the Doorstep";
     translate.catc="Conflict at the Carrock";
     translate.rtr="Road to Rivendell";
-    translate.tdf="The Drúadan Forest";
+    translate.tdf=unescape("The Dr%FAadan Forest");
     translate.ttt="The Three Trials";
     translate.efmg="Escape from Mount Gram";
     translate.tbr="The Black Riders";
     translate.ajtr="A Journey to Rhosgobel";
     translate.twitw="The Watcher in the Water";
-    translate.eaad="Encounter at Amon Dîn";
+    translate.eaad=unescape("Encounter at Amon D%EEn");
     translate.tit="Trouble in Tharbad";
     translate.trd="The Road Darkens";
     translate.thoem="The Hills of Emyn Muil";
     translate.tld="The Long Dark";
     translate.aoo="Assault on Osgiliath";
-    translate.tnie="The Nin-in-Eiilph";
+    translate.tnie="The Nin-in-Eilph";
     translate.tdm="The Dead Marshes";
     translate.fos="Foundations of Stone";
     translate.tbog="The Blood of Gondor";

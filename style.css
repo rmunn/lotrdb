@@ -16,6 +16,9 @@
   background-color: #bbb;
   border-color: #555 #eee #eee #555;
 }
+.packbutton:hover {
+  border-color: black;
+}
 .packbutton:disabled {
   color: lightgrey;
   background-color: grey;
@@ -33,6 +36,9 @@
   border-style: solid;
   border-color: #eee #555 #555 #eee;
 }
+.cardbutton:hover {
+  border-color: black;
+}
 .cardbutton.selected{
   background-color: #bbb;
   border-color: #555 #eee #eee #555;
@@ -41,6 +47,8 @@
   background-color: #bbb;
   border-color: #555 #eee #eee #555;
 }
+
+
 
 .filterbutton {
   width: 40px;
@@ -51,9 +59,6 @@
   border-style: solid;
   border-color: #eee #555 #555 #eee;
 }
-.filterbutton:hover{
-  border-color: black;
-}
 .filterbutton.selected {
   background-color: #bbb;
   border-color: #555 #eee #eee #555;
@@ -61,6 +66,9 @@
 .filterbutton:active {
   background-color: #bbb;
   border-color: #555 #eee #eee #555;
+}
+.filterbutton:hover{
+  border-color: black;
 }
 
 .cardpreview {
@@ -218,6 +226,12 @@ tr.card:hover {
   border-width: 1px;
   border-style: solid;
   border-color: #eee #555 #555 #eee;
+  height: 30px;
+  font-weight: normal;
+  text-align: center;
+}
+.savebutton:hover{
+  border-color: black;
 }
 
 .savebutton:active {
@@ -225,7 +239,13 @@ tr.card:hover {
   border-color: #555 #eee #eee #555;
 }
 
+div.upload {
+  margin-top:5px;
+}
+
+
 td.decks {
-  padding: 5px;
-  width: 25%;
+  padding: 0px;
+  width: 80px;
+  vertical-align: top;
 }

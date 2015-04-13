@@ -1,5 +1,6 @@
 <div class="leftdiv">
-  <h4>Total Cards: {{deck.countTotal()}}</h4>
+  <h3 ng-show="deck.deckname">{{deck.deckname}}</h3>
+  <h4 ng-show="deck.countTotal()">Total Cards: {{deck.countTotal()}}</h4>
   <table class="deck">
     <tr class="head" ng-show="deck.countHeroes()"><td style="width:100px"></td><td>Heroes (Starting threat: {{deck.startingThreat()}})</td></tr>
     <tr class="card" ng-repeat="card in deck['1hero'] | orderBy:'name.replace(\'É\',\'E\')'" ng-mouseover="deckC.changepreview(card)">
