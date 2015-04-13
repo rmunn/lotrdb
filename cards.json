@@ -4061,6 +4061,7 @@
     "type":       "5quest",
     "sphere":     "5neutral",
     "restrict":   true,
+    "cost":       0,
     "cycle":      8,
     "exp":        "tlr",
     "no":         14,

@@ -1,4 +1,5 @@
-<div ng-show="tab.isSet(1)">
+<div ng-show="tab.isSet(1)" class="cardsdiv">
+  
   
   <div class="filterdiv">
     <div style="float:left;margin:5px;">
@@ -18,19 +19,21 @@
       <button class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship')"><img src="img/spheres/7fellowship.png"/></button>
     </div>
   </div>
-  <table style="width:95%;">
-    <tr>
-      <td style="font-weight: bold;width:20%"></td>
-      <td style="font-weight: bold;width:35%"><a href ng-click="cards.orderby('name')">Name</a></td>
-      <td style="font-weight: bold;width:12%;text-align:center"><a href ng-click="cards.orderby('sphere')">Sphere</a></td>
-      <td style="font-weight: bold;width:8%;text-align:center"><a href ng-click="cards.orderby('cost')">Cost</a></td>
-      <td style="font-weight: bold;width:7%"><a href ng-click="cards.orderby('type')">Type</a></td>
-      <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-willpower')"><img src="img/willpower.gif"/></a></td>
-      <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-strength')"><img src="img/strength.gif"/></a></td>
-      <td style="font-weight: bold;width:4%"><a href ng-click="cards.orderby('-defense')"><img src="img/defense.gif"/></a></td>
-      <td style="font-weight: bold;width:3%"><a href ng-click="cards.orderby('-hitpoints')"><img src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
-    </tr>
-  </table>
+  <div>
+    <table style="width:95%;">
+      <tr>
+        <td style="font-weight: bold;width:20%"></td>
+        <td style="font-weight: bold;width:35%"><a href ng-click="cards.orderby('name')">Name</a></td>
+        <td style="font-weight: bold;width:12%;text-align:center"><a href ng-click="cards.orderby('sphere')">Sphere</a></td>
+        <td style="font-weight: bold;width:8%;text-align:center"><a href ng-click="cards.orderby('cost')">Cost</a></td>
+        <td style="font-weight: bold;width:7%"><a href ng-click="cards.orderby('type')">Type</a></td>
+        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-willpower')"><img src="img/willpower.gif"/></a></td>
+        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-strength')"><img src="img/strength.gif"/></a></td>
+        <td style="font-weight: bold;width:4%"><a href ng-click="cards.orderby('-defense')"><img src="img/defense.gif"/></a></td>
+        <td style="font-weight: bold;width:3%"><a href ng-click="cards.orderby('-hitpoints')"><img src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
+      </tr>
+    </table>
+  </div>
   
   <div class="cards">
     <table class="cardlist">
