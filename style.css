@@ -123,16 +123,19 @@ h1 {
 .footer{
   margin: 0;
   padding:0;
-  height:10vh;
-  width: 90%;
+  height:5vh;
+  width: 100%;
   font-size: 9px;
-  text-align: justify;
-}
-
-footer{
-  width: 90%;
+  text-align: center;
+  background-color: lightgrey;
   position: absolute;
   bottom: 0;
+}
+
+.footerdiv{
+  width: 90%;
+  text-align: justify;
+  margin: 0 auto;
 }
 
 .cardsdiv {
