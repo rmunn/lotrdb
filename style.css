@@ -83,12 +83,13 @@ body {
   height:95vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .body{
   margin: 0;
   padding:0;
-  height: 75vh;
+  height: 80vh;
 }
 
 .leftdiv {
@@ -120,12 +121,13 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  margin: 0;
 }
 
 .headerdiv{
-  margin: 0;
+  margin-top: 10px;
   padding:0;
-  height:10vh;
+  height:6vh;
 }
 
 .footer{

@@ -18,4 +18,4 @@ Built on Angular.js, requires nothing more than a web server.
 * Compare decks
 * Sort decks by name/sphere/cost/set
 * Graphical revamp
-* Download/upload different format (Markdown, CardgameDB and OCTGN specifically)
+* Download/upload different format (CardgameDB and OCTGN specifically)

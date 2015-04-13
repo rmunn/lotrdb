@@ -399,13 +399,11 @@
       }
       return ret
     };
-
     
-    this.downloadDeck = function(deckname){
-      var text="";
-      var deck= $localStorage.decks[deckname].deck;
+    this.markdown = function(deck,deckname) {
+      var text="#";
       text+=deckname;
-      text+="\r\n\r\nTotal Cards: ";
+      text+="  \r\nTotal Cards: ";
       var total = 0;
       var types = ["2ally","3attachment","4event","5quest"]
       for (var t in types) {
@@ -415,21 +413,21 @@
         }
       }
       text+=total;
-      text+="\r\n\r\n";
+      text+="  \r\n\r\n";
       if (deck["1hero"].length){
-        text+="Heroes (starting threat: ";
+        text+="**Heroes** (starting threat: ";
         var threat=0;
         for (var i in deck["1hero"]) {
           threat += deck["1hero"][i].cost;
         }
         text+=threat;
-        text+=")\r\n"
+        text+=")  \r\n"
         for (var i in deck["1hero"]) {
-          text+="  * ";
-          text+=deck["1hero"][i].name;
-          text+=" (";
-          text+=translate[deck["1hero"][i].exp];
-          text+=")\r\n";
+          text+="    ";
+          text+=deck["1hero"].sort(function(a,b){return a.name>b.name})[i].name;
+          text+=" (*";
+          text+=translate[deck["1hero"].sort(function(a,b){return a.name>b.name})[i].exp];
+          text+="*)  \r\n";
         }
       }
       for (var t in types){
@@ -437,16 +435,16 @@
         if (deck[type].length){
           switch (type){
             case "2ally":
-              text+="Allies";
+              text+="**Allies**";
               break;
             case "3attachment":
-              text+="Attachments";
+              text+="**Attachments**";
               break;
             case "4event":
-              text+="Events";
+              text+="**Events**";
               break;
             case "5quest":
-              text+="Quests";
+              text+="**Quests**";
               break;
           }
           text+=" (";
@@ -455,21 +453,107 @@
             number += deck[type][i].quantity;
           }
           text+=number;
-          text+=")\r\n"
+          text+=")  \r\n"
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type][i].quantity;
+            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].quantity;
             text+="x ";
-            text+=deck[type][i].name;
-            text+=" (";
-            text+=translate[deck[type][i].exp];
-            text+=")\r\n";
+            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].name;
+            text+=" (*";
+            text+=translate[deck[type].sort(function(a,b){return a.name>b.name})[i].exp];
+            text+="*)  \r\n";
           }
         }
-
       }
+      
+      text+="***\r\n^Deck ^built ^with ^[Rivendell-Councilroom](http://github.com/ddddirk/lotrdb)";
+      return text;
+    }
+    
+    
+    this.bbcode = function(deck,deckname) {
+      var text="[size=18]";
+      text+=deckname;
+      text+="[/size]\r\nTotal Cards: ";
+      var total = 0;
+      var types = ["2ally","3attachment","4event","5quest"]
+      for (var t in types) {
+        var type = types[t];
+        for (var i in deck[type]) {
+          total += deck[type][i].quantity;
+        }
+      }
+      text+=total;
+      text+="  \r\n\r\n";
+      if (deck["1hero"].length){
+        text+="[b]Heroes[/b] (starting threat: ";
+        var threat=0;
+        for (var i in deck["1hero"]) {
+          threat += deck["1hero"][i].cost;
+        }
+        text+=threat;
+        text+=")  \r\n"
+        for (var i in deck["1hero"]) {
+          text+="    ";
+          text+=deck["1hero"].sort(function(a,b){return a.name>b.name})[i].name;
+          text+=" ([i]";
+          text+=translate[deck["1hero"].sort(function(a,b){return a.name>b.name})[i].exp];
+          text+="[/i])  \r\n";
+        }
+      }
+      for (var t in types){
+        var type = types[t];
+        if (deck[type].length){
+          switch (type){
+            case "2ally":
+              text+="[b]Allies[/b]";
+              break;
+            case "3attachment":
+              text+="[b]Attachments[/b]";
+              break;
+            case "4event":
+              text+="[b]Events[/b]";
+              break;
+            case "5quest":
+              text+="[b]Quests[/b]";
+              break;
+          }
+          text+=" (";
+          var number=0;
+          for (var i in deck[type]) {
+            number += deck[type][i].quantity;
+          }
+          text+=number;
+          text+=")  \r\n"
+          for (var i in deck[type]) {
+            text+=" ";
+            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].quantity;
+            text+="x ";
+            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].name;
+            text+=" ([i]";
+            text+=translate[deck[type].sort(function(a,b){return a.name>b.name})[i].exp];
+            text+="[/i])  \r\n";
+          }
+        }
+      }
+      
+      text+="\r\n[size=7]Deck built with [url=http://github.com/ddddirk/lotrdb]Rivendell Councilroom[/url][/size]";
+      return text;
+    }
+    
+    
 
-      text+="\r\n\r\n\r\n\r\nDo not remove the part below, or you will be unable to upload the deck!\r\n";
+    
+    this.downloadDeck = function(deckname){
+      var deck= $localStorage.decks[deckname].deck;
+      var text="++++++++++++\r\n+For Reddit+\r\n++++++++++++ \r\n\r\n";
+      text+=this.markdown(deck,deckname);
+      text+="\r\n\r\n\r\n\r\n\r\n+++++++++++++++++++ \r\n+For Boardgamegeek+\r\n+++++++++++++++++++  \r\n\r\n";
+      text+=this.bbcode(deck,deckname);
+      
+      
+      
+      text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
       text+=LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname])).chunk(80).join("\r\n");
       text+="\r\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
