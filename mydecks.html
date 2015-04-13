@@ -14,10 +14,10 @@
         <button class="savebutton"  ng-click="mydecks.clearDeck()">Clear</button>
       </td>
     </tr>
-    <tr ng-repeat="deck in mydecks.decks | orderBy:'-date'">
+    <tr ng-repeat="deck in mydecks.decks | toArray | orderBy:'-dateUTC'">
       <td>
         <div style="font-weight:bold;">{{deck.deckname}}</div>
-        <div style="font-size:9px;">{{deck.date.toLocaleString()}}</div>
+        <div style="font-size:9px;">{{deck.dateFormatted}}</div>
       </td>
       <td class="decks">
         <button class="savebutton"  ng-click="mydecks.loadDeck(deck.deckname)">Load</button>

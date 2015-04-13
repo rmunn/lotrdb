@@ -1,7 +1,20 @@
 (function() {
 
   var app = angular.module('deckbuilder', ['ngStorage']);
-  
+
+  app.filter('toArray', function () {
+    'use strict';
+
+    return function (obj) {
+      if (!(obj instanceof Object)) {
+        return obj;
+      }
+
+      return Object.keys(obj).map(function (key) {
+        return Object.defineProperty(obj[key], '$key', {__proto__: null, value: key});
+      });
+    }
+  });  
   
   app.factory('getData', function($http) {
     var promise;
@@ -327,7 +340,8 @@
         newdeck.deck["4event"] = deck["4event"].slice(0);
         newdeck.deck["5quest"] = deck["5quest"].slice(0);
       newdeck.deckname = deckname;
-      newdeck.date = Date.now();
+      newdeck.dateUTC = new Date().valueOf().toString();
+      newdeck.dateFormatted = new Date().toUTCString();
       $localStorage.decks[deckname] = newdeck;
     };
     this.loadDeck = function(deckname) {

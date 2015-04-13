@@ -220,6 +220,11 @@ tr.card:hover {
   border-color: #eee #555 #555 #eee;
 }
 
+.savebutton:active {
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
+}
+
 td.decks {
   padding: 5px;
   width: 25%;
