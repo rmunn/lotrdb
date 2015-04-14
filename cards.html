@@ -2,6 +2,8 @@
   
   
   <div class="filterdiv">
+      <input ng-model="search.name" type="text" placeholder="Search for card names" style="width:40%;font-size:12px;margin-right:10px;">
+      <!--<input ng-model="search.trait" type="text" placeholder="Search for card traits" style="width:40%;font-size:12px;margin-right:10px;">-->
     <div style="float:left;margin:5px;">
       <button class="filterbutton" ng-class="{selected: cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero')"><img src="img/types/1hero.png"/></button>
       <button class="filterbutton" ng-class="{selected: cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally')"><img src="img/types/2ally.png"/></button>
@@ -38,7 +40,7 @@
   <div class="cards">
     <table class="cardlist">
       <tbody>
-        <tr ng-repeat="card in cards.allcards | cardfilter:cards | orderBy:cards.order" class="cardrow" ng-mouseover="cards.changepreview(card)">
+        <tr ng-repeat="card in cards.allcards | cardfilter:cards | filter:search | orderBy:cards.order" class="cardrow" ng-mouseover="cards.changepreview(card)">
           <td style="font-size:0;width:20%;">
             <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">0</button>
             <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
