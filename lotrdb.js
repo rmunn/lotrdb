@@ -552,10 +552,20 @@
       text+=this.bbcode(deck,deckname);
       
       
+      CompressedDeck=[deckname];
+      var types = ["1hero","2ally","3attachment","4event","5quest"]
+      for (var t in types){
+        var type = types[t];
+        for (var c in $localStorage.decks[deckname].deck[type]){
+          var card = $localStorage.decks[deckname].deck[type][c];
+          console.log([card.cycle,card.no,card.quantity]);
+          CompressedDeck.push([card.cycle,card.no,card.quantity]);
+        }
+      }
       
       text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
-      text+=LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname])).chunk(80).join("\r\n");
+      text+=LZString.compressToEncodedURIComponent(JSON.stringify(CompressedDeck)).chunk(80).join("\r\n");
       text+="\r\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 
 
