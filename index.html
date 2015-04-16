@@ -23,16 +23,19 @@
           <section class="tab">
             <ul class="nav nav-pills">
               <li>
-                <a href ng-click="tab.setTab(1)">Cards</a></li>
+                <a href ng-click="tab.setTab(1)" ng-class="{activetab: tab.isSet(1)}">Cards</a></li>
               <li>
-                <a href ng-click="tab.setTab(2)">Packs</a></li>
+                <a href ng-click="tab.setTab(2)" ng-class="{activetab: tab.isSet(2)}">Packs</a></li>
               <li>
-                <a href ng-click="tab.setTab(3)">Decks</a></li>
+                <a href ng-click="tab.setTab(3)" ng-class="{activetab: tab.isSet(3)}">Decks</a></li>
+              <li>
+                <a href ng-click="tab.setTab(4)" ng-class="{activetab: tab.isSet(4)}">Stats</a></li>
             </ul>
           </section>
           <packs></packs>
           <cards></cards>
           <mydecks></mydecks>
+          <stats></stats>
         </div>
         
       </div>

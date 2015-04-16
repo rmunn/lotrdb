@@ -74,7 +74,7 @@
   
   
   //Tabs in the right div
-  app.controller('tabController',function(){
+  app.controller('tabController',[function(){
     this.tab=1;
     this.setTab = function(newValue){
       this.tab = newValue;
@@ -82,15 +82,35 @@
     this.isSet = function(tabName){
       return this.tab === tabName;
     };
-  });
+  }]);
   
+  
+  app.controller('init',['getData','$location','deck','cardObject','$scope',function(getData,$location,deck,cardObject,$scope){
+    
+    getData.async('cards.json').then(function(data) {
+      for (d in data) {
+        cardObject.push(data[d]);
+      }
+    });
+    
+    setTimeout( function() {
+      var hashIndex = $location.url().indexOf('/#');
+      if (hashIndex>-1){
+        var encoded = $location.url().substr(hashIndex+2);
+        var decoded = JSON.parse(LZString.decompressFromEncodedURIComponent(encoded));
+        deck.load(decoded,cardObject);
+      }
+      $scope.$apply();
+    },1000);
+  }]);
   
   
   //Page header
   app.directive('header', function() {
     return {
       restrict: 'E',
-      templateUrl: 'header.html'
+      templateUrl: 'header.html',
+      controller: 'init'
     };
   });
   //Page footer
@@ -123,18 +143,19 @@
   }]);
   
   
+  app.factory('cardObject',["getData",function(getData){
+    var cardObject = [];
+    return cardObject;
+  }]);
+  
   //Logic for the card selection
-  app.controller('cardControl',["$http","$scope","getData","filtersettings","deck","image",function($http,$scope,getData,filtersettings,deck,image){
+  app.controller('cardControl',["$http","$scope","filtersettings","deck","image","cardObject",function($http,$scope,filtersettings,deck,image,cardObject){
     $scope.allcards=[];
     $scope.deck=deck;
     this.image = image;
     this.filtersettings=filtersettings;
     this.order="sphere";
-    getData.async('cards.json').then(function(data) {
-      for (d in data) {
-        $scope.allcards.push(data[d]);
-      }
-    });
+    $scope.allcards = cardObject;
     this.allcards = $scope.allcards;
     this.toggleType = function(t){
       this.filtersettings.type[t] = !(this.filtersettings.type[t]);
@@ -163,7 +184,7 @@
   
   
   
-  app.factory('deck',function(){
+  app.factory('deck', function(){
     var deck={};
     deck['1hero']=[];
     deck['2ally']=[];
@@ -195,61 +216,95 @@
       for (var c in deck[card.type]){
         if (deck[card.type][c].cycle==card.cycle && deck[card.type][c].no==card.no){
           return deck[card.type][c].quantity;
-        }
-      }
+        };
+      };
       return 0;
-    }
+    };
     deck.startingThreat = function(){
       var threat = 0;
       for(var h in deck['1hero']){
         threat += deck['1hero'][h].cost;
-      }
+      };
       return threat;
-    }
+    };
     
     deck.countAllies = function(){
       var allies=0;
       for (var a in deck['2ally']) {
         allies += deck['2ally'][a].quantity;
-      }
+      };
       return allies;
-    }
+    };
     deck.countAttachments = function(){
       var attachments=0;
       for (var a in deck['3attachment']) {
         attachments += deck['3attachment'][a].quantity;
-      }
+      };
       return attachments;
-    }
+    };
     deck.countEvents = function(){
       var events=0;
       for (var e in deck['4event']) {
         events += deck['4event'][e].quantity;
-      }
+      };
       return events;
-    }
+    };
     deck.countQuests = function(){
       var quests=0;
       for (var q in deck['5quest']) {
         quests += deck['5quest'][q].quantity;
-      }
+      };
       return quests;
-    }
+    };
     deck.countHeroes = function(){
       var heroes=0;
       for (var h in deck['1hero']) {
         heroes += deck['1hero'][h].quantity;
-      }
+      };
       return heroes;
-    }
+    };
     
     deck.countTotal = function() {
       return deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests();
-    }
+    };
     
     deck.empty = function() {
       return (deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests()+deck.countHeroes())==0;
-    }
+    };
+    
+    deck.load = function(deckArray,cardObject,deckname) {
+      if (Object.prototype.toString.apply(deckArray) == "[object Object]") {
+        deck.deckname = deckname;
+        deck.loadLegacy(deckArray);
+        return 0;
+        
+      }
+      deck['1hero']=[];
+      deck['2ally']=[];
+      deck['3attachment']=[];
+      deck['4event']=[];
+      deck['5quest']=[];
+      deck.deckname = deckArray[0];
+      for (var i=1; i<deckArray.length; i++) {
+        for (var j in cardObject) {
+          if (deckArray[i][0]==cardObject[j].cycle
+          &&  deckArray[i][1]==cardObject[j].no) {
+            var card = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            card.quantity = deckArray[i][2];
+            deck[card.type].push(card);
+          }
+        }
+      }
+    };
+    
+    deck.loadLegacy = function(deckObject) {
+      deck['1hero']=deckObject['1hero'];
+      deck['2ally']=deckObject['2ally'];
+      deck['3attachment']=deckObject['3attachment'];
+      deck['4event']=deckObject['4event'];
+      deck['5quest']=deckObject['5quest'];
+    };
+    
     
     return deck;
   });
@@ -313,7 +368,7 @@
   
   
   
-  app.controller('myDecks',['deck','$localStorage','translate','$scope',function(deck,$localStorage,translate,$scope){
+  app.controller('myDecks',['deck','$localStorage','translate','$scope','cardObject','$location',function(deck,$localStorage,translate,$scope,cardObject,$location){
     if (!$localStorage.decks){
       $localStorage.decks={};
     }
@@ -338,26 +393,29 @@
           return 0;
         }
       }
-      var newdeck = {};
-      newdeck.deck = {};
-        newdeck.deck["1hero"] = deck["1hero"].slice(0);
-        newdeck.deck["2ally"] = deck["2ally"].slice(0);
-        newdeck.deck["3attachment"] = deck["3attachment"].slice(0);
-        newdeck.deck["4event"] = deck["4event"].slice(0);
-        newdeck.deck["5quest"] = deck["5quest"].slice(0);
-      newdeck.deckname = deckname;
-      newdeck.dateUTC = new Date().valueOf().toString();
-      newdeck.dateFormatted = new Date().toUTCString();
-      $localStorage.decks[deckname] = newdeck;
+      var CompressedDeck=[deckname];
+      CompressedDeck.name = deckname;
+      var types = ["1hero","2ally","3attachment","4event","5quest"]
+      for (var t in types){
+        var type = types[t];
+        for (var c in deck[type]){
+          var card = deck[type][c];
+          CompressedDeck.push([card.cycle,card.no,card.quantity]);
+        }
+      }
+      $localStorage.decks[deckname] = {};
+      $localStorage.decks[deckname].deck = CompressedDeck;
+      $localStorage.decks[deckname].deckname = deckname;
+      $localStorage.decks[deckname].dateUTC = new Date().valueOf().toString();
+      
+      var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
+      $location.url("/#"+compressed);
     };
 
     this.loadDeck = function(deckname) {
-      deck["1hero"] = $localStorage.decks[deckname].deck["1hero"].slice(0);
-      deck["2ally"] = $localStorage.decks[deckname].deck["2ally"].slice(0);
-      deck["3attachment"] = $localStorage.decks[deckname].deck["3attachment"].slice(0);
-      deck["4event"] = $localStorage.decks[deckname].deck["4event"].slice(0);
-      deck["5quest"] = $localStorage.decks[deckname].deck["5quest"].slice(0);
-      deck.deckname = deckname;
+      deck.load($localStorage.decks[deckname].deck,cardObject,deckname);
+      var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
+      $location.url("/#"+compressed);
     };
 
     $scope.loadDeck = this.loadDeck;
@@ -400,7 +458,26 @@
       return ret
     };
     
-    this.markdown = function(deck,deckname) {
+    this.markdown = function(deckArray,deckname) {
+      var deck={};
+      deck["1hero"] = [];
+      deck["2ally"] = [];
+      deck["3attachment"] = [];
+      deck["4event"] = [];
+      deck["5quest"] = [];
+      
+      deck.deckname = deckArray[0];
+      for (var i=1; i<deckArray.length; i++) {
+        for (var j in cardObject) {
+          if (deckArray[i][0]==cardObject[j].cycle
+          &&  deckArray[i][1]==cardObject[j].no) {
+            var card = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            card.quantity = deckArray[i][2];
+            deck[card.type].push(card);
+          }
+        }
+      }
+      
       var text="#";
       text+=deckname;
       text+="  \r\nTotal Cards: ";
@@ -471,7 +548,26 @@
     }
     
     
-    this.bbcode = function(deck,deckname) {
+    this.bbcode = function(deckArray,deckname) {
+      var deck={};
+      deck["1hero"] = [];
+      deck["2ally"] = [];
+      deck["3attachment"] = [];
+      deck["4event"] = [];
+      deck["5quest"] = [];
+      
+      deck.deckname = deckArray[0];
+      for (var i=1; i<deckArray.length; i++) {
+        for (var j in cardObject) {
+          if (deckArray[i][0]==cardObject[j].cycle
+          &&  deckArray[i][1]==cardObject[j].no) {
+            var card = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            card.quantity = deckArray[i][2];
+            deck[card.type].push(card);
+          }
+        }
+      }
+      
       var text="[size=18]";
       text+=deckname;
       text+="[/size]\r\nTotal Cards: ";
@@ -552,16 +648,8 @@
       text+=this.bbcode(deck,deckname);
       
       
-      CompressedDeck=[deckname];
-      var types = ["1hero","2ally","3attachment","4event","5quest"]
-      for (var t in types){
-        var type = types[t];
-        for (var c in $localStorage.decks[deckname].deck[type]){
-          var card = $localStorage.decks[deckname].deck[type][c];
-          console.log([card.cycle,card.no,card.quantity]);
-          CompressedDeck.push([card.cycle,card.no,card.quantity]);
-        }
-      }
+      var CompressedDeck=$localStorage.decks[deckname].deck;
+      
       
       text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
@@ -575,24 +663,15 @@
     this.uploadDeck = function(event) {
       var file = event.target.files[0];
       var deckname = file.name.replace('.txt','');
+      var deck = this.currentdeck;
       if (file) {
         var r = new FileReader();
-        r.onload = function(e) { 
+          r.onload = function(e) { 
           var contents = e.target.result.replace(/(\r\n|\n|\r)/gm,""); //strip newlines
           var encoded = contents.match(/\+{80}([A-Za-z0-9+\-\r\n]+)\+{80}/gm)[0];
           encoded = encoded.replace(/\+{80}/,"");
-          var newdeck = JSON.parse(LZString.decompressFromEncodedURIComponent(encoded));
-          newdeck.deckname = deckname;
-          newdeck.dateUTC = new Date().valueOf().toString();
-          newdeck.dateFormatted = new Date().toUTCString();
-          if ($localStorage.decks[deckname]!=null){
-            if (confirm('A deck by that name exists, overwrite?')) {
-            } else{
-              return 0;
-            }
-          }
-          $localStorage.decks[deckname] = newdeck;
-          $scope.loadDeck(deckname);
+          var decoded = JSON.parse(LZString.decompressFromEncodedURIComponent(encoded));
+          deck.load(decoded,cardObject);
           $scope.$apply();
         };
         r.readAsText(file);
@@ -612,6 +691,156 @@
   });
   
   
+  
+  app.directive('stats', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'stats.html',
+      controller: 'stats',
+      controllerAs: 'stats'
+    };
+  });
+  
+  app.controller('stats',['deck',function(deck){
+    this.sphereCanvas = document.getElementById("spheres").getContext("2d");
+    this.costCanvas = document.getElementById("cost").getContext("2d");
+    this.typeCanvas = document.getElementById("type").getContext("2d");
+    
+    this.reloadDeck = function() {
+      this.cards = [];
+      var types = ["2ally","3attachment","4event","5quest"]
+      for (var t in types) {
+        var type = types[t];
+        for (var c in deck[type]) {
+          var card = deck[type][c];
+          for (var i = 0; i<card.quantity; i++){
+            this.cards.push(card);
+          }
+        }
+      }
+      
+    }
+    
+    this.reshuffle = function() {
+      this.reloadDeck();
+      function shuffle(o){ //v1.0
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+      };
+      shuffle(this.cards);
+      this.hand = this.cards.slice(0,6);
+      this.deck = this.cards.slice(6).reverse();
+    };
+    
+    this.draw = function() {
+      this.hand.push(this.deck.pop());
+    }
+    
+    this.sphereSplit = function() {
+      this.reloadDeck();
+      var split = [ {label:"Leadership", value: 0, color: "purple"},
+                    {label:"Tactics", value: 0, color: "red"},
+                    {label:"Spirit", value: 0, color: "blue"},
+                    {label:"Lore", value: 0, color: "green"},
+                    {label:"Neutral", value: 0, color: "grey"},
+                    {label:"Baggins", value: 0, color: "yellow"},
+                    {label:"Fellowship", value: 0, color: "orange"}];
+      for (var c in this.cards) {
+        switch (this.cards[c].sphere) {
+          case "1leadership":
+            split[0].value++;
+            break;
+          case "2tactics":
+            split[1].value++;
+            break;
+          case "3spirit":
+            split[2].value++;
+            break;
+          case "4lore":
+            split[3].value++;
+            break;
+          case "5neutral":
+            split[4].value++;
+            break;
+          case "6baggins":
+            split[5].value++;
+            break;
+          case "7fellowship":
+            split[6].value++;
+            break;
+        }
+      }
+      if (this.sphereChart) {
+        this.sphereChart.destroy();
+      }
+      
+      this.sphereChart = new Chart(this.sphereCanvas).Pie(split);
+    }
+    
+    this.costSplit = function() {
+      this.reloadDeck();
+      var split = [ {label:'Cost 0', value: 0, color: 'green'},
+                    {label:'Cost 1', value: 0, color: 'lime'},
+                    {label:'Cost 2', value: 0, color: 'yellow'},
+                    {label:'Cost 3', value: 0, color: 'orange'},
+                    {label:'Cost 4', value: 0, color: 'red'},
+                    {label:'Cost 5', value: 0, color: 'purple'},
+                    {label:'Cost 6', value: 0, color: 'blue'},
+                    {label:'Cost X', value: 0, color: 'grey'}];
+      for (var c in this.cards) {
+        var cost = this.cards[c].cost;
+        if (cost=='X'){
+          split[7].value++;
+        } else{
+          split[cost].value++;
+        }
+      }
+      if (this.costChart) {
+        this.costChart.destroy();
+      }
+      
+      this.costChart = new Chart(this.costCanvas).Pie(split);
+    }
+    
+    
+    
+    this.typeSplit = function() {
+      this.reloadDeck();
+      var split = [ {label:"Ally", value: 0, color: "green"},
+                    {label:"Attachment", value: 0, color: "red"},
+                    {label:"Event", value: 0, color: "blue"},
+                    {label:"Side Quest", value: 0, color: "yellow"}];
+      for (var c in this.cards) {
+        switch (this.cards[c].type) {
+          case "2ally":
+            split[0].value++;
+            break;
+          case "3attachment":
+            split[1].value++;
+            break;
+          case "4event":
+            split[2].value++;
+            break;
+          case "5quest":
+            split[3].value++;
+            break;
+        }
+      }
+      if (this.typeChart) {
+        this.typeChart.destroy();
+      }
+      
+      this.typeChart = new Chart(this.typeCanvas).Pie(split);
+    }
+    
+    
+    this.refresh = function() {
+      this.sphereSplit();
+      this.costSplit();
+      this.typeSplit();
+    }
+    
+  }]);
   
   
   

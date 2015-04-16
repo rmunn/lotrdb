@@ -1,5 +1,5 @@
 .packbutton { 
-  font-size: 9px;
+  font-size: 10px;
   width:   100%;
   height: 50px;
   border-radius: 6px;
@@ -98,6 +98,7 @@ body {
   float: left;
   height:108%;
   overflow-y: auto;
+  padding-left: 5px;
 }
 
 .cardpreviewdiv {
@@ -114,6 +115,7 @@ body {
   min-width: 300px;
   height: 100%;
   float:left;
+  padding-right: 5px;
 }
 
 h1 {
@@ -121,6 +123,16 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  margin: 0;
+}
+h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+h3 {
+  font-size: 20px;
   margin: 0;
 }
 
@@ -215,7 +227,7 @@ tr.head {
   color: orange;
 }
 
-tr.card:hover {
+.card:hover {
   background-color: lightgrey;
 }
 
@@ -250,4 +262,67 @@ td.decks {
   padding: 0px;
   width: 80px;
   vertical-align: top;
+}
+
+
+.activetab {
+  color: #fff !important;
+  background-color: #337ab7 !important;
+}
+
+
+.carddraw {
+  width: 40%;
+  height: 80vh;
+  overflow-y: auto;
+  float:left;
+}
+
+.carddraw > ul, 
+.carddraw > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carddraw > button,
+.chartdiv > button {
+  width: 40%;  
+  border-radius: 6px;
+  background-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee #555 #555 #eee;
+  height: 30px;
+  font-weight: normal;
+  text-align: center;
+}
+.carddraw > button:hover,
+.chartdiv > button:hover{
+  border-color: black;
+}
+
+.carddraw > button:active,
+.chartdiv > button:active {
+  background-color: #bbb;
+  border-color: #555 #eee #eee #555;
+}
+
+
+
+.chartdiv {
+  width: 60%;
+  height: 80vh;
+  overflow: hidden;
+  float:left;
+  text-align: center;
+}
+
+canvas {
+  width: 100%;
+  min-height: 120px;
+  height: 25vh;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
