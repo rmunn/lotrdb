@@ -1,4 +1,7 @@
 #Rivendell Councilroom
+
+##[Live version](http://ddddirk.github.io/lotrdb)
+
 A deck builder for the Lord of the Rings Living Card Game by Fantasy Flight Games.  
 Built on Angular.js, requires nothing more than a web server.
 
