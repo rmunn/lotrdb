@@ -706,6 +706,8 @@
     this.costCanvas = document.getElementById("cost").getContext("2d");
     this.typeCanvas = document.getElementById("type").getContext("2d");
     
+    this.filter = {sphere:null, cost:null, type:null};
+    
     this.reloadDeck = function() {
       this.cards = [];
       var types = ["2ally","3attachment","4event","5quest"]
@@ -738,106 +740,263 @@
     
     this.sphereSplit = function() {
       this.reloadDeck();
-      var split = [ {label:"Leadership", value: 0, color: "purple"},
-                    {label:"Tactics", value: 0, color: "red"},
-                    {label:"Spirit", value: 0, color: "blue"},
-                    {label:"Lore", value: 0, color: "green"},
-                    {label:"Neutral", value: 0, color: "grey"},
-                    {label:"Baggins", value: 0, color: "yellow"},
-                    {label:"Fellowship", value: 0, color: "orange"}];
+      var colors = ["purple","red","blue","green","grey","yellow","orange","lightgrey"];
+      var split = [ {label:"Leadership", value: 0, color: colors[0]},
+                    {label:"Tactics", value: 0, color: colors[1]},
+                    {label:"Spirit", value: 0, color: colors[2]},
+                    {label:"Lore", value: 0, color: colors[3]},
+                    {label:"Neutral", value: 0, color: colors[4]},
+                    {label:"Baggins", value: 0, color: colors[5]},
+                    {label:"Fellowship", value: 0, color: colors[6]}];
       for (var c in this.cards) {
-        switch (this.cards[c].sphere) {
-          case "1leadership":
-            split[0].value++;
-            break;
-          case "2tactics":
-            split[1].value++;
-            break;
-          case "3spirit":
-            split[2].value++;
-            break;
-          case "4lore":
-            split[3].value++;
-            break;
-          case "5neutral":
-            split[4].value++;
-            break;
-          case "6baggins":
-            split[5].value++;
-            break;
-          case "7fellowship":
-            split[6].value++;
-            break;
-        }
+        if  ((this.filter.type==null || this.filter.type==this.cards[c].type)
+          && (this.filter.cost==null || this.filter.cost==this.cards[c].cost)) {
+          switch (this.cards[c].sphere) {
+            case "1leadership":
+              split[0].value++;
+              break;
+            case "2tactics":
+              split[1].value++;
+              break;
+            case "3spirit":
+              split[2].value++;
+              break;
+            case "4lore":
+              split[3].value++;
+              break;
+            case "5neutral":
+              split[4].value++;
+              break;
+            case "6baggins":
+              split[5].value++;
+              break;
+            case "7fellowship":
+              split[6].value++;
+              break;
+          }
+        };
       }
       if (this.sphereChart) {
         this.sphereChart.destroy();
       }
       
       this.sphereChart = new Chart(this.sphereCanvas).Pie(split);
+      parent = this;
+      this.sphereCanvas.canvas.onclick = function(evt){
+        var sphere = parent.sphereChart.getSegmentsAtEvent(evt)[0].label;
+        if (sphere){
+          
+          parent.filter.type=null;
+          parent.filter.cost=null;
+          parent.sphereSplit();
+          parent.sphereFilter(sphere,colors);
+          parent.costSplit();
+          parent.typeSplit();
+        }
+      };
     }
     
     this.costSplit = function() {
       this.reloadDeck();
-      var split = [ {label:'Cost 0', value: 0, color: 'green'},
-                    {label:'Cost 1', value: 0, color: 'lime'},
-                    {label:'Cost 2', value: 0, color: 'yellow'},
-                    {label:'Cost 3', value: 0, color: 'orange'},
-                    {label:'Cost 4', value: 0, color: 'red'},
-                    {label:'Cost 5', value: 0, color: 'purple'},
-                    {label:'Cost 6', value: 0, color: 'blue'},
-                    {label:'Cost X', value: 0, color: 'grey'}];
+      var split = {labels: ['0','1','2','3','4','5','6','X'],
+                  datasets:[{label:"Cost",data:[0,0,0,0,0,0,0]}]};
       for (var c in this.cards) {
-        var cost = this.cards[c].cost;
-        if (cost=='X'){
-          split[7].value++;
-        } else{
-          split[cost].value++;
+        if  ((this.filter.sphere==null || this.filter.sphere==this.cards[c].sphere)
+          && (this.filter.type==null || this.filter.type==this.cards[c].type)) {
+          var cost = this.cards[c].cost;
+          if (cost=='X'){
+            split.datasets[0].data[7]++;
+          } else{
+            split.datasets[0].data[cost]++;
+          }
         }
       }
       if (this.costChart) {
         this.costChart.destroy();
       }
-      
-      this.costChart = new Chart(this.costCanvas).Pie(split);
+      this.costChart = new Chart(this.costCanvas).Bar(split);
     }
     
     
     
     this.typeSplit = function() {
       this.reloadDeck();
-      var split = [ {label:"Ally", value: 0, color: "green"},
-                    {label:"Attachment", value: 0, color: "red"},
-                    {label:"Event", value: 0, color: "blue"},
-                    {label:"Side Quest", value: 0, color: "yellow"}];
+      var colors = ["red","green","blue","yellow","lightgrey"];
+      var split = [ {label:"Ally", value: 0, color: colors[0]},
+                    {label:"Attachment", value: 0, color: colors[1]},
+                    {label:"Event", value: 0, color: colors[2]},
+                    {label:"Side Quest", value: 0, color: colors[3]}];
       for (var c in this.cards) {
-        switch (this.cards[c].type) {
-          case "2ally":
-            split[0].value++;
-            break;
-          case "3attachment":
-            split[1].value++;
-            break;
-          case "4event":
-            split[2].value++;
-            break;
-          case "5quest":
-            split[3].value++;
-            break;
+        if  ((this.filter.sphere==null || this.filter.sphere==this.cards[c].sphere)
+          && (this.filter.cost==null || this.filter.cost==this.cards[c].cost)) {
+          switch (this.cards[c].type) {
+            case "2ally":
+              split[0].value++;
+              break;
+            case "3attachment":
+              split[1].value++;
+              break;
+            case "4event":
+              split[2].value++;
+              break;
+            case "5quest":
+              split[3].value++;
+              break;
+          }
         }
       }
       if (this.typeChart) {
         this.typeChart.destroy();
       }
-      
       this.typeChart = new Chart(this.typeCanvas).Pie(split);
+      
+      parent = this;
+      this.typeCanvas.canvas.onclick = function(evt){
+        var type = parent.typeChart.getSegmentsAtEvent(evt)[0].label;
+        if (type){
+          
+          parent.filter.sphere=null;
+          parent.filter.cost=null;
+          parent.typeSplit();
+          parent.typeFilter(type,colors);
+          parent.sphereSplit();
+          parent.costSplit();
+        }
+      };
     }
     
     
     this.refresh = function() {
+      this.filter = {sphere:null, cost:null, type:null};
       this.sphereSplit();
       this.costSplit();
       this.typeSplit();
+    }
+    
+    
+    
+    this.sphereFilter = function(_sphere,colors) {
+      var sphere=null;
+      var i;
+      switch (_sphere) {
+        case "Leadership":
+          sphere = "1leadership";
+          i=0;
+          break;
+        case "Tactics":
+          sphere = "2tactics";
+          i=1;
+          break;
+        case "Spirit":
+          sphere = "3spirit";
+          i=2;
+          break;
+        case "Lore":
+          sphere = "4lore";
+          i=3;
+          break;
+        case "Neutral":
+          sphere = "5neutral";
+          i=4;
+          break;
+        case "Baggins":
+          sphere = "6baggins";
+          i=5;
+          break;
+        case "Fellowship":
+          sphere = "7fellowship";
+          i=6;
+          break;
+      }
+      if ((this.filter.sphere == sphere) || (sphere==null)) {
+        this.filter.sphere = null;
+        this.sphereChart.segments[0].fillColor = colors[0];
+        this.sphereChart.segments[1].fillColor = colors[1];
+        this.sphereChart.segments[2].fillColor = colors[2];
+        this.sphereChart.segments[3].fillColor = colors[3];
+        this.sphereChart.segments[4].fillColor = colors[4];
+        this.sphereChart.segments[5].fillColor = colors[5];
+        this.sphereChart.segments[6].fillColor = colors[6];
+        this.sphereChart.segments[0]._saved.fillColor = colors[0];
+        this.sphereChart.segments[1]._saved.fillColor = colors[1];
+        this.sphereChart.segments[2]._saved.fillColor = colors[2];
+        this.sphereChart.segments[3]._saved.fillColor = colors[3];
+        this.sphereChart.segments[4]._saved.fillColor = colors[4];
+        this.sphereChart.segments[5]._saved.fillColor = colors[5];
+        this.sphereChart.segments[6]._saved.fillColor = colors[6];
+      } else {
+        this.filter.sphere = sphere;
+        this.sphereChart.segments[0].fillColor = colors[7];
+        this.sphereChart.segments[1].fillColor = colors[7];
+        this.sphereChart.segments[2].fillColor = colors[7];
+        this.sphereChart.segments[3].fillColor = colors[7];
+        this.sphereChart.segments[4].fillColor = colors[7];
+        this.sphereChart.segments[5].fillColor = colors[7];
+        this.sphereChart.segments[6].fillColor = colors[7];
+        this.sphereChart.segments[i].fillColor = colors[i];
+        this.sphereChart.segments[0]._saved.fillColor = colors[7];
+        this.sphereChart.segments[1]._saved.fillColor = colors[7];
+        this.sphereChart.segments[2]._saved.fillColor = colors[7];
+        this.sphereChart.segments[3]._saved.fillColor = colors[7];
+        this.sphereChart.segments[4]._saved.fillColor = colors[7];
+        this.sphereChart.segments[5]._saved.fillColor = colors[7];
+        this.sphereChart.segments[6]._saved.fillColor = colors[7];
+        this.sphereChart.segments[i]._saved.fillColor = colors[i];
+      }
+      
+      return(this.sphereChart.update());
+    }
+    
+    this.costFilter = function(cost) {
+      
+    }
+    
+    this.typeFilter = function(_type,colors) {
+      var type=null;
+      var i;
+      switch (_type) {
+        case "Ally":
+          type = "2ally";
+          i=0;
+          break;
+        case "Attachment":
+          type = "3attachment";
+          i=1;
+          break;
+        case "Event":
+          type = "4event";
+          i=2;
+          break;
+        case "Side Quest":
+          type = "5quest";
+          i=3;
+          break;
+      }
+      if ((this.filter.type == type) || (type==null)) {
+        this.filter.type = null;
+        this.typeChart.segments[0].fillColor = colors[0];
+        this.typeChart.segments[1].fillColor = colors[1];
+        this.typeChart.segments[2].fillColor = colors[2];
+        this.typeChart.segments[3].fillColor = colors[3];
+        this.typeChart.segments[0]._saved.fillColor = colors[0];
+        this.typeChart.segments[1]._saved.fillColor = colors[1];
+        this.typeChart.segments[2]._saved.fillColor = colors[2];
+        this.typeChart.segments[3]._saved.fillColor = colors[3];
+      } else {
+        this.filter.type = type;
+        this.typeChart.segments[0].fillColor = colors[4];
+        this.typeChart.segments[1].fillColor = colors[4];
+        this.typeChart.segments[2].fillColor = colors[4];
+        this.typeChart.segments[3].fillColor = colors[4];
+        this.typeChart.segments[i].fillColor = colors[i];
+        this.typeChart.segments[0]._saved.fillColor = colors[4];
+        this.typeChart.segments[1]._saved.fillColor = colors[4];
+        this.typeChart.segments[2]._saved.fillColor = colors[4];
+        this.typeChart.segments[3]._saved.fillColor = colors[4];
+        this.typeChart.segments[i]._saved.fillColor = colors[i];
+      }
+      
+      return(this.typeChart.update());
     }
     
   }]);

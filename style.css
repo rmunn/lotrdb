@@ -316,12 +316,14 @@ td.decks {
   overflow: hidden;
   float:left;
   text-align: center;
+  font-weight:bold;
+  font-size:11px;
 }
 
 canvas {
   width: 100%;
   min-height: 120px;
-  height: 25vh;
+  height: 20vh;
   float: left;
   margin: 0;
   padding: 0;

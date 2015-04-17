@@ -2,7 +2,7 @@
   
   <div class="carddraw">
     <h3>Sample Hand</h3>
-    <button ng-click="stats.reshuffle()">Shuffle</button>
+    <button ng-click="stats.reshuffle()">Start</button>
     <button ng-click="stats.draw()">Draw</button>
     <ul>
       <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="card c{{card.sphere}}">{{card.name}}</li>
@@ -10,13 +10,18 @@
   </div>
   
   <script src="Chart.js"></script>
+  <script>
+    Chart.defaults.global.animation=false;
+  </script>
   
   <div class="chartdiv">
-    <button ng-click="stats.refresh()">Refresh</button><br/>
-    <canvas id="spheres"></canvas>
+    <button ng-click="stats.refresh()">Reset</button><br/>
     <canvas id="cost"></canvas>
+    <br/>Cost<br/><br/>
+    <canvas id="spheres"></canvas>
+    <br/>Spheres<br/><br/>
     <canvas id="type"></canvas>
-    
+    <br/>Types
     
   </div>
   
