@@ -1,3 +1,4 @@
 *.log
 beorn/*
 beorn
+*.backup

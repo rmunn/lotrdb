@@ -334,10 +334,16 @@
     image.url="";
     image.name="";
     image.exp="";
+    image.text="";
+    image.traits="";
+    image.flavor="";
     image.update = function(card){
       image.url = card.img;
       image.name = card.name;
       image.exp = card.exp;
+      image.text = card.text;
+      image.traits = card.traits;
+      image.flavor = card.flavor;
     }
     image.getUrl = function(){
       return image.url;
@@ -353,6 +359,9 @@
     };
     this.name = function() {
       return image.name + " (" + translate[image.exp] +")";
+    }
+    this.alt = function() {
+      return image.text;
     }
   }]);
   

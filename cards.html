@@ -2,8 +2,10 @@
   
   
   <div class="filterdiv">
-      <input ng-model="search.name" type="text" placeholder="Search for card names" style="width:40%;font-size:12px;margin-right:10px;"><br/>
-      <!--<input ng-model="search.trait" type="text" placeholder="Search for card traits" style="width:40%;font-size:12px;margin-right:10px;">-->
+      <input ng-model="search.name" type="text" placeholder="Search by card name" style="width:30%;font-size:12px;margin-right:10px;">
+      <input ng-model="search.traits" type="text" placeholder="Search by card traits" style="width:30%;font-size:12px;margin-right:10px;">
+      <input ng-model="search.text" type="text" placeholder="Search by card text" style="width:30%;font-size:12px;margin-right:10px;">
+      <br/>
     <div style="float:left;margin:5px;">
       <button title="Heroes" class="filterbutton" ng-class="{selected: cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero')"><img src="img/types/1hero.png"/></button>
       <button title="Allies" class="filterbutton" ng-class="{selected: cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally')"><img src="img/types/2ally.png"/></button>
@@ -47,7 +49,9 @@
             <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.type=='1hero' || card.restrict">2</button>
             <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.type=='1hero' || card.restrict">3</button>
           </td>
-          <td style=";width:35%;">{{card.name}}</td>
+          <td style=";width:35%;">
+            <img class="unique" src="img/unique.png" ng-show="card.unique"/>
+            {{card.name}}</td>
           <td style=";width:10%;text-align:center"><img src="img/spheres/{{card.sphere}}.png"/></td>
           <td style=";width:10%;text-align:center">{{card.cost}}</td>
           <td style=";width:5%;"><img src="img/types/{{card.type}}.png"/></td>

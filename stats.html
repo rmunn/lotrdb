@@ -2,8 +2,10 @@
   
   <div class="carddraw">
     <h3>Sample Hand</h3>
+    <br/>
     <button ng-click="stats.reshuffle()">Start</button>
     <button ng-click="stats.draw()">Draw</button>
+    <br/><br/>
     <ul>
       <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="card c{{card.sphere}}">{{card.name}}</li>
     </ul>

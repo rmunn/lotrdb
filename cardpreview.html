@@ -1,4 +1,6 @@
 <div class="cardpreviewdiv">
-  <div ng-hide="preview.name()==' ()'">{{preview.name()}}<br/></div>
-  <img ng-src="{{preview.getImg()}}" class="cardpreview"/>
+  <div ng-hide="preview.name()==' ()'">
+    {{preview.name()}}<br/>
+  </div>
+  <img ng-hide="preview.name()==' ()'" ng-src="{{preview.getImg()}}" class="cardpreview" alt="{{preview.alt()}}" title="{{preview.alt()}}"/>
 </div>

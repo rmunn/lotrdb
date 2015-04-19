@@ -271,6 +271,13 @@ td.decks {
 }
 
 
+section.tab{
+margin-bottom:2px;
+
+}
+
+
+
 .carddraw {
   width: 40%;
   height: 80vh;
@@ -310,6 +317,18 @@ td.decks {
 
 
 
+.mydecks{
+  height: 80vh;
+  overflow-y:auto;
+}
+
+.unique{
+  height:10px;
+  width:auto;
+  margin-bottom: 2px;
+}
+
+
 .chartdiv {
   width: 60%;
   height: 80vh;
@@ -328,3 +347,11 @@ canvas {
   margin: 0;
   padding: 0;
 }
+
+
+.packtable {
+  border-spacing:0px;
+  width:100%;
+  border-collapse: separate;
+}
+
