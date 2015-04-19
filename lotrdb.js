@@ -799,12 +799,13 @@
     this.costSplit = function() {
       this.reloadDeck();
       var split = {labels: ['0','1','2','3','4','5','6','X'],
-                  datasets:[{label:"Cost",data:[0,0,0,0,0,0,0]}]};
+                  datasets:[{label:"Cost",data:[0,0,0,0,0,0,0,0]}]};
       for (var c in this.cards) {
         if  ((this.filter.sphere==null || this.filter.sphere==this.cards[c].sphere)
           && (this.filter.type==null || this.filter.type==this.cards[c].type)) {
           var cost = this.cards[c].cost;
-          if (cost=='X'){
+          console.log(cost);
+          if (cost=="X"){
             split.datasets[0].data[7]++;
           } else{
             split.datasets[0].data[cost]++;
@@ -947,9 +948,6 @@
       return(this.sphereChart.update());
     }
     
-    this.costFilter = function(cost) {
-      
-    }
     
     this.typeFilter = function(_type,colors) {
       var type=null;
