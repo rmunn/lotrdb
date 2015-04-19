@@ -157,6 +157,11 @@
     this.order="sphere";
     $scope.allcards = cardObject;
     this.allcards = $scope.allcards;
+    this.resetSearch = function(){
+      filtersettings.search.name="";
+      filtersettings.search.traits="";
+      filtersettings.search.text="";
+    }
     this.toggleType = function(t){
       this.filtersettings.type[t] = !(this.filtersettings.type[t]);
     };
