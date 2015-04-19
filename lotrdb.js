@@ -160,7 +160,7 @@
     this.resetSearch = function(){
       filtersettings.search.name="";
       filtersettings.search.traits="";
-      filtersettings.search.text="";
+      filtersettings.search.textc="";
     }
     this.toggleType = function(t){
       this.filtersettings.type[t] = !(this.filtersettings.type[t]);
@@ -349,6 +349,7 @@
       image.text = card.text;
       image.traits = card.traits;
       image.flavor = card.flavor;
+      image.textc = card.textc;
     }
     image.getUrl = function(){
       return image.url;
@@ -366,7 +367,7 @@
       return image.name + " (" + translate[image.exp] +")";
     }
     this.alt = function() {
-      return image.text;
+      return image.textc;
     }
   }]);
   
