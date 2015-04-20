@@ -185,7 +185,12 @@
     };
   });
   
-  
+  app.directive('traits', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'traitchoice.html'
+    };
+  });
   
   
   
