@@ -708,7 +708,7 @@
         var r = new FileReader();
           r.onload = function(e) { 
           var deckArray = [deckname];
-          var regexp = /<card qty="(\d)" id="([0-9a-f\-]+)">/gi, match;
+          var regexp = /<card\s+qty="(\d)"\s+id="([0-9a-f\-]+)">/gi, match;
           while (match = regexp.exec(e.target.result)) {
             for (var i in cardObject) {
               if (cardObject[i].octgn == match[2]) {
