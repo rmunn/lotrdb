@@ -13,6 +13,8 @@ Built on Angular.js, requires nothing more than a web server.
 * Saving & loading decks
 * Download & upload decks
 * Persistent pack selection 
+* OCTGN format support
+* Statistics
 
 ##Future
 * Mobile friendliness
@@ -21,4 +23,3 @@ Built on Angular.js, requires nothing more than a web server.
 * Compare decks
 * Sort decks by name/sphere/cost/set
 * Graphical revamp
-* Download/upload different format (CardgameDB and OCTGN specifically)
