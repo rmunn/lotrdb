@@ -459,7 +459,7 @@
     
     this.download = function(filename, text) {
       var pom = document.createElement('a');
-      pom.setAttribute('href', 'data:text/plain;charset=utf-16,' + encodeURIComponent(text));
+      pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
       pom.setAttribute('download', filename);
 
       pom.style.display = 'none';
@@ -682,6 +682,9 @@
 
     this.uploadDeck = function(event) {
       var file = event.target.files[0];
+      if (file.name.indexOf(".o8d")>=0) {
+        return this.uploadOctgn(file);
+      }
       var deckname = file.name.replace('.txt','');
       var deck = this.currentdeck;
       if (file) {
@@ -697,6 +700,123 @@
         r.readAsText(file);
       };
     };
+    
+    this.uploadOctgn = function(file){
+      var deckname = file.name.replace('.o8d','');
+      var deck = this.currentdeck;
+      if (file) {
+        var r = new FileReader();
+          r.onload = function(e) { 
+          var deckArray = [deckname];
+          var regexp = /<card qty="(\d)" id="([0-9a-f\-]+)">/gi, match;
+          while (match = regexp.exec(e.target.result)) {
+            for (var i in cardObject) {
+              if (cardObject[i].octgn == match[2]) {
+                deckArray.push([cardObject[i].cycle,cardObject[i].no,+match[1]]);
+              }
+            }
+          }
+          
+          deck.load(deckArray,cardObject);
+          $scope.$apply();
+        };
+        r.readAsText(file);
+      };
+    }
+    
+    
+    this.octgn = function(deckname) {
+      var deck = {"1hero":[],"2ally":[],"3attachment":[],"4event":[],"5quest":[]};
+      for (var c = 1; c < $localStorage.decks[deckname].deck.length; c++) {
+        var card = $localStorage.decks[deckname].deck[c];
+        for (var j in cardObject) {
+          if (card[0]==cardObject[j].cycle
+          &&  card[1]==cardObject[j].no) {
+            var fullcard = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            fullcard.quantity = card[2];
+            deck[fullcard.type].push(fullcard);
+          }
+        }
+      }
+      var text = "";
+      ﻿text+= '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n';
+      text+= '<deck game="a21af4e8-be4b-4cda-a6b6-534f9717391f">\n';
+      
+      text+= '  <section name="Hero" shared="False">\n';
+      for (var h in deck["1hero"]){
+        text+='    <card qty="';
+        text+=deck["1hero"][h].quantity;
+        text+='" id="';
+        text+=deck["1hero"][h].octgn;
+        text+='">';
+        text+=deck["1hero"][h].name_norm;
+        text+='</card>\n';
+      }
+      text+= '  </section>\n';
+      
+      text+= '  <section name="Ally" shared="False">\n';
+      for (var h in deck["2ally"]){
+        text+='    <card qty="';
+        text+=deck["2ally"][h].quantity;
+        text+='" id="';
+        text+=deck["2ally"][h].octgn;
+        text+='">';
+        text+=deck["2ally"][h].name_norm;
+        text+='</card>\n';
+      }
+      text+= '  </section>\n';
+      
+      text+= '  <section name="Event" shared="False">\n';
+      for (var h in deck["4event"]){
+        text+='    <card qty="';
+        text+=deck["4event"][h].quantity;
+        text+='" id="';
+        text+=deck["4event"][h].octgn;
+        text+='">';
+        text+=deck["4event"][h].name_norm;
+        text+='</card>\n';
+      }
+      text+= '  </section>\n';
+      
+      text+= '  <section name="Attachment" shared="False">\n';
+      for (var h in deck["3attachment"]){
+        text+='    <card qty="';
+        text+=deck["3attachment"][h].quantity;
+        text+='" id="';
+        text+=deck["3attachment"][h].octgn;
+        text+='">';
+        text+=deck["3attachment"][h].name_norm;
+        text+='</card>\n';
+      }
+      text+= '  </section>\n';
+      
+      text+= '  <section name="Side Quest" shared="False">\n';
+      for (var h in deck["5quest"]){
+        text+='    <card qty="';
+        text+=deck["5quest"][h].quantity;
+        text+='" id="';
+        text+=deck["5quest"][h].octgn;
+        text+='">';
+        text+=deck["5quest"][h].name_norm;
+        text+='</card>\n';
+      }
+      text+= '  </section>\n';
+      
+      
+      
+      text+='  <section name="Quest" shared="True" />\n'
+      text+='  <section name="Encounter" shared="True" />\n'
+      text+='  <section name="Special" shared="True" />\n'
+      text+='  <section name="Setup" shared="True" />\n'
+      
+      
+      text+='  <notes><![CDATA[]]></notes>';
+      text+='</deck>';
+      
+      this.download(deckname+".o8d",text);
+    }
+    
+    
   }]);
   
   
