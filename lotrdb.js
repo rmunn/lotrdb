@@ -478,7 +478,7 @@
       return ret
     };
     
-    this.markdown = function(deckArray,deckname) {
+    this.markdown = function(deckArray,deckname,compressed) {
       var deck={};
       deck["1hero"] = [];
       deck["2ally"] = [];
@@ -498,9 +498,11 @@
         }
       }
       
-      var text="#";
+      var text="#[";
       text+=deckname;
-      text+="  \r\nTotal Cards: ";
+      text+="](http://ddddirk.github.io/lotrdb/#/#";
+      text+=compressed;
+      text+=")  \r\nTotal Cards: ";
       var total = 0;
       var types = ["2ally","3attachment","4event","5quest"]
       for (var t in types) {
@@ -568,7 +570,7 @@
     }
     
     
-    this.bbcode = function(deckArray,deckname) {
+    this.bbcode = function(deckArray,deckname,compressed) {
       var deck={};
       deck["1hero"] = [];
       deck["2ally"] = [];
@@ -588,8 +590,11 @@
         }
       }
       
-      var text="[size=18]";
+      var text="[size=18][url=http://ddddirk.github.io/lotrdb/#/#";
+      text+=compressed;
+      text+="]";
       text+=deckname;
+      text+="[/url]";
       text+="[/size]\r\nTotal Cards: ";
       var total = 0;
       var types = ["2ally","3attachment","4event","5quest"]
@@ -662,18 +667,18 @@
     
     this.downloadDeck = function(deckname){
       var deck= $localStorage.decks[deckname].deck;
+      var CompressedDeck=LZString.compressToEncodedURIComponent(JSON.stringify(deck));
       var text="++++++++++++\r\n+For Reddit+\r\n++++++++++++ \r\n\r\n";
-      text+=this.markdown(deck,deckname);
+      text+=this.markdown(deck,deckname,CompressedDeck);
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++++++++++ \r\n+For Boardgamegeek+\r\n+++++++++++++++++++  \r\n\r\n";
-      text+=this.bbcode(deck,deckname);
+      text+=this.bbcode(deck,deckname,CompressedDeck);
       
       
-      var CompressedDeck=$localStorage.decks[deckname].deck;
       
       
       text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
-      text+=LZString.compressToEncodedURIComponent(JSON.stringify(CompressedDeck)).chunk(80).join("\r\n");
+      text+=CompressedDeck.chunk(80).join("\r\n");
       text+="\r\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 
 
