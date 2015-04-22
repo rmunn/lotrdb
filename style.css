@@ -89,7 +89,7 @@ body {
 .body{
   margin: 0;
   padding:0;
-  height: 80vh;
+  height: 86vh;
 }
 
 .leftdiv {
@@ -280,7 +280,7 @@ margin-bottom:2px;
 
 .carddraw {
   width: 40%;
-  height: 80vh;
+  height: 86vh;
   overflow-y: auto;
   float:left;
 }
@@ -318,7 +318,7 @@ margin-bottom:2px;
 
 
 .mydecks{
-  height: 80vh;
+  height: 86vh;
   overflow-y:auto;
 }
 
@@ -331,7 +331,7 @@ margin-bottom:2px;
 
 .chartdiv {
   width: 60%;
-  height: 80vh;
+  height: 86vh;
   overflow: hidden;
   float:left;
   text-align: center;
@@ -342,7 +342,7 @@ margin-bottom:2px;
 canvas {
   width: 100%;
   min-height: 120px;
-  height: 20vh;
+  height: 23vh;
   float: left;
   margin: 0;
   padding: 0;
@@ -355,3 +355,21 @@ canvas {
   border-collapse: separate;
 }
 
+.about {
+  text-align: justify;
+  height: 86vh;
+  overflow-y: scroll;
+}
+
+.about-inner {
+  text-align: justify;
+  margin: 25px;
+}
+
+.about-inner > ul >li > p {
+  font-size: 12px;
+}
+
+.about-inner >ul>li>p>a {
+  font-weight: bold;
+}

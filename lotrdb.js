@@ -61,6 +61,13 @@
     };
   }]);
   
+  app.directive('about', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'about.html'
+    };
+  });
+
   app.directive('packs', function() {
     return {
       restrict: 'E',
@@ -744,7 +751,7 @@
         }
       }
       var text = "";
-      ﻿text+= '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n';
+      text+= '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n';
       text+= '<deck game="a21af4e8-be4b-4cda-a6b6-534f9717391f">\n';
       
       text+= '  <section name="Hero" shared="False">\n';
