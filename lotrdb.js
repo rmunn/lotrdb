@@ -41,7 +41,7 @@
   //Logic for the pack selection
   app.controller('packSelect',["filtersettings","$localStorage",function(filtersettings,$localStorage){
     this.filtersettings=filtersettings;
-    this.full=["core", "kd", "hon", "tvoi", "tlr", "ohuh", "thfg", "trg", "tsf", "tdt", "twoe", "otd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "trd", "thoem", "tld", "aoo", "tnie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac"]; //all expansions so far
+    this.full=["core", "kd", "hon", "tvoi", "tlr", "ohuh", "thfg", "trg", "tsf", "tdt", "twoe", "otd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "trd", "thoem", "tld", "aoo", "tnie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "ttos"]; //all expansions so far
     this.toggle=function(exp){
       var ind = this.filtersettings.pack.indexOf(exp);
       if (ind<0) { //index will be -1 if not found
@@ -354,14 +354,43 @@
     image.text="";
     image.traits="";
     image.flavor="";
+    var cardmarkup = function(text){
+      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Ring-bearer|Ring|Rohan|Signal|Silvan|Skill|Song|Spell|Staff|Steward|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
+        "<b><i>$1</i></b> ");
+      
+      
+      text=text.replace(/Response:/g,"<b>Response:</b>");
+      text=text.replace(/Forced:/g,"<b>Forced:</b>");
+      text=text.replace(/Planning Action:/g,"<b>Planning Action:</b>");
+      text=text.replace(/Quest Action:/g,"<b>Planning Action:</b>");
+      text=text.replace(/Travel Action:/g,"<b>Planning Action:</b>");
+      text=text.replace(/Combat Action:/g,"<b>Combat Action:</b>");
+      text=text.replace(/Refresh Action:/g,"<b>Refresh Action:</b>");
+      text=text.replace(/Action:([^<])/g,"<b>Action:</b>$1");
+      
+      text=text.replace(/Attack/g,"<img src='img/strength.gif'/>");
+      text=text.replace(/Willpower/g,"<img src='img/willpower.gif'/>");
+      text=text.replace(/Defense/g,"<img src='img/defense.gif'/>");
+      text=text.replace(/Threat/g,"<img src='img/threat.png'/>");
+      
+      return text;
+    }
+    
     image.update = function(card){
       image.url = card.img;
       image.name = card.name;
       image.exp = card.exp;
       image.text = card.text;
       image.traits = card.traits;
-      image.flavor = card.flavor;
-      image.textc = card.textc;
+      image.flavor = (card.flavor||"").replace(/\`/g,'"');
+      image.textc = cardmarkup(card.textc);
+      image.cost = card.cost;
+      image.willpower = card.willpower;
+      image.strength = card.strength;
+      image.defense = card.defense;
+      image.hitpoints = card.hitpoints;
+      image.unique = card.unique;
+      image.sphere = "img/spheres/"+card.sphere+".png";
     }
     image.getUrl = function(){
       return image.url;
@@ -370,7 +399,9 @@
   });
   
   
-  app.controller('cardPreview',['$scope','image','translate',function($scope,image,translate){
+  
+  app.controller('cardPreview',['$scope','$sce','image','translate',function($scope,$sce,image,translate){
+    $scope.trust = $sce.trustAsHtml;
     this.image=image;
     this.getImg = function() {
       return this.image.getUrl();

@@ -1,4 +1,5 @@
-  { "name":       "",
+{
+    "name":       "",
     "type":       "",
     "sphere":     "",
     "cost":       ,
@@ -9,5 +10,13 @@
     "cycle":      ,
     "exp":        "",
     "no":         ,
-    "img":        ""
-  }
+    "img":        "",
+    "unique":     false,
+    "traits":     "",
+    "keywords":   "",
+    "text":       "",
+    "flavor":     "",
+    "textc":      "",
+    "name_norm":  "",
+    "octgn":      ""
+  },
