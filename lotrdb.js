@@ -355,7 +355,7 @@
     image.traits="";
     image.flavor="";
     var cardmarkup = function(text){
-      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Ring-bearer|Ring|Rohan|Signal|Silvan|Skill|Song|Spell|Staff|Steward|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
+      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Signal|Silvan|Skill|Song|Spell|Steward|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
       
       
@@ -372,6 +372,12 @@
       text=text.replace(/Willpower/g,"<img src='img/willpower.gif'/>");
       text=text.replace(/Defense/g,"<img src='img/defense.gif'/>");
       text=text.replace(/Threat/g,"<img src='img/threat.png'/>");
+      
+      text=text.replace(/Leadership/g,"<img src='img/spheres/1leadership.png'/>");
+      text=text.replace(/Tactics/g,"<img src='img/spheres/2tactics.png'/>");
+      text=text.replace(/Spirit/g,"<img src='img/spheres/3spirit.png'/>");
+      text=text.replace(/Lore/g,"<img src='img/spheres/4lore.png'/>");
+      text=text.replace(/Neutral/g,"<img src='img/spheres/5neutral.png'/>");
       
       return text;
     }
