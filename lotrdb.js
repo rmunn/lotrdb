@@ -355,7 +355,7 @@
     image.traits="";
     image.flavor="";
     var cardmarkup = function(text){
-      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Signal|Silvan|Skill|Song|Spell|Steward|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
+      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
       
       
