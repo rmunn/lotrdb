@@ -354,7 +354,9 @@
     image.text="";
     image.traits="";
     image.flavor="";
-    var cardmarkup = function(text){
+    var cardmarkup = function(text,cardname){
+      var rx = new RegExp(cardname, "g");
+      text=text.replace(rx,"CARDNAME");
       text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
       
@@ -378,6 +380,10 @@
       text=text.replace(/Spirit/g,"<img src='img/spheres/3spirit.png'/>");
       text=text.replace(/Lore/g,"<img src='img/spheres/4lore.png'/>");
       text=text.replace(/Neutral/g,"<img src='img/spheres/5neutral.png'/>");
+      text=text.replace(/Baggins/g,"<img src='img/spheres/6baggins.png'/>");
+      text=text.replace(/Fellowship/g,"<img src='img/spheres/7fellowship.png'/>");
+      
+      text=text.replace(/CARDNAME/g,cardname);
       
       return text;
     }
@@ -389,7 +395,7 @@
       image.text = card.text;
       image.traits = card.traits;
       image.flavor = (card.flavor||"").replace(/\`/g,'"');
-      image.textc = cardmarkup(card.textc);
+      image.textc = cardmarkup(card.textc,card.name);
       image.cost = card.cost;
       image.willpower = card.willpower;
       image.strength = card.strength;
