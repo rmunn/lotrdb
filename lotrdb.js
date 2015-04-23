@@ -357,7 +357,7 @@
     var cardmarkup = function(text,cardname){
       var rx = new RegExp(cardname, "g");
       text=text.replace(rx,"CARDNAME");
-      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
+      text=text.replace(/(Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Scout|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
       
       
