@@ -392,7 +392,7 @@
       image.url = card.img;
       image.name = card.name;
       image.exp = card.exp;
-      image.text = card.text;
+      image.text = card.keywords + "\n" + card.text;
       image.traits = card.traits;
       image.flavor = (card.flavor||"").replace(/\`/g,'"');
       image.textc = cardmarkup(card.textc,card.name);
@@ -422,7 +422,7 @@
       return image.name + " (" + translate[image.exp] +")";
     }
     this.alt = function() {
-      return image.textc;
+      return image.text;
     }
   }]);
   
