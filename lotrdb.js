@@ -403,6 +403,7 @@
       image.hitpoints = card.hitpoints;
       image.unique = card.unique;
       image.sphere = "img/spheres/"+card.sphere+".png";
+      image.type = card.type.substr(1,1).toUpperCase() + card.type.substr(2);
     }
     image.getUrl = function(){
       return image.url;
