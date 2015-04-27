@@ -7349,6 +7349,28 @@
     "octgn": "128f940d-8a71-4a80-83c2-bdbc014d95c9"
   },
   {
+    "name": "(Ranger of the North)",
+    "type": "2ally",
+    "sphere": "5neutral",
+    "cost": "-",
+    "willpower": 2,
+    "strength": 2,
+    "defense": 2,
+    "hitpoints": 3,
+    "cycle": 8,
+    "exp": "tlr",
+    "no": 15,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC38_15.jpg",
+    "unique": false,
+    "traits": "Dúnedain. Ranger.",
+    "keywords": "Encounter. Surge. Ranged. Sentinel.",
+    "text": "When Revealed: The first player chooses a player to take control of Ranger of the North. Then either deal 2 damage to an enemy or place 2 progress tokens on a location.",
+    "flavor": "",
+    "textc": "Encounter. Surge. Ranged. Sentinel.\nWhen Revealed: The first player chooses a player to take control of Ranger of the North. Then either deal 2 damage to an enemy or place 2 progress tokens on a location.",
+    "name_norm": "ZZ_Ranger of the North",
+    "octgn": "156ed210-ab6e-4da9-b8c0-48984711edf2"
+  },
+  {
     "name": "Bilbo Baggins",
     "type": "1hero",
     "sphere": "6baggins",

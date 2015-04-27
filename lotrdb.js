@@ -363,6 +363,7 @@
       
       text=text.replace(/Response:/g,"<b>Response:</b>");
       text=text.replace(/Forced:/g,"<b>Forced:</b>");
+      text=text.replace(/When Revealed:/g,"<b>When Revealed:</b>");
       text=text.replace(/Planning Action:/g,"<b>Planning Action:</b>");
       text=text.replace(/Quest Action:/g,"<b>Planning Action:</b>");
       text=text.replace(/Travel Action:/g,"<b>Planning Action:</b>");
