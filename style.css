@@ -373,3 +373,13 @@ canvas {
 .about-inner >ul>li>p>a {
   font-weight: bold;
 }
+
+
+.preload {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}

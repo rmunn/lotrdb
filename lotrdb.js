@@ -354,6 +354,7 @@
     image.text="";
     image.traits="";
     image.flavor="";
+    image.loaded=false;
     var cardmarkup = function(text,cardname){
       var rx = new RegExp(cardname, "g");
       text=text.replace(rx,"CARDNAME");
@@ -390,21 +391,24 @@
     }
     
     image.update = function(card){
-      image.url = card.img;
-      image.name = card.name;
-      image.exp = card.exp;
-      image.text = card.keywords + "\n" + card.text;
-      image.traits = card.traits;
-      image.flavor = (card.flavor||"").replace(/\`/g,'"');
-      image.textc = cardmarkup(card.textc,card.name);
-      image.cost = card.cost;
-      image.willpower = card.willpower;
-      image.strength = card.strength;
-      image.defense = card.defense;
-      image.hitpoints = card.hitpoints;
-      image.unique = card.unique;
-      image.sphere = "img/spheres/"+card.sphere+".png";
-      image.type = card.type.substr(1,1).toUpperCase() + card.type.substr(2);
+      if(image.url!=card.img){
+        image.loaded = false;
+        image.url = card.img;
+        image.name = card.name;
+        image.exp = card.exp;
+        image.text = card.keywords + "\n" + card.text;
+        image.traits = card.traits;
+        image.flavor = (card.flavor||"").replace(/\`/g,'"');
+        image.textc = cardmarkup(card.textc,card.name);
+        image.cost = card.cost;
+        image.willpower = card.willpower;
+        image.strength = card.strength;
+        image.defense = card.defense;
+        image.hitpoints = card.hitpoints;
+        image.unique = card.unique;
+        image.sphere = "img/spheres/"+card.sphere+".png";
+        image.type = card.type.substr(1,1).toUpperCase() + card.type.substr(2);
+      }
     }
     image.getUrl = function(){
       return image.url;
@@ -437,7 +441,18 @@
     };
   });
   
-  
+  app.directive('imageonload',function() {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+        element.bind('load', function() {
+          scope.$apply(function(){
+            scope.preview.image.loaded=true;
+          });
+        });
+      }
+    };
+  });
   
   
   app.controller('myDecks',['deck','$localStorage','translate','$scope','cardObject','$location',function(deck,$localStorage,translate,$scope,cardObject,$location){
