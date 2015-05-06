@@ -7,21 +7,23 @@
       <input ng-model="cards.filtersettings.search.textc" type="text" placeholder="Search by card text" style="width:28%;font-size:12px;margin-right:10px;">
       <button ng-click="cards.resetSearch();" class="packbutton" style="font-size:12px;width:10%;height:25px;">Reset</button>
       <br/>
-    <div style="float:left;margin:5px;">
-      <button title="Heroes" class="filterbutton" ng-class="{selected: cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero')"><img src="img/types/1hero.png"/></button>
-      <button title="Allies" class="filterbutton" ng-class="{selected: cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally')"><img src="img/types/2ally.png"/></button>
-      <button title="Attachments" class="filterbutton" ng-class="{selected: cards.filtersettings.type['3attachment']}" ng-click="cards.toggleType('3attachment')"><img src="img/types/3attachment.png"/></button>
-      <button title="Events" class="filterbutton" ng-class="{selected: cards.filtersettings.type['4event']}" ng-click="cards.toggleType('4event')"><img src="img/types/4event.png"/></button>
-      <button title="Side Quests" class="filterbutton" ng-class="{selected: cards.filtersettings.type['5quest']}" ng-click="cards.toggleType('5quest')"><img src="img/types/5quest.png"/></button>
+    <div style="float:left;margin-right:5px;">
+      <div style="font-size:9px;width:100%;text-align:center;">Card Type</div></br>
+      <button title="Heroes" class="filterbutton" ng-class="{selected: cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero',$event)"><img src="img/types/1hero.png"/></button>
+      <button title="Allies" class="filterbutton" ng-class="{selected: cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally',$event)"><img src="img/types/2ally.png"/></button>
+      <button title="Attachments" class="filterbutton" ng-class="{selected: cards.filtersettings.type['3attachment']}" ng-click="cards.toggleType('3attachment',$event)"><img src="img/types/3attachment.png"/></button>
+      <button title="Events" class="filterbutton" ng-class="{selected: cards.filtersettings.type['4event']}" ng-click="cards.toggleType('4event',$event)"><img src="img/types/4event.png"/></button>
+      <button title="Side Quests" class="filterbutton" ng-class="{selected: cards.filtersettings.type['5quest']}" ng-click="cards.toggleType('5quest',$event)"><img src="img/types/5quest.png"/></button>
     </div>
-    <div style="float:left;margin:5px;">
-      <button title="Leadership" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['1leadership']}" ng-click="cards.toggleSphere('1leadership')"><img src="img/spheres/1leadership.png"/></button>
-      <button title="Tactics" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['2tactics']}" ng-click="cards.toggleSphere('2tactics')"><img src="img/spheres/2tactics.png"/></button>
-      <button title="Spirit" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['3spirit']}" ng-click="cards.toggleSphere('3spirit')"><img src="img/spheres/3spirit.png"/></button>
-      <button title="Lore" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['4lore']}" ng-click="cards.toggleSphere('4lore')"><img src="img/spheres/4lore.png"/></button>
-      <button title="Neutral" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['5neutral']}" ng-click="cards.toggleSphere('5neutral')"><img src="img/spheres/5neutral.png"/></button>
-      <button title="Baggins" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['6baggins']}" ng-click="cards.toggleSphere('6baggins')"><img src="img/spheres/6baggins.png"/></button>
-      <button title="Fellowship" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship')"><img src="img/spheres/7fellowship.png"/></button>
+    <div style="float:left;margin-left:5px;">
+      <div style="font-size:9px;width:100%;text-align:center;">Sphere of Influence</div></br>
+      <button title="Leadership" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['1leadership']}" ng-click="cards.toggleSphere('1leadership',$event)"><img src="img/spheres/1leadership.png"/></button>
+      <button title="Tactics" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['2tactics']}" ng-click="cards.toggleSphere('2tactics',$event)"><img src="img/spheres/2tactics.png"/></button>
+      <button title="Spirit" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['3spirit']}" ng-click="cards.toggleSphere('3spirit',$event)"><img src="img/spheres/3spirit.png"/></button>
+      <button title="Lore" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['4lore']}" ng-click="cards.toggleSphere('4lore',$event)"><img src="img/spheres/4lore.png"/></button>
+      <button title="Neutral" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['5neutral']}" ng-click="cards.toggleSphere('5neutral',$event)"><img src="img/spheres/5neutral.png"/></button>
+      <button title="Baggins" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['6baggins']}" ng-click="cards.toggleSphere('6baggins',$event)"><img src="img/spheres/6baggins.png"/></button>
+      <button title="Fellowship" class="filterbutton" ng-class="{selected: cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship',$event)"><img src="img/spheres/7fellowship.png"/></button>
     </div>
   </div>
   <div>
@@ -29,13 +31,13 @@
       <tr>
         <td style="font-weight: bold;width:20%"></td>
         <td style="font-weight: bold;width:35%"><a href ng-click="cards.orderby('name_norm')">Name</a></td>
-        <td style="font-weight: bold;width:12%;text-align:center"><a href ng-click="cards.orderby('sphere')">Sphere</a></td>
-        <td style="font-weight: bold;width:8%;text-align:center"><a href ng-click="cards.orderby('cost')">Cost</a></td>
-        <td style="font-weight: bold;width:7%"><a href ng-click="cards.orderby('type')">Type</a></td>
-        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-willpower')"><img title="Willpower" src="img/willpower.gif"/></a></td>
-        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby('-strength')"><img title="Attack" src="img/strength.gif"/></a></td>
-        <td style="font-weight: bold;width:4%"><a href ng-click="cards.orderby('-defense')"><img title="Defense" src="img/defense.gif"/></a></td>
-        <td style="font-weight: bold;width:3%"><a href ng-click="cards.orderby('-hitpoints')"><img title="Hit Points" src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
+        <td style="font-weight: bold;width:12%;text-align:center"><a href ng-click="cards.orderby(['sphere','name_norm'])">Sphere</a></td>
+        <td style="font-weight: bold;width:8%;text-align:center"><a href ng-click="cards.orderby(['cost','name_norm'])">Cost</a></td>
+        <td style="font-weight: bold;width:7%"><a href ng-click="cards.orderby(['type','name_norm'])">Type</a></td>
+        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby(['-willpower','name_norm'])"><img title="Willpower" src="img/willpower.gif"/></a></td>
+        <td style="font-weight: bold;width:5%"><a href ng-click="cards.orderby(['-strength','name_norm'])"><img title="Attack" src="img/strength.gif"/></a></td>
+        <td style="font-weight: bold;width:4%"><a href ng-click="cards.orderby(['-defense','name_norm'])"><img title="Defense" src="img/defense.gif"/></a></td>
+        <td style="font-weight: bold;width:3%"><a href ng-click="cards.orderby(['-hitpoints','name_norm'])"><img title="Hit Points" src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
       </tr>
     </table>
   </div>

@@ -161,18 +161,28 @@
     $scope.deck=deck;
     this.image = image;
     this.filtersettings=filtersettings;
-    this.order="sphere";
+    this.order=['sphere','name_norm'];
     $scope.allcards = cardObject;
     this.allcards = $scope.allcards;
     this.resetSearch = function(){
-      filtersettings.search.name="";
+      filtersettings.search.name_norm="";
       filtersettings.search.traits="";
       filtersettings.search.textc="";
     }
-    this.toggleType = function(t){
+    this.toggleType = function(t,$event){
+      if($event.shiftKey){
+        for (var type in this.filtersettings.type) {
+          this.filtersettings.type[type] = false;
+        }
+      }
       this.filtersettings.type[t] = !(this.filtersettings.type[t]);
     };
-    this.toggleSphere = function(s){
+    this.toggleSphere = function(s,$event){
+      if($event.shiftKey){
+        for (var sphere in this.filtersettings.spheres) {
+          this.filtersettings.spheres[sphere] = false;
+        }
+      }
       this.filtersettings.spheres[s] = !(this.filtersettings.spheres[s]);
     };
     this.orderby = function(o){
