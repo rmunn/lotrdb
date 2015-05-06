@@ -642,7 +642,7 @@
         }
       }
       
-      text+="***\r\n^Deck ^built ^with ^[Rivendell-Councilroom](http://github.com/ddddirk/lotrdb)";
+      text+="***\r\n^Deck ^built ^with [^Rivendell ^Councilroom](http://github.com/ddddirk/lotrdb)";
       return text;
     }
     
