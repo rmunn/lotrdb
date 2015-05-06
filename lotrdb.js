@@ -632,17 +632,17 @@
           text+=")  \r\n"
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].quantity;
+            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].quantity;
             text+="x ";
-            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].name;
+            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].name;
             text+=" (*";
-            text+=translate[deck[type].sort(function(a,b){return a.name>b.name})[i].exp];
+            text+=translate[deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].exp];
             text+="*)  \r\n";
           }
         }
       }
       
-      text+="***\r\n^Deck ^built ^with [^Rivendell ^Councilroom](http://github.com/ddddirk/lotrdb)";
+      text+="***\r\n^^Deck ^^built ^^with [^^Rivendell ^^Councilroom](http://ddddirk.github.io/lotrdb)";
       return text;
     }
     
@@ -725,17 +725,17 @@
           text+=")  \r\n"
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].quantity;
+            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].quantity;
             text+="x ";
-            text+=deck[type].sort(function(a,b){return a.name>b.name})[i].name;
+            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].name;
             text+=" ([i]";
-            text+=translate[deck[type].sort(function(a,b){return a.name>b.name})[i].exp];
+            text+=translate[deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].exp];
             text+="[/i])  \r\n";
           }
         }
       }
       
-      text+="\r\n[size=7]Deck built with [url=http://github.com/ddddirk/lotrdb]Rivendell Councilroom[/url][/size]";
+      text+="\r\n[size=7]Deck built with [url=http://ddddirk.github.io/lotrdb]Rivendell Councilroom[/url][/size]";
       return text;
     }
     
