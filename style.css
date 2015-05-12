@@ -368,6 +368,7 @@ canvas {
 
 .about-inner > ul >li > p {
   font-size: 12px;
+  margin-top: 0;
 }
 
 .about-inner >ul>li>p>a {

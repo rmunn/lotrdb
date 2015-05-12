@@ -67,6 +67,13 @@
       templateUrl: 'about.html'
     };
   });
+  
+  app.directive('news', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'news.html'
+    };
+  });
 
   app.directive('packs', function() {
     return {
