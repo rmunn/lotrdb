@@ -8653,7 +8653,7 @@
     "flavor": "`I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dúnedain, the heir of Isildur Elendil's son of Gondor` -The Two Towers",
     "textc": "The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.\nAction: Spend 2 resources from Aragorn's resource pool to ready a hero.",
     "name_norm": "Aragorn",
-    "octgn": ""
+    "octgn": "f5178135-1485-43c5-9660-99232a4cdca8"
   },
   {
     "name": "Théoden",
@@ -8675,7 +8675,7 @@
     "flavor": "`Arise now, arise, Riders of Théoden!` -The Two Towers",
     "textc": "Sentinel.\nReduce the cost of the first Rohan ally you play from you hand each round by 1 (to a minimum of 0).",
     "name_norm": "Theoden",
-    "octgn": ""
+    "octgn": "f3d88160-30f2-4b8b-9e83-c42e62851bbc"
   },
   {
     "name": "Treebeard",
@@ -8697,7 +8697,7 @@
     "flavor": "`I am not altogether on anybody's side, because nobody is altogether on my side...` -The Two Towers",
     "textc": "Cannot have restricted attachments.\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)",
     "name_norm": "Treebeard",
-    "octgn": ""
+    "octgn": "94f6738a-c946-4415-9b38-0ce3a443fa33"
   },
   {
     "name": "Gimli",
@@ -8719,7 +8719,7 @@
     "flavor": "`Give me a row of orc-necks and room to swing and all weariness will fall from me!` -The Two Towers",
     "textc": "Sentinel.\nResponse: After an enemy is revealed from the encounter deck, ready Gimli.",
     "name_norm": "Gimli",
-    "octgn": ""
+    "octgn": "6a9ff9c1-64d2-4ed5-a793-9e93e8d605b7"
   },
   {
     "name": "Legolas",
@@ -8741,7 +8741,7 @@
     "flavor": "`He stands not alone,` said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight. -The Two Towers",
     "textc": "Ranged.\nResponse: After Legolas participates in an attack that destroys an enemy, draw 1 card.",
     "name_norm": "Legolas",
-    "octgn": ""
+    "octgn": "9825aa22-f197-4320-972d-e2487197d989"
   },
   {
     "name": "Quickbeam",
@@ -8763,7 +8763,7 @@
     "flavor": "`I am Bregalad, that is Quickbeam in your language. But it is only a nickname, of course.` -The Two Towers",
     "textc": "Cannot have restricted attachments. Enters play exhausted.\nResponse: After Quickbeam enters play, deal 1 damage to him to ready him.",
     "name_norm": "Quickbeam",
-    "octgn": ""
+    "octgn": "f37fc371-5a6e-4a24-85a1-2afef11c6841"
   },
   {
     "name": "Háma",
@@ -8785,7 +8785,7 @@
     "flavor": "`I am the doorward of Théoden,` he said. `Háma is my name` -The Two Towers",
     "textc": "Combat Action: Ready Háma. He gets +3 Defense until the end of the phase. At the end of the phase, discard Háma. (Limit once per round.)",
     "name_norm": "Hama",
-    "octgn": ""
+    "octgn": "adc3e6f6-da67-4cc1-9767-8e87dfc91b99"
   },
   {
     "name": "Arod",
@@ -8803,7 +8803,7 @@
     "flavor": "`A smaller and lighter horse, but restive and fiery, was brought to Legolas. Arod was his name.` -The Two Towers",
     "textc": "Attach to a hero or Legolas.\nResponse: After attached character participates in an attack that destroys an enemy, exhaust Arod to place 1 progress token on any location.",
     "name_norm": "Arod",
-    "octgn": ""
+    "octgn": "6646bb07-0b44-4051-94a7-39c600b38481"
   },
   {
     "name": "Ent Draught",
@@ -8821,7 +8821,7 @@
     "flavor": "The effect of the draught began at the toes, and rose steadily through every limb, bringing refreshment and vigour as it coursed upwards, right to the tips of the hair. -The Two Towers",
     "textc": "Play only if you control at least 1 Ent character.\nAttach to a character. Limit 1 per character.\nAttached character gets +2 hit points.",
     "name_norm": "Ent Draught",
-    "octgn": ""
+    "octgn": "b86ba0f8-11f9-4694-b421-17b683bd4325"
   },
   {
     "name": "Herugrim",
@@ -8839,7 +8839,7 @@
     "flavor": "`Here, lord, is Herugrim, your ancient blade.` -The Two Towers",
     "textc": "Attach to a Rohan hero. Restricted.\n Reduce the cost to play Herugrim on Théoden by 1.\nRespone: After attached hero is declared an an attacker, exhaust Herugrim to add attached hero's Willpower to its Attack for this attack.",
     "name_norm": "Herugrim",
-    "octgn": ""
+    "octgn": "9fce5e18-37dc-45c2-8398-df8b5018cb54"
   },
   {
     "name": "Entmoot",
@@ -8857,7 +8857,7 @@
     "flavor": "`...it is a gathering of Ents - which does not often happen nowadays.` -Treebeard, The Two Towers",
     "textc": "Play only if you control at least 1 Ent character.\nAction: Search the top 5 cards of your deck for any number of Ent cards and add them to your hand. Shuffle the other cards back into your deck.",
     "name_norm": "Entmoot",
-    "octgn": ""
+    "octgn": "a17465f5-e6f5-4699-b0d7-79355286a065"
   },
   {
     "name": "Helm! Helm!",
@@ -8875,7 +8875,7 @@
     "flavor": "`Helm is arisen and comes back to war. Helm for Théoden King!` -Riders of Rohan, The Two Towers",
     "textc": "Play only after the resolving enemy attacks step is complete.\nCombat Action: Exhaust and discard a Rohan ally you control to choose and discard a non-unique enemy engaged with you.",
     "name_norm": "Helm! Helm!",
-    "octgn": ""
+    "octgn": "f63da56c-6598-4e01-b245-a9fe49f2251a"
   },
   {
     "name": "The Three Hunters",
@@ -8893,7 +8893,7 @@
     "flavor": "`We will make such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men. Forth the Three Hunters!` -Aragorn, The Two Towers",
     "textc": "Play only if you control Fellowship Aragorn.\nQuest Action: Choose 3 heroes committed to the quest. Ready those heroes. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack, and +1 Defense.",
     "name_norm": "The Three Hunters",
-    "octgn": ""
+    "octgn": "4101f975-3317-43f8-ba60-19785e01959c"
   },
   {
     "name": "Shadowfax",
@@ -8911,6 +8911,6 @@
     "flavor": "`He is the chief of the Mearas, lords of horses and not even Théoden, King of Rohan, has ever looked on a better.` -Gandalf, The Two Towers",
     "textc": "Attach to Gandalf.\nGandalf gains Ranged and Sentinel.\nAction: Exhaust Shadowfax to ready Gandalf.",
     "name_norm": "Shadowfax",
-    "octgn": ""
+    "octgn": "9f61eee8-cff2-43ad-8f82-7c4efb5ed9b8"
   }
 ]
