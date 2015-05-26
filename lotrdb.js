@@ -1,5 +1,6 @@
 (function() {
 
+  
   var app = angular.module('deckbuilder', ['ngStorage']);
 
   app.filter('toArray', function () {
@@ -730,13 +731,14 @@
           }
           text+=number;
           text+=")  \r\n"
+          deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) });
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].quantity;
+            text+=deck[type][i].quantity;
             text+="x ";
-            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].name;
+            text+=deck[type][i].name;
             text+=" ([i]";
-            text+=translate[deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].exp];
+            text+=translate[deck[type][i].exp];
             text+="[/i])  \r\n";
           }
         }
