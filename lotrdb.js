@@ -638,13 +638,14 @@
           }
           text+=number;
           text+=")  \r\n"
+          var t = deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? ((a.name>b.name)?1:-1) : ((a.sphere>b.sphere)?1:-1) });
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].quantity;
+            text+=t[i].quantity;
             text+="x ";
-            text+=deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].name;
+            text+=t[i].name;
             text+=" (*";
-            text+=translate[deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) })[i].exp];
+            text+=translate[t[i].exp];
             text+="*)  \r\n";
           }
         }
@@ -731,14 +732,14 @@
           }
           text+=number;
           text+=")  \r\n"
-          deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? (a.name>b.name) : (a.sphere>b.sphere) });
+          var t = deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? ((a.name>b.name)?1:-1) : ((a.sphere>b.sphere)?1:-1) });
           for (var i in deck[type]) {
             text+=" ";
-            text+=deck[type][i].quantity;
+            text+=t[i].quantity;
             text+="x ";
-            text+=deck[type][i].name;
+            text+=t[i].name;
             text+=" ([i]";
-            text+=translate[deck[type][i].exp];
+            text+=translate[t[i].exp];
             text+="[/i])  \r\n";
           }
         }
