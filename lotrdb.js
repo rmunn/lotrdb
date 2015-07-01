@@ -385,8 +385,8 @@
       text=text.replace(/Forced:/g,"<b>Forced:</b>");
       text=text.replace(/When Revealed:/g,"<b>When Revealed:</b>");
       text=text.replace(/Planning Action:/g,"<b>Planning Action:</b>");
-      text=text.replace(/Quest Action:/g,"<b>Planning Action:</b>");
-      text=text.replace(/Travel Action:/g,"<b>Planning Action:</b>");
+      text=text.replace(/Quest Action:/g,"<b>Quest Action:</b>");
+      text=text.replace(/Travel Action:/g,"<b>Travel Action:</b>");
       text=text.replace(/Combat Action:/g,"<b>Combat Action:</b>");
       text=text.replace(/Refresh Action:/g,"<b>Refresh Action:</b>");
       text=text.replace(/Valour Action:/g,"<b>Valour Action:</b>");

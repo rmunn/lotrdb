@@ -8580,9 +8580,9 @@
     "unique": false,
     "traits": "Item.",
     "keywords": "",
-    "text": "Attach to a Hobbit hero. Limit 1 per hero.\nAttached hero gets +2 Defense while defending against an attack by an enemy with an egagement cost higher than your threat.",
+    "text": "Attach to a Hobbit hero. Limit 1 per hero.\nAttached hero gets +2 Defense while defending against an attack by an enemy with an engagement cost higher than your threat.",
     "flavor": "In their dark cloaks they were invisible as if they all had magic rings. -The Fellowship of the Ring",
-    "textc": "Attach to a Hobbit hero. Limit 1 per hero.\nAttached hero gets +2 Defense while defending against an attack by an enemy with an egagement cost higher than your threat.",
+    "textc": "Attach to a Hobbit hero. Limit 1 per hero.\nAttached hero gets +2 Defense while defending against an attack by an enemy with an engagement cost higher than your threat.",
     "name_norm": "Hobbit Cloak",
     "octgn": "8e49ea86-375a-472e-b497-16a1164ae27f"
   },
