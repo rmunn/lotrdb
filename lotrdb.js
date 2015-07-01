@@ -376,11 +376,12 @@
     var cardmarkup = function(text,cardname){
       var rx = new RegExp(cardname, "g");
       text=text.replace(rx,"CARDNAME");
-      text=text.replace(/(Orc|Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|Dúnedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Scout|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
+      text=text.replace(/(Orc|Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|D\u00fanedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Rohan|Scout|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
       
       
-      text=text.replace(/Response:/g,"<b>Response:</b>");
+      text=text.replace(/Valour Response:/g,"<b>Valour Response:</b>");
+      text=text.replace(/Response:([^<])/g,"<b>Response:</b>$1");
       text=text.replace(/Forced:/g,"<b>Forced:</b>");
       text=text.replace(/When Revealed:/g,"<b>When Revealed:</b>");
       text=text.replace(/Planning Action:/g,"<b>Planning Action:</b>");
@@ -388,6 +389,7 @@
       text=text.replace(/Travel Action:/g,"<b>Planning Action:</b>");
       text=text.replace(/Combat Action:/g,"<b>Combat Action:</b>");
       text=text.replace(/Refresh Action:/g,"<b>Refresh Action:</b>");
+      text=text.replace(/Valour Action:/g,"<b>Valour Action:</b>");
       text=text.replace(/Action:([^<])/g,"<b>Action:</b>$1");
       
       text=text.replace(/Attack/g,"<img src='img/strength.gif'/>");
