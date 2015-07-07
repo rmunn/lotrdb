@@ -1269,13 +1269,13 @@
     translate.hon=unescape("Heirs of N%FAmenor");
     translate.tvoi="The Voice of Isengard";
     translate.tlr="The Lost Realm";
-    translate.ohuh="Over Hill and Under Hill";
+    translate.thohauh="The Hobbit: Over Hill and Under Hill";
     translate.thfg="The Hunt for Gollum";
     translate.trg="The Redhorn Gate";
     translate.tsf="The Steward's Fear";
     translate.tdt="The Dunland Trap";
     translate.twoe="The Wastes of Eriador";
-    translate.otd="On the Doorstep";
+    translate.thotd="The Hobbit: On the Doorstep";
     translate.catc="Conflict at the Carrock";
     translate.rtr="Road to Rivendell";
     translate.tdf=unescape("The Dr%FAadan Forest");
