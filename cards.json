@@ -7393,7 +7393,7 @@
     "flavor": "`We have come a long way with you and been through some stiff times. We want to go on.` -The Fellowship of the Ring",
     "textc": "Response: After an enemy is revealed from the top of the encounter deck, exhaust Merry to reduce your threat by that enemy's Threat.",
     "name_norm": "Merry",
-    "octgn": ""
+    "octgn": "03a7152b-e6af-4aaf-a064-7e814fc181d5"
   },
   {
     "name": "Ingold",
@@ -7415,7 +7415,7 @@
     "flavor": "`We wist for no strangers in the land at this time, unless they be mighty men of arms in whose faith and help we can trust.` -The Return of the King",
     "textc": "Ingold gets +1 Willpower for each hero you control with at least 1 resource in its resource pool.",
     "name_norm": "Ingold",
-    "octgn": ""
+    "octgn": "1e28318c-e82a-4d50-b6db-d08e6e9a6b53"
   },
   {
     "name": "Rallying Cry",
@@ -7433,7 +7433,7 @@
     "flavor": "He let blow the horns to rally all men to his banner that could come thither... -The Return of the King",
     "textc": "Response: After an ally leaves play, add it to its owner's hand instead of placing it in the discard pile.\nValour Action: Until the end of the phase, add each ally that leaves play to its owner's hand instead of placing it in the discard pile.",
     "name_norm": "Rallying Cry",
-    "octgn": ""
+    "octgn": "1c6d209d-8ff3-4b81-a03f-e81e132e3b5e"
   },
   {
     "name": "Honour Guard",
@@ -7455,7 +7455,7 @@
     "flavor": "",
     "textc": "Response: Exhaust Honour Guard to cancel the first point of damage just dealt to a character.\nValour Response: Exhaust and discard Honour Guard to cancel up to 5 damage just dealt to a character",
     "name_norm": "Honour Guard",
-    "octgn": ""
+    "octgn": "7a8f5eb3-4c89-4516-974b-812b589cb818"
   },
   {
     "name": "Raven-winged Helm",
@@ -7473,7 +7473,7 @@
     "flavor": "He had a small hauberk, its rings forged of steel, maybe, yet black as jet; and a high-crowned helm with small raven-wings on either side, set with a silver star in the centre of the circlet. -The Return of the King",
     "textc": "Attach to a hero with sentinel. Limit 1 per hero.\nResponse: Exhaust Raven-winged Helm to cancel 1 point of damage just dealt to attached character.",
     "name_norm": "Raven-winged Helm",
-    "octgn": ""
+    "octgn": "62dd5a22-ccf4-4612-be1f-ea13d7da3ced"
   },
   {
     "name": "Curious Brandybuck",
@@ -7495,7 +7495,7 @@
     "flavor": "",
     "textc": "Forced: After the active location is explored, place Curious Brandybuck on the bottom of its owner's deck.\nResponse: After you travel to a location, put Curious Brandybuck into play from your hand, under any player's control.",
     "name_norm": "Curious Brandybuck",
-    "octgn": ""
+    "octgn": "c52c00b2-ab39-4ffa-898d-ab9c8246bd00"
   },
   {
     "name": "Hobbit Pony",
@@ -7513,7 +7513,7 @@
     "flavor": "He was riding a pony, and a scarf was swathed round his neck and over his chin to keep out the fog. -The Fwllowship of the Ring.",
     "textc": "Attach to a Hobbit hero. Restricted.\nQuest Action: If attached hero is not committed to the quest, exhaust Hobbit Pony and attached hero to commit attached hero to the quest.",
     "name_norm": "Hobbit Pony",
-    "octgn": ""
+    "octgn": "ebcb133a-1777-49cf-a7d4-137a65b2c2d5"
   },
   {
     "name": "East Road Ranger",
@@ -7535,7 +7535,7 @@
     "flavor": "`If you bring a Ranger with you, it is well to pay attention to him...` -Gandalf, the Fellowship of the Ring",
     "textc": "East Road Ranger gets +2 Willpower while committed to a side quest.",
     "name_norm": "East Road Ranger",
-    "octgn": ""
+    "octgn": "8b95d0c6-eda4-4820-8279-6bdddae7b499"
   },
   {
     "name": "Scout Ahead",
@@ -7554,7 +7554,7 @@
     "flavor": "Strider made them take cover in a thicket at the side of the Road, while he went forward to explore. -The Fellowship of the Ring",
     "textc": "Victory 1.\nLimit 1 per deck.\nResponse: When this stage is defeated, the first player searches the top X cards of the encounter deck for 1 non-objective card worth no victory points and adds it to the victory display. Put the remaining cards back in any order. X is the number of players in the game plus 4.",
     "name_norm": "Scout Ahead",
-    "octgn": ""
+    "octgn": "f8a3acfb-3b0d-414b-b5d0-2612d33c193d"
   },
   {
     "name": "Ranger of Cardolan",
@@ -7576,7 +7576,7 @@
     "flavor": "",
     "textc": "Response: After you engage an enemy, if you control at least 1 Dúnedain hero, spend 1 resource to put Ranger of Cardolan into play from your hand, under your control. At the end of the round, if Ranger of Cardolan is still in play, shuffle it into its owner's deck.",
     "name_norm": "Ranger of Cardolan",
-    "octgn": ""
+    "octgn": "cc73532b-e891-49b6-9544-468b5977149a"
   },
 
 
