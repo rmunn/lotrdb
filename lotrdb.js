@@ -42,7 +42,7 @@
   //Logic for the pack selection
   app.controller('packSelect',["filtersettings","$localStorage",function(filtersettings,$localStorage){
     this.filtersettings=filtersettings;
-    this.full=["core", "kd", "hon", "tvoi", "tlr", "ohuh", "thfg", "trg", "tsf", "tdt", "twoe", "otd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "trd", "thoem", "tld", "aoo", "tnie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "ttos"]; //all expansions so far
+    this.full=["core", "kd", "hon", "tvoi", "tlr", "thohauh", "thfg", "trg", "tsf", "tdt", "twoe", "thotd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "trd", "thoem", "tld", "aoo", "nie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "ttos"]; //all expansions so far
     this.toggle=function(exp){
       var ind = this.filtersettings.pack.indexOf(exp);
       if (ind<0) { //index will be -1 if not found
