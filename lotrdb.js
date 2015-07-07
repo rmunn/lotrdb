@@ -1269,13 +1269,13 @@
     translate.hon=unescape("Heirs of N%FAmenor");
     translate.tvoi="The Voice of Isengard";
     translate.tlr="The Lost Realm";
-    translate.thohauh="The Hobbit: Over Hill and Under Hill";
+    translate.thohauh="Over Hill and Under Hill";
     translate.thfg="The Hunt for Gollum";
     translate.trg="The Redhorn Gate";
     translate.tsf="The Steward's Fear";
     translate.tdt="The Dunland Trap";
     translate.twoe="The Wastes of Eriador";
-    translate.thotd="The Hobbit: On the Doorstep";
+    translate.thotd="On the Doorstep";
     translate.catc="Conflict at the Carrock";
     translate.rtr="Road to Rivendell";
     translate.tdf=unescape("The Dr%FAadan Forest");
@@ -1290,7 +1290,7 @@
     translate.thoem="The Hills of Emyn Muil";
     translate.tld="The Long Dark";
     translate.aoo="Assault on Osgiliath";
-    translate.tnie="The Nin-in-Eilph";
+    translate.nie="The Nin-in-Eilph";
     translate.tdm="The Dead Marshes";
     translate.fos="Foundations of Stone";
     translate.tbog="The Blood of Gondor";
