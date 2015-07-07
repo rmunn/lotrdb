@@ -732,7 +732,7 @@
     "text": "Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.",
     "flavor": null,
     "textc": "Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.",
-    "name_norm": "For Gondor!",
+    "name_norm": "For Gondor",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9022"
   },
   {
@@ -1536,7 +1536,7 @@
     "text": "Action: Search the top 5 cards of your deck for any number of Eagle cards and add them to your hand. Shuffle the other cards back into your deck.",
     "flavor": "`The Eagles! The Eagles!` -Bilbo Baggins, The Hobbit",
     "textc": "Action: Search the top 5 cards of your deck for any number of Eagle cards and add them to your hand. Shuffle the other cards back into your deck.",
-    "name_norm": "The Eagles Are Coming!",
+    "name_norm": "The Eagles Are Coming",
     "octgn": "51223bd0-ffd1-11df-a976-0801201c9008"
   },
   {
@@ -2782,7 +2782,7 @@
     "text": "Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.",
     "flavor": null,
     "textc": "Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.",
-    "name_norm": "Khazad! Khazad!",
+    "name_norm": "Khazad Khazad",
     "octgn": "51223bd0-ffd1-11df-a976-0801207c9044"
   },
   {
@@ -3947,7 +3947,7 @@
     "text": "Response: After an enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
     "flavor": null,
     "textc": "Secrecy 4.\nResponse: After an enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
-    "name_norm": "O Elbereth! Gilthonial!",
+    "name_norm": "O Elbereth Gilthonial",
     "octgn": "51223bd0-ffd1-11df-a976-0801213c9019"
   },
   {
@@ -5491,7 +5491,7 @@
     "text": "Combat Action: Each Rohan hero can be declared as an attacker against enemies in the staging area this phase.",
     "flavor": "`Oaths ye have taken: now fulfill them all, to lord and land and league of friendship!` -Théoden, The Return of the King",
     "textc": "Combat Action: Each Rohan hero can be declared as an attacker against enemies in the staging area this phase.",
-    "name_norm": "Forth Eorlingas!",
+    "name_norm": "Forth Eorlingas",
     "octgn": "80cdd2b5-60cf-4d47-afe7-505b79abcb1b"
   },
   {
@@ -7028,7 +7028,7 @@
     "text": "Response: When an encounter card is revealed but before resolving any of that card's keywords or `when revealed` effects, choose a character comited to the quest. Ready that character and remove it from the quest.",
     "flavor": "`Don't be hasty, that is my motto.` -Treebeard, The Two Towers",
     "textc": "Response: When an encounter card is revealed but before resolving any of that card's keywords or `when revealed` effects, choose a character comited to the quest. Ready that character and remove it from the quest.",
-    "name_norm": "Don't Be Hasty!",
+    "name_norm": "Don't Be Hasty",
     "octgn": "31406925-1626-4c17-b3ee-2e2700a99c14"
   },
   {
@@ -8208,7 +8208,7 @@
     "text": "Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.",
     "flavor": "Out leapt the King under the Mountain, and his companions followed him. -The Hobbit",
     "textc": "Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.",
-    "name_norm": "To me! O my kinsfolk!",
+    "name_norm": "To me O my kinsfolk",
     "octgn": "16ae4f56-d8bb-41b8-a992-1da3b6ec1fdb"
   },
   {
@@ -9085,7 +9085,7 @@
     "text": "Play only after the resolving enemy attacks step is complete.\nCombat Action: Exhaust and discard a Rohan ally you control to choose and discard a non-unique enemy engaged with you.",
     "flavor": "`Helm is arisen and comes back to war. Helm for Théoden King!` -Riders of Rohan, The Two Towers",
     "textc": "Play only after the resolving enemy attacks step is complete.\nCombat Action: Exhaust and discard a Rohan ally you control to choose and discard a non-unique enemy engaged with you.",
-    "name_norm": "Helm! Helm!",
+    "name_norm": "Helm Helm",
     "octgn": "f63da56c-6598-4e01-b245-a9fe49f2251a"
   },
   {
