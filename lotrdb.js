@@ -42,7 +42,7 @@
   //Logic for the pack selection
   app.controller('packSelect',["filtersettings","$localStorage",function(filtersettings,$localStorage){
     this.filtersettings=filtersettings;
-    this.full=["core", "kd", "hon", "tvoi", "tlr", "thohauh", "thfg", "trg", "tsf", "tdt", "twoe", "thotd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "trd", "thoem", "tld", "aoo", "nie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "ttos"]; //all expansions so far
+    this.full=["core", "kd", "hon", "tvoi", "tlr", "thohauh", "thfg", "trg", "tsf", "tdt", "twoe", "thotd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "rd", "thoem", "tld", "aoo", "nie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "ttos"]; //all expansions so far
     this.toggle=function(exp){
       var ind = this.filtersettings.pack.indexOf(exp);
       if (ind<0) { //index will be -1 if not found
@@ -1267,7 +1267,7 @@
     translate.core="Core Set";
     translate.kd=unescape("Khazad-D%FBm");
     translate.hon=unescape("Heirs of N%FAmenor");
-    translate.tvoi="The Voice of Isengard";
+    translate.voi="The Voice of Isengard";
     translate.tlr="The Lost Realm";
     translate.thohauh="Over Hill and Under Hill";
     translate.thfg="The Hunt for Gollum";
@@ -1286,7 +1286,7 @@
     translate.twitw="The Watcher in the Water";
     translate.eaad=unescape("Encounter at Amon D%EEn");
     translate.tit="Trouble in Tharbad";
-    translate.trd="The Road Darkens";
+    translate.rd="The Road Darkens";
     translate.thoem="The Hills of Emyn Muil";
     translate.tld="The Long Dark";
     translate.aoo="Assault on Osgiliath";
@@ -1299,7 +1299,7 @@
     translate.saf="Shadow and Flame";
     translate.tmv="The Morgul Vale";
     translate.tac="The Antlered Crown";
-    translate.ttos="The Treason of Saruman";
+    translate.tos="The Treason of Saruman";
     return translate;
   });
   
