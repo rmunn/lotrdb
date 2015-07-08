@@ -609,14 +609,14 @@
         text+=threat;
         text+=")  \r\n"
         for (var i in deck["1hero"]) {
-	  h = deck["1hero"].sort(function(a,b){return a.name>b.name})[i];
+          h = deck["1hero"].sort(function(a,b){return a.name>b.name ? 1 : -1})[i];
           text+="    [";
           text+=h.name;
           text+="](http://hallofbeorn.com/Cards/Details/";
-	  text+=h.name_norm.replace(/ /g,'-');
-	  text+='-';
-	  text+=h.exp;
-	  text+=") (*";
+          text+=h.name_norm.replace(/ /g,'-');
+          text+='-';
+          text+=h.exp;
+          text+=") (*";
           text+=translate[h.exp];
           text+="*)  \r\n";
         }
@@ -653,9 +653,9 @@
             text+=t[i].name;
             text+="](http://hallofbeorn.com/Cards/Details/";
             text+=t[i].name_norm.replace(/ /g,'-');
-	    text+='-';
-	    text+=t[i].exp;
-	    text+=") (*";
+            text+='-';
+            text+=t[i].exp;
+            text+=") (*";
             text+=translate[t[i].exp];
             text+="*)  \r\n";
           }
@@ -712,14 +712,14 @@
         text+=threat;
         text+=")  \r\n"
         for (var i in deck["1hero"]) {
-	  h = deck["1hero"].sort(function(a,b){return a.name>b.name})[i];
+          h = deck["1hero"].sort(function(a,b){return a.name>b.name?1:-1})[i];
           text+="    ";
           text+="[url=http://hallofbeorn.com/Cards/Details/";
-	  text+=h.name_norm.replace(/ /g,'-');
-	  text+='-';
-	  text+=h.exp;
-	  text+="]";
-	  text+=h.name;
+          text+=h.name_norm.replace(/ /g,'-');
+          text+='-';
+          text+=h.exp;
+          text+="]";
+          text+=h.name;
           text+="[/url] ([i]";
           text+=translate[h.exp];
           text+="[/i])  \r\n";
@@ -754,11 +754,11 @@
             text+=" ";
             text+=t[i].quantity;
             text+="x ";
-	    text+="[url=http://hallofbeorn.com/Cards/Details/";
-	    text+=t[i].name_norm.replace(/ /g,'-');
-	    text+='-';
-	    text+=t[i].exp;
-	    text+="]";
+            text+="[url=http://hallofbeorn.com/Cards/Details/";
+            text+=t[i].name_norm.replace(/ /g,'-');
+            text+='-';
+            text+=t[i].exp;
+            text+="]";
             text+=t[i].name;
             text+="[/url] ([i]";
             text+=translate[t[i].exp];
