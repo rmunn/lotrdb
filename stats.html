@@ -7,7 +7,10 @@
     <button ng-click="stats.draw()">Draw</button>
     <br/><br/>
     <ul>
-      <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="card c{{card.sphere}}">{{card.name}}</li>
+      <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="card c{{card.sphere}}">
+        {{card.name}}
+        <span ng-click="stats.playCard($index)">Play Card</span>
+      </li>
     </ul>
   </div>
   

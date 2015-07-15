@@ -315,6 +315,19 @@ margin-bottom:2px;
   border-color: #555 #eee #eee #555;
 }
 
+.carddraw li span {
+  color: #337ab7;
+  font-size: 11px;
+  float: right;
+  line-height: 1.8;
+  cursor: pointer;
+  margin-right: 4px;
+  display: none;
+}
+.carddraw li:hover span {
+  display: inline-block;
+}
+
 
 
 .mydecks{

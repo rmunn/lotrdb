@@ -991,6 +991,10 @@
     this.draw = function() {
       this.hand.push(this.deck.pop());
     }
+
+    this.playCard = function(handIndex) {
+      this.hand.splice(handIndex, 1);
+    }
     
     this.sphereSplit = function() {
       this.reloadDeck();
