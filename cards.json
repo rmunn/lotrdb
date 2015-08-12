@@ -7603,7 +7603,7 @@
     "flavor": "`Did you not say that you wished to see Elf-magic?` -Galadriel, The Fellowship of the Ring",
     "textc": "If the active location shares a Trait with a location in the victory display, Rossiel gets +2 Willpower.\n If the attacking enemy shares a Trait with an enemy in the victory display, Rossiel gets +2 Defense.",
     "name_norm": "Rossiel",
-    "octgn": ""
+    "octgn": "18fea279-cd38-4a5e-b271-b94d4f64eda1"
   },
   {
     "name": "Veteran of Osgiliath",
@@ -7625,7 +7625,7 @@
     "flavor": "`So do we ever watch the shores nigh Osgiliath, which our enemies now partly hold, and issue from it to harry our lands.` -Faramir, The Two Towers",
     "textc": "Veteran of Osgiliath gets +1 Willpower, +1 Attack, and +1 Defense while your threat is 40 or higher.",
     "name_norm": "Veteran of Osgiliath",
-    "octgn": ""
+    "octgn": "0484e428-6a72-4841-b2d5-d8df7cfb51bf"
   },
   {
     "name": "Descendants of Kings",
@@ -7643,7 +7643,7 @@
     "flavor": "`But when dark things come from the houseless hills, or creep from sunless woods, they fly from us.` -Aragorn, The Fellowship of the Ring",
     "textc": "Action: Ready up to X Dúnedain characters you control. X is the number of enemies engaged with you.",
     "name_norm": "Descendants of Kings",
-    "octgn": ""
+    "octgn": "25641d97-e196-40d5-8481-727602aa2da2"
   },
   {
     "name": "Derndingle Warrior",
@@ -7665,7 +7665,7 @@
     "flavor": "",
     "textc": "Sentinel.\nCannot have restricted attachments.\nEnters play exhausted.\nWhile Derndingle Warrior is defending, it gains: `Action: Deal 1 damage to Derndingle Warrior to give it +3 Defense for this attack.` (Limit once per attack.)",
     "name_norm": "Derndingle Warrior",
-    "octgn": ""
+    "octgn": "e562d744-bf7d-4325-97ba-424bf3ca3ca8"
   },
   {
     "name": "Boomed and Trumpeted",
@@ -7683,7 +7683,7 @@
     "flavor": "`They roared and boomed and trumpeted, until stones began to crack and fall at the mere noise of them.` -Merry, The Two Towers",
     "textc": "Response: After an Ent character takes any amount of damage, ready it. That character gets +3 Attack until the end of the phase.",
     "name_norm": "Boomed and Trumpeted",
-    "octgn": ""
+    "octgn": "f4b2af17-b589-49c1-a884-ecd4570d8545"
   },
   {
     "name": "Elven Jeweler",
@@ -7705,7 +7705,7 @@
     "flavor": "`...to the Elven-smiths they were but trifles...` -Gandalf, The Fellowship of the Ring",
     "textc": "Action: Discard 2 cards from your hand to put Elven Jeweler into play from your hand, under your control.",
     "name_norm": "Elven Jeweler",
-    "octgn": ""
+    "octgn": "9c42d496-267e-4822-8df4-6fcc7ae4c2d1"
   },
   {
     "name": "Double Back",
@@ -7724,7 +7724,7 @@
     "flavor": "He was taking a wandering course with many turns and doublings, to put off any pursuit. -The Fellowship of the Ring",
     "textc": "Limit 1 per deck.\nResponse: When this stage is defeated, reduce each player’s threat by 5.",
     "name_norm": "Double Back",
-    "octgn": ""
+    "octgn": "f4d94f3d-d3af-44d6-9896-764484302bb1"
   },
   {
     "name": "Leave No Trace",
@@ -7742,7 +7742,7 @@
     "flavor": "",
     "textc": "Limit 3 copies of Leave No Trace in the victory display.\nResponse: After a non-unique location is explored, add Leave No Trace to the victory display to add that location to the victory display.",
     "name_norm": "Leave No Trace",
-    "octgn": ""
+    "octgn": "57658f13-fb9c-4a87-bb05-965a022cc69d"
   },
   {
     "name": "Distant Stars",
@@ -7760,7 +7760,7 @@
     "flavor": "`I have crossed many mountains and many rivers, and trodden many plains, even into the far countries of Rhûn and Harad where the stars are strange...` -Aragorn, The Fellowship of the Ring",
     "textc": "Action: Exhaust a Ranger or Scout character to discard a non-unique active location. Then, search the encounter deck and discard pile for a non-unique location and make it the active location. Shuffle the encounter deck.",
     "name_norm": "Distant Stars",
-    "octgn": ""
+    "octgn": "3ba15db9-9967-48b8-9b38-4fdfb4866676"
   },
   {
     "name": "Keen as Lances",
@@ -7778,7 +7778,7 @@
     "flavor": "",
     "textc": "Reduce the cost to play Keen as Lances by 1 for each card worth no victory points in the victory display.\nAction: Add Keen as Lances to the victory display. Then, choose one: add 2 resources to a hero's resource pool, draw 3 cards, or reduce your threat by 4.",
     "name_norm": "Keen as Lances",
-    "octgn": ""
+    "octgn": "ede00b4b-15e0-4469-aaf6-ea60c9376898"
   },
 
 
