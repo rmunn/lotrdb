@@ -9347,7 +9347,7 @@
     "flavor": "`It's my doom, I think, to go to that Shadow yonder, so that a way will be found.` -The Two Towers",
     "textc": "Action: Spend 1 Fellowship resource and exhaust The One Ring to give Frodo Baggins +2 Willpower and +2 Attack until the end of the round.",
     "name_norm": "Frodo Baggins",
-    "octgn": ""
+    "octgn": "fe58a6d3-7028-41c1-ab00-5e33e7d77b5f"
   },
   {
     "name": "Faramir",
@@ -9369,7 +9369,7 @@
     "flavor": "`That will be the Captain: he can master both beasts and men'` -Beregond, The Return of the King",
     "textc": "Ranged.\nResponse: After you engage an enemy, ready an ally you control. (Limit once per phase.)",
     "name_norm": "Faramir",
-    "octgn": ""
+    "octgn": "8f937f89-b248-4261-9b00-4e3cd9763299"
   },
   {
     "name": "Damrod",
@@ -9391,7 +9391,7 @@
     "flavor": "`See! Some of the Southrons have broken from the trap and are flying from the road.` -The Two Towers",
     "textc": "Reduce the cost of the first Trap card you play each round by 1 (to a minimum of 0).\nResponse: After a Trap card you control is attached to an enemy, draw 1 card.",
     "name_norm": "Damrod",
-    "octgn": ""
+    "octgn": "3f482b9c-aa18-415e-ab9b-58f9c3b328a1"
   },
   {
     "name": "Anborn",
@@ -9413,7 +9413,7 @@
     "flavor": "`Now I have him at the arrow-point.` -The Two Towers",
     "textc": "Response: After an enemy is added to the staging area, exhaust Anborn to give that enemy +5 engagement cost until the end of the round. Then, deal 1 damage to that enemy.",
     "name_norm": "Anborn",
-    "octgn": ""
+    "octgn": "c8b5dd1c-82bc-4733-be1a-484a6e87c3c0"
   },
   {
     "name": "Mablung",
@@ -9435,7 +9435,7 @@
     "flavor": "`But still we will not sit idle and let Him do all as He would.` -The Two Towers",
     "textc": "Response: After Mablung enters play, choose an enemy to get +5 engagement cost until the end of the round. Then, you may engage that enemy, or return it to the staging area.",
     "name_norm": "Mablung",
-    "octgn": ""
+    "octgn": "a870e2b3-4b9d-46ea-bc37-425fd682f114"
   },
   {
     "name": "Skinbark",
@@ -9457,7 +9457,7 @@
     "flavor": "`He was wounded by the Orcs, and many of his folk and his tree-herds have been murdered and destroyed.` -Treebeard, The Two Towers",
     "textc": "Cannot have restricted attachments. Enters play exhausted.\nWhile Skinbark is attacking alone against an Orc enemy, that enemy does not count its Defense.",
     "name_norm": "Skinbark",
-    "octgn": ""
+    "octgn": "df2b2070-240c-4b38-b4c8-29a0d2c789cf"
   },
   {
     "name": "Gamling",
@@ -9479,7 +9479,7 @@
     "flavor": "`...we have a thousand fit to fight on foot.` said Gamling, an old man, the leader of those that watched the Dike. -The Two Towers",
     "textc": "Response: After a Rohan ally you control is discarded from play, exhaust Gamling to return that ally to your hand.",
     "name_norm": "Gamling",
-    "octgn": ""
+    "octgn": "9e944f47-14b0-4890-98d2-584e0abe0eda"
   },
   {
     "name": "Staff of Lebethron",
@@ -9497,7 +9497,7 @@
     "flavor": "`They are made of the fair tree lebethron, beloved of the woodwrights of Gondor...` -Faramir, The Two Towers",
     "textc": "Attach to a Gondor or Hobbit hero. Restricted.\nResponse: After attached hero exhausts to defend an attack from an enemy with engagement cost higher than your threat, exhaust Staff of Lebethron to discard a shadow card from that enemy.",
     "name_norm": "Staff of Lebethron",
-    "octgn": ""
+    "octgn": "c86cc6c9-8c50-4069-aa85-4d1cc11f796d"
   },
   {
     "name": "Ambush",
@@ -9515,7 +9515,7 @@
     "flavor": "`But we have a new errand on this journey: we come to ambush the Men of Harad.` -Mablung, The Two Towers",
     "textc": "Play Ambush into the staging area unattached. If unattached, attach Ambush to the next eligible enemy that enters the staging area.\nCombat Action: The engaged player discards Ambush to declare an attack against the attached enemy.",
     "name_norm": "Ambush",
-    "octgn": ""
+    "octgn": "bb89cc13-3049-4001-bd85-916438c6d629"
   },
   {
     "name": "Snowmane",
@@ -9533,7 +9533,7 @@
     "flavor": "Suddenly the king cried to Snowmane and the horse sprang away. -The Return of the King",
     "textc": "Attach to a Rohan hero. Restricted.\nIf attached hero is Théoden, Snowmane loses the Restricted keyword.\nResponse: After attached hero quests successfully, ready attached hero.",
     "name_norm": "Snowmane",
-    "octgn": ""
+    "octgn": "b89d39c4-1017-4707-95c3-d60f352d4e95"
   },
   {
     "name": "Taste it Again!",
@@ -9551,7 +9551,7 @@
     "flavor": "`We're going on; but we'll settle with you first. Come on, and taste it again! -Sam Gamgee, The Two Towers`",
     "textc": "Response: After a hero you control defends an attack made by an enemy with engagement cost higher than your threat, ready that hero. Until the end of the phase, that hero gets +2 Attack while attacking that enemy.",
     "name_norm": "Taste it Again",
-    "octgn": ""
+    "octgn": "1ddaf688-b39b-4d15-8058-1e2957e021ca"
   },
   {
     "name": "In the Shadows",
@@ -9569,7 +9569,7 @@
     "flavor": "He could see them stealing up the slowes, singly or in long files, keeping always to the shade of grove or thicket... -The Two Towers",
     "textc": "Lower the cost to play In the Shadows by 1 for each Hobbit or Ranger hero you control.\nCombat Action: Each enemy engaged with you with an engagement cost higher than your threat gets -1 Attack and -1 Defense until the end of the phase.",
     "name_norm": "In the Shadows",
-    "octgn": ""
+    "octgn": "f9351811-479d-4bad-a6b3-ac745739b63f"
   },
   {
     "name": "Speak Your Promise!",
@@ -9587,7 +9587,7 @@
     "flavor": "For a moment it appeared to Sam that his master had grown and Gollum had shrunk... -The Two Towers",
     "textc": "Action: Ready the Ring-bearer to choose an enemy engaged with you. If the Ring-bearer's Willpower is greater than that enemy's Threat, lower that enemy's Attack and Defense by the difference until the end of the phase.",
     "name_norm": "Speak Your Promise",
-    "octgn": ""
+    "octgn": "e2daba5a-f5ac-4fcb-a508-45b3b3cae5a9"
   }
 
 
