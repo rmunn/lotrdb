@@ -391,6 +391,7 @@
       text=text.replace(/Refresh Action:/g,"<b>Refresh Action:</b>");
       text=text.replace(/Valour Action:/g,"<b>Valour Action:</b>");
       text=text.replace(/Action:([^<])/g,"<b>Action:</b>$1");
+      text=text.replace(/([^>])Valour/g,"$1<b>Valour</b>");
       
       text=text.replace(/Attack/g,"<img src='img/strength.gif'/>");
       text=text.replace(/Willpower/g,"<img src='img/willpower.gif'/>");
@@ -1305,6 +1306,7 @@
     translate.tac="The Antlered Crown";
     translate.tos="The Treason of Saruman";
     translate.tlos="The Land of Shadow"
+    translate.ate="Across the Ettenmoors"
     return translate;
   });
   
