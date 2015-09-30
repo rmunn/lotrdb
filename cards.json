@@ -7804,7 +7804,7 @@
     "flavor": "Dore was really a decent fellow in spite of his grumbling. -The Hobbit",
     "textc": "Sentinel.\nResponse: After another hero is declared as a defender, exhaust Dori to add his Defense to the defending hero's Defense for this attack.",
     "name_norm": "Dori",
-    "octgn": ""
+    "octgn": "a25c47a4-3a9c-4883-a7a7-c40df596650c"
   },
   {
     "name": "Ranger Provisions",
@@ -7822,7 +7822,7 @@
     "flavor": "`Ranger have been here lately. It is they who left the firewood behind.` -Aragorn, The Fellowship of the Ring",
     "textc": "Attach to a location. Limit 1 per location.\nResponse: After attached location is explored, the first player adds 1 resource to each of his heroes' resource pools.",
     "name_norm": "Ranger Provisions",
-    "octgn": ""
+    "octgn": "265b6ab0-446c-4090-a7e1-341ce987c903"
   },
   {
     "name": "Dúnedain Message",
@@ -7840,7 +7840,7 @@
     "flavor": "`I called for the help of the Dúnedain, and their watch was doubled...` -Gandalf, The Fellowship of the Ring",
     "textc": "Action: Search your deck for a side quest and add it to your hand. Shuffle your deck.",
     "name_norm": "Dunedain Message",
-    "octgn": ""
+    "octgn": "d54a293d-7e36-4dab-98e9-71fa23df2355"
   },
   {
     "name": "Longbeard Sentry",
@@ -7862,7 +7862,7 @@
     "flavor": "`...many of them have had experience in the dreadful dwarf and goblin wars, of which you have no doubt heard.` -Bilbo Baggins, The Hobbit",
     "textc": "Action: Discard 2 cards from the top of your deck to give Longbeard Sentry sentinel and +1 Defense until the end of the phase. (Limit once per phase.)",
     "name_norm": "Longbeard Sentry",
-    "octgn": ""
+    "octgn": "54b219c4-a359-435f-9988-336cad0384b2"
   },
   {
     "name": "Delay the Enemy",
@@ -7880,7 +7880,7 @@
     "flavor": "",
     "textc": "Limit 1 per deck.\nBattle. (Characters use their Attack instead of Willpower when questing here.)\nResponse: When this stage is defeated, each player may choose and discard a non-unique enemy engaged with him.",
     "name_norm": "Delay the Enemy",
-    "octgn": ""
+    "octgn": "b11ff1d9-c9e9-4cc1-b329-8226b73dd429"
   },
   {
     "name": "Steed of Imladris",
@@ -7898,7 +7898,7 @@
     "flavor": "In the dusk its headstall flickered and flashed, as if it were studded with gems like living stars -The Fellowship of the Ring",
     "textc": "Attach to a Spirit or Noldor hero. Restricted.\nResponse: After attached hero commits to a quest, discard a card from your hand to place 2 progress on the active location.",
     "name_norm": "Steed of Imladris",
-    "octgn": ""
+    "octgn": "8741c7a7-be7d-462a-b39a-0c9bfe4042a3"
   },
   {
     "name": "Fair and Perilous",
@@ -7916,7 +7916,7 @@
     "flavor": "`...you saw him for a moment as he is upon the other side: one of the mighty of the Firstborn.` -Gandalf, The Fellowship of the Ring",
     "textc": "Action: Choose a Noldor or Silvan character. Until the end of the phase, add that character's Willpower to its Attack.",
     "name_norm": "Fair and Perilous",
-    "octgn": ""
+    "octgn": "475d185f-403f-4b3e-9e8b-6b9f539c2423"
   },
   {
     "name": "Wellinghall Preserver",
@@ -7938,7 +7938,7 @@
     "flavor": "",
     "textc": "Cannot have restricted attachments.\nEnters play exhausted.\nResponse: After Wellinghall Preserver readies, heal 1 damage from an Ent character.",
     "name_norm": "Wellinghall Preserver",
-    "octgn": ""
+    "octgn": "68a9d6cc-13a2-417a-ad87-f213ddc2bf48"
   },
   {
     "name": "None Return",
@@ -7956,7 +7956,7 @@
     "flavor": "`None of the Orcs will ever return out of Lórien.` -Haldir, The Fellowship of the Ring",
     "textc": "Limit 3 copies of None Return in the victory display.\nResponse: After a non-unique enemy is destroyed, add None Return to the victory display to add that enemy to the victory display.",
     "name_norm": "None Return",
-    "octgn": ""
+    "octgn": "6cf22f3e-29bd-4bbb-8459-92b7b4bc6b02"
   },
   {
     "name": "Hope Rekindled",
@@ -7974,9 +7974,202 @@
     "flavor": "Hope he rekindled, and in hope ended;\nover death, over dread, over doom lifted\nOut of loss, out of life, unto long glory.\n-The Return of the King",
     "textc": "Action: Reduce the cost of the next event that has a Valour trigger you play this phase by 2.\nValour Action: Search the top 10 cards of your deck for an event that has a Valour trigger and add it to your hand. Shuffle your deck.",
     "name_norm": "Hope Rekindled",
-    "octgn": ""
+    "octgn": "809470ac-05c2-4578-9556-8c64b84d4619"
   },
 
+  {
+    "name": "Erestor",
+    "type": "1hero",
+    "sphere": "4lore",
+    "cost": 10,
+    "willpower": 2,
+    "strength": 2,
+    "defense": 2,
+    "hitpoints": 4,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 84,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_84.jpg",
+    "unique": true,
+    "traits": "Noldor.",
+    "keywords": "",
+    "text": "Draw 3 additional cards at the beginning of the resource phase. \nAt the end of the round, discard all cards in your hand.",
+    "flavor": "",
+    "textc": "Draw 3 additional cards at the beginning of the resource phase. \nAt the end of the round, discard all cards in your hand.",
+    "name_norm": "Erestor",
+    "octgn": "b188f729-0314-4664-95a0-7f93f4d44133"
+  },
+  {
+    "name": "Reinforcements",
+    "type": "4event",
+    "sphere": "1leadership",
+    "cost": 3,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 85,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_85.jpg",
+    "unique": false,
+    "traits": "",
+    "keywords": "",
+    "text": "You must spend resources from 3 different heroes' resource pools to play this card. \nAction: The players, as a group, can put up to 2 allies into play from their hands. Each of these allies may enter play under any player's control. At the end of the phase, return each of those allies that are still in play to their owners' hands.",
+    "flavor": "",
+    "textc": "You must spend resources from 3 different heroes' resource pools to play this card. \nAction: The players, as a group, can put up to 2 allies into play from their hands. Each of these allies may enter play under any player's control. At the end of the phase, return each of those allies that are still in play to their owners' hands.",
+    "name_norm": "Reinforcements",
+    "octgn": "b9339072-5665-45c7-a2ca-a8c844c5762d"
+  },
+  {
+    "name": "Send for Aid",
+    "type": "5quest",
+    "sphere": "1leadership",
+    "cost": 1,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 86,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_86.jpg",
+    "unique": false,
+    "restrict": true,
+    "traits": "",
+    "keywords": "",
+    "text": "Limit 1 per deck. \nResponse: When this stage is defeated, each player may search the top 10 cards of his deck for an ally and put it into play under his control. Each player who did shuffles his deck.",
+    "flavor": "",
+    "textc": "Limit 1 per deck. \nResponse: When this stage is defeated, each player may search the top 10 cards of his deck for an ally and put it into play under his control. Each player who did shuffles his deck.",
+    "name_norm": "Send for Aid",
+    "octgn": "ad0cbc82-6807-4a5a-ada8-97952cb02c5f"
+  },
+  {
+    "name": "Elven Spear",
+    "type": "3attachment",
+    "sphere": "2tactics",
+    "cost": 0,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 87,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_87.jpg",
+    "unique": false,
+    "traits": "Item. Weapon.",
+    "keywords": "Restricted.",
+    "text": "Attach to a Noldor or Silvan hero. \nAction: Discard a card from your hand to give attached hero +1 Attack until the end of the phase. Limit 3 times per phase.",
+    "flavor": "",
+    "textc": "Attach to a Noldor or Silvan hero. Restricted. \nAction: Discard a card from your hand to give attached hero +1 Attack until the end of the phase. Limit 3 times per phase.",
+    "name_norm": "Elven Spear",
+    "octgn": "6ba569dd-92d4-4de4-bfa4-385e2d50eddb"
+  },
+  {
+    "name": "Horn's Cry",
+    "type": "4event",
+    "sphere": "2tactics",
+    "cost": 2,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 88,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_88.jpg",
+    "unique": false,
+    "traits": "",
+    "keywords": "",
+    "text": "Action: All enemies get -1 Attack until the end of the phase. \nValour Action: Choose a player. Each enemy engaged with that player gets -3 Attack until the end of the phase.",
+    "flavor": "",
+    "textc": "Action: All enemies get -1 Attack until the end of the phase. \nValour Action: Choose a player. Each enemy engaged with that player gets -3 Attack until the end of the phase.",
+    "name_norm": "Horn's Cry",
+    "octgn": "7d906063-149f-4b7d-b271-e1532afea7c0"
+  },
+  {
+    "name": "Galadhrim Weaver",
+    "type": "2ally",
+    "sphere": "3spirit",
+    "cost": 1,
+    "willpower": 1,
+    "strength": 0,
+    "defense": 0,
+    "hitpoints": 1,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 89,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_89.jpg",
+    "unique": false,
+    "traits": "Silvan. Craftsman.",
+    "keywords": "",
+    "text": "Cannot attack or defend. \nResponse: After Galadhrim Weaver enters play, shuffle the top card of your discard pile into your deck.",
+    "flavor": "",
+    "textc": "Cannot attack or defend. \nResponse: After Galadhrim Weaver enters play, shuffle the top card of your discard pile into your deck.",
+    "name_norm": "Galadhrim Weaver",
+    "octgn": "5ababdc3-8d6c-47ad-aa1a-d21f5c96bbda"
+  },
+  {
+    "name": "Silver Harp",
+    "type": "3attachment",
+    "sphere": "3spirit",
+    "cost": 2,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 90,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_90.jpg",
+    "unique": false,
+    "traits": "Item. Instrument.",
+    "keywords": "Restricted.",
+    "text": "Attach to a Spirit hero. \nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.",
+    "flavor": "",
+    "textc": "Attach to a Spirit hero. Restricted. \nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.",
+    "name_norm": "Silver Harp",
+    "octgn": "41b56fc4-6ecd-4c9a-80d4-3074c267e823"
+  },
+  {
+    "name": "Galdor of the Havens",
+    "type": "2ally",
+    "sphere": "4lore",
+    "cost": 4,
+    "willpower": 2,
+    "strength": 2,
+    "defense": 1,
+    "hitpoints": 4,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 91,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_91.jpg",
+    "unique": true,
+    "traits": "Noldor.",
+    "keywords": "",
+    "text": "Response: After 1 or more cards are discarded from your hand, draw 1 card. Limit once per round.",
+    "flavor": "",
+    "textc": "Response: After 1 or more cards are discarded from your hand, draw 1 card. Limit once per round.",
+    "name_norm": "Galdor of the Havens",
+    "octgn": "608ac037-89dd-4aac-8b6d-057bd0fa7507"
+  },
+  {
+    "name": "The Door is Closed!",
+    "type": "4event",
+    "sphere": "4lore",
+    "cost": 1,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 92,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_92.jpg",
+    "unique": false,
+    "traits": "",
+    "keywords": "",
+    "text": "Response: After an encounter card is revealed from the encounter deck, cancel its effects and discard it if there is a card with the same title in the victory display.",
+    "flavor": "",
+    "textc": "Response: After an encounter card is revealed from the encounter deck, cancel its effects and discard it if there is a card with the same title in the victory display.",
+    "name_norm": "The Door is Closed",
+    "octgn": "f9f464e9-188c-42aa-bbea-b325a6d0f16d"
+  },
+  {
+    "name": "Elf-friend",
+    "type": "3attachment",
+    "sphere": "5neutral",
+    "cost": 1,
+    "cycle": 9,
+    "exp": "ttor",
+    "no": 93,
+    "img": "http://www.cardgamedb.com/forums/uploads/lotr/MEC42_93.jpg",
+    "unique": false,
+    "traits": "Title.",
+    "keywords": "",
+    "text": "Attach to a character. Attached character gains the Noldor and Silvan traits.",
+    "flavor": "",
+    "textc": "Attach to a character. Attached character gains the Noldor and Silvan traits.",
+    "name_norm": "Elf-friend",
+    "octgn": "38ed7520-8749-47ab-b3b4-34ec96441475"
+  },
 
 
 
