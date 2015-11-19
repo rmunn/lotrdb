@@ -1,7 +1,9 @@
 <div ng-show="tab.isSet(2)">
-  <button class="packbutton" style="width:50%;height:25px" ng-click="packs.selectAll()">
+  <button class="packbutton" style="width:33%;height:25px" ng-click="packs.toggleonecore()" ng-class="{selected: packs.filtersettings.onecore}">
+    Limit to 1 Core Set
+  </button><button class="packbutton" style="width:34%;height:25px" ng-click="packs.selectAll()">
     Select All
-  </button><button class="packbutton" style="width:50%;height:25px" ng-click="packs.selectNone()">
+  </button><button class="packbutton" style="width:33%;height:25px" ng-click="packs.selectNone()">
     Select None</button>
   <table class="packtable">
     <tbody>

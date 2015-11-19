@@ -283,6 +283,7 @@
     "flavor": null,
     "textc": "",
     "name_norm": "Guard of the Citadel",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9013"
   },
   {
@@ -305,6 +306,7 @@
     "flavor": null,
     "textc": "Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.",
     "name_norm": "Faramir",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9014"
   },
   {
@@ -327,6 +329,7 @@
     "flavor": "...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin. -The Fellowship of the Ring",
     "textc": "Response: After Son of Arnor enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.",
     "name_norm": "Son of Arnor",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9015"
   },
   {
@@ -349,6 +352,7 @@
     "flavor": "...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight. -The Two Towers",
     "textc": "Response: After Snowbourn Scout enters play, choose a location. Place 1 progress token on that location.",
     "name_norm": "Snowbourn Scout",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9016"
   },
   {
@@ -371,6 +375,7 @@
     "flavor": "`We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.` -Haldir of Lórien, The Fellowship of the Ring",
     "textc": "Ranged.\n",
     "name_norm": "Silverlode Archer",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9017"
   },
   {
@@ -393,6 +398,7 @@
     "flavor": null,
     "textc": "Response: After Longbeard Orc Slayer enters play, deal 1 damage to each Orc enemy in play.",
     "name_norm": "Longbeard Orc Slayer",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9018"
   },
   {
@@ -415,6 +421,7 @@
     "flavor": null,
     "textc": "Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.",
     "name_norm": "Brok Ironfist",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9019"
   },
   {
@@ -437,6 +444,7 @@
     "flavor": null,
     "textc": "",
     "name_norm": "Veteran Axehand",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9028"
   },
   {
@@ -459,6 +467,7 @@
     "flavor": null,
     "textc": "Sentinel.\nResponse: After Gondorian Spearman is declared as a defender, deal 1 damage to the attacking enemy.",
     "name_norm": "Gondorian Spearman",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9029"
   },
   {
@@ -481,6 +490,7 @@
     "flavor": null,
     "textc": "Ranged.\n",
     "name_norm": "Horseback Archer",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9030"
   },
   {
@@ -503,6 +513,7 @@
     "flavor": null,
     "textc": "Action: Beorn gains +5 Attack until the end of the phase. At the end of the phase in which you trigger this effect, shuffle Beorn back into your deck. (Limit once per round.)",
     "name_norm": "Beorn",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9031"
   },
   {
@@ -525,6 +536,7 @@
     "flavor": null,
     "textc": "Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3.",
     "name_norm": "Wandering Took",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9043"
   },
   {
@@ -547,6 +559,7 @@
     "flavor": null,
     "textc": "Response: After Lórien Guide commits to a quest, place 1 progress token on the active location.",
     "name_norm": "Lorien Guide",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9044"
   },
   {
@@ -569,6 +582,7 @@
     "flavor": "`What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?` -Aragorn, The Fellowship of the Ring",
     "textc": "Response: After Northern Tracker commits to a quest, place 1 progress token on each location in the staging area.",
     "name_norm": "Northern Tracker",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9045"
   },
   {
@@ -591,6 +605,7 @@
     "flavor": null,
     "textc": "Action: Exhaust Daughter of the Nimrodel to heal up to 2 damage on any 1 hero.",
     "name_norm": "Daughter of the Nimrodel",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9058"
   },
   {
@@ -613,6 +628,7 @@
     "flavor": null,
     "textc": "Response: After you play Erebor Hammersmith, return the topmost attachment in any player's discard pile to his hand.",
     "name_norm": "Erebor Hammersmith",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9059"
   },
   {
@@ -635,6 +651,7 @@
     "flavor": null,
     "textc": "Action: Exhaust Henamarth Riversong to look at the top card of the encounter deck.",
     "name_norm": "Henamarth Riversong",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9060"
   },
   {
@@ -657,6 +674,7 @@
     "flavor": null,
     "textc": "Response: After Miner of the Iron Hills enters play, choose and discard 1 Condition attachment from play.",
     "name_norm": "Miner of the Iron Hills",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9061"
   },
   {
@@ -679,6 +697,7 @@
     "flavor": null,
     "textc": "Action: Exhaust Gléowine to choose a player. That player draws 1 card.",
     "name_norm": "Gleowine",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9062"
   },
   {
@@ -697,6 +716,7 @@
     "flavor": null,
     "textc": "Action: Choose and ready 1 ally card.",
     "name_norm": "Ever Vigilant",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9020"
   },
   {
@@ -715,6 +735,7 @@
     "flavor": null,
     "textc": "Action: Exhaust 1 hero you control to choose and ready a different hero.",
     "name_norm": "Common Cause",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9021"
   },
   {
@@ -733,6 +754,7 @@
     "flavor": null,
     "textc": "Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.",
     "name_norm": "For Gondor",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9022"
   },
   {
@@ -751,6 +773,7 @@
     "flavor": null,
     "textc": "Action: Put 1 ally card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.",
     "name_norm": "Sneak Attack",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9023"
   },
   {
@@ -769,6 +792,7 @@
     "flavor": null,
     "textc": "Response: After an ally card leaves play, that card's controller draws 2 cards.",
     "name_norm": "Valiant Sacrifice",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9024"
   },
   {
@@ -787,6 +811,7 @@
     "flavor": null,
     "textc": "Action: Ready all character cards in play.",
     "name_norm": "Grim Resolve",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9025"
   },
   {
@@ -805,6 +830,7 @@
     "flavor": "`It was commanded yesterday.` -Denethor, The Return of the King",
     "textc": "Attach to a hero. Attached hero gains the Gondor trait.\nAction: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.",
     "name_norm": "Steward of Gondor",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9026"
   },
   {
@@ -823,6 +849,7 @@
     "flavor": null,
     "textc": "Restricted.\nAttach to a hero.\nAttached hero gains +2 Willpower.\nIf attached hero is Aragorn, he also gains a Spirit resource icon.",
     "name_norm": "Celebrian's Stone",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9027"
   },
   {
@@ -841,6 +868,7 @@
     "flavor": null,
     "textc": "Action: Choose a character. Until the end of the phase, that character gains +1 Attack and +1 Defense.",
     "name_norm": "Blade Mastery",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9032"
   },
   {
@@ -859,6 +887,7 @@
     "flavor": "Arrows thick as the rain came whistling over the battlements, and fell clinking and glancing on th estones. Many found their mark. -The Two Towers",
     "textc": "Action: Exhaust a character you control with the ranged keyword to choose a player. Deal 1 damage to each enemy engaged with that player.",
     "name_norm": "Rain of Arrows",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9033"
   },
   {
@@ -877,6 +906,7 @@
     "flavor": null,
     "textc": "Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.",
     "name_norm": "Feint",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9034"
   },
   {
@@ -895,6 +925,7 @@
     "flavor": "`...for he that strikes the first blow, if he strikes it hard enough, may need to strike no more.` -Gandalf, The Two Towers",
     "textc": "Action: Exhaust a character you control to immediately declare it as an attacker (and resolve its attack) against any eligible enemy target.",
     "name_norm": "Quick Strike",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9035"
   },
   {
@@ -913,6 +944,7 @@
     "flavor": null,
     "textc": "You must use resources from 3 different heroes' pools to pay for this card.\n                \nAction: Choose a player. That player's engaged enemies cannot attack that player this phase.",
     "name_norm": "Thicket of Spears",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9036"
   },
   {
@@ -931,6 +963,7 @@
     "flavor": null,
     "textc": "Response: After a character is declared as a defender, deal 2 damage to the attacking enemy.",
     "name_norm": "Swift Strike",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9037"
   },
   {
@@ -949,6 +982,7 @@
     "flavor": "...and when the task was done, there they would come to an end, alone, houseless, foodless in the midst of a terrible desert. There could be no return. -The Return of the King",
     "textc": "Action: Choose a player. That player may declare any number of his eligible characters as defenders against each enemy attacking him this phase.",
     "name_norm": "Stand Together",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9038"
   },
   {
@@ -967,6 +1001,7 @@
     "flavor": null,
     "textc": "Restricted.\nAttach to a hero.\nAttached hero gets +1 Attack when attacking an Orc.\nResponse: After attached hero attacks and destroys an enemy, place 1 progress token on the current quest.",
     "name_norm": "Blade of Gondolin",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9039"
   },
   {
@@ -985,6 +1020,7 @@
     "flavor": null,
     "textc": "Restricted.\nAttach to a hero.\nAttached hero gets +4 Hit Points.",
     "name_norm": "Citadel Plate",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9040"
   },
   {
@@ -1003,6 +1039,7 @@
     "flavor": null,
     "textc": "Restricted.\nAttach to a hero.\nAttached hero gains +1 Attack. (+2 Attack instead if attached hero is a Dwarf.)",
     "name_norm": "Dwarven Axe",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9041"
   },
   {
@@ -1021,6 +1058,7 @@
     "flavor": null,
     "textc": "Restricted.\nAttach to a hero.\nResponse: After a character leaves play, add 1 resource to attached hero's pool.",
     "name_norm": "Horn of Gondor",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9042"
   },
   {
@@ -1039,6 +1077,7 @@
     "flavor": "`Welcome to Caras Galadhan!` he said. `Here is the city of the Galadhrim where dwell the Lord Celeborn and Galadriel the Lady of Lórien` -The Fellowship of the Ring",
     "textc": "Action: Reduce one player's threat by 6, or reduce each player's threat by 2.",
     "name_norm": "The Galadhrim's Greeting",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9046"
   },
   {
@@ -1057,6 +1096,7 @@
     "flavor": null,
     "textc": "Response: After you travel to a location, exhaust a Spirit character to place 2 progress tokens on that location.",
     "name_norm": "Strength of Will",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9047"
   },
   {
@@ -1075,6 +1115,7 @@
     "flavor": null,
     "textc": "Response: Cancel a shadow effect just triggered during combat.",
     "name_norm": "Hasty Stroke",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9048"
   },
   {
@@ -1093,6 +1134,7 @@
     "flavor": "`If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.` -Legolas, The Return of the King",
     "textc": "Action: Choose a player. Shuffle that player's discard pile back into his deck.",
     "name_norm": "Will of the West",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9049"
   },
   {
@@ -1111,6 +1153,7 @@
     "flavor": null,
     "textc": "Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.",
     "name_norm": "A Test of Will",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9050"
   },
   {
@@ -1129,6 +1172,7 @@
     "flavor": "`...we will fight on.` -Boromir, The Fellowship of the Ring",
     "textc": "Action: Choose an ally with a printed cost of X in any player's discard pile. Put that ally into play under your control. (The chosen ally can belong to any sphere of influence.)",
     "name_norm": "Stand and Fight",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9051"
   },
   {
@@ -1147,6 +1191,7 @@
     "flavor": null,
     "textc": "Action: Choose an enemy engaged with a player. Return that enemy to the staging area.",
     "name_norm": "A Light in the Dark",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9052"
   },
   {
@@ -1165,6 +1210,7 @@
     "flavor": null,
     "textc": "Action: Return 1 Spirit card from your discard pile to your hand.",
     "name_norm": "Dwarven Tomb",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9053"
   },
   {
@@ -1183,6 +1229,7 @@
     "flavor": null,
     "textc": "Action: Choose a hero in any player's discard pile. Put that card into play, under its owner's control.",
     "name_norm": "Fortune or Fate",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9054"
   },
   {
@@ -1201,6 +1248,7 @@
     "flavor": null,
     "textc": "Attach to a hero.\nAttached hero gains +1 Willpower.",
     "name_norm": "The Favor of the Lady",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9055"
   },
   {
@@ -1219,6 +1267,7 @@
     "flavor": null,
     "textc": "Attach to a location.\nAttached location gets -1 Threat.",
     "name_norm": "Power in the Earth",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9056"
   },
   {
@@ -1237,6 +1286,7 @@
     "flavor": null,
     "textc": "Attach to a hero.\nAction: Exhaust Unexpected Courage to ready attached hero.",
     "name_norm": "Unexpected Courage",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9057"
   },
   {
@@ -1255,6 +1305,7 @@
     "flavor": null,
     "textc": "Action: Choose a character. Heal all damage from that character.",
     "name_norm": "Lore of Imladris",
+    "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9063"
   },
   {
@@ -1273,6 +1324,7 @@
     "flavor": null,
     "textc": "Action: Choose a player. That player draws 3 cards.",
     "name_norm": "Lorien's Wealth",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9064"
   },
   {
@@ -1291,6 +1343,7 @@
     "flavor": "`Radagast is, of course, a worthy Wizard, a master of shapes and changes of hue; and he has much lore of herbs and beasts, and birds are especially his friends.` -Gandalf, The Fellowship of the Ring",
     "textc": "Quest Action: Choose an enemy in the staging area. Until the end of the phase, that enemy does not contribute its Threat.",
     "name_norm": "Radagast's Cunning",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9065"
   },
   {
@@ -1309,6 +1362,7 @@
     "flavor": "...Beorn advised them to take this way; for at a place a few days' ride due north of the Carrock was the gate of a little-known pathway through Mirkwood... -The Hobbit",
     "textc": "Quest Action: Choose a location in the staging area. Until the end of the phase, that location does not contribute its Threat.",
     "name_norm": "Secret Paths",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9066"
   },
   {
@@ -1327,6 +1381,7 @@
     "flavor": null,
     "textc": "Action: Look at the top X cards of any player's deck, add 1 of those cards to its owner's hand, and return the rest to the top of the deck in any order.",
     "name_norm": "Gandalf's Search",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9067"
   },
   {
@@ -1345,6 +1400,7 @@
     "flavor": null,
     "textc": "Action: Choose a player. Heal all damage on each hero controlled by that player.",
     "name_norm": "Beorn's Hospitality",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9068"
   },
   {
@@ -1363,6 +1419,7 @@
     "flavor": null,
     "textc": "Attach to an enemy engaged with a player.\nAttached enemy cannot attack.",
     "name_norm": "Forest Snare",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9069"
   },
   {
@@ -1381,6 +1438,7 @@
     "flavor": null,
     "textc": "Attach to a hero.\nAction: Discard a card from your hand to give attached hero +1 Defense or +1 Willpower until the end of the phase. Limit 3 times per phase.",
     "name_norm": "Protector of Lorien",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9070"
   },
   {
@@ -1399,6 +1457,7 @@
     "flavor": null,
     "textc": "Attach to a hero. Attached hero gets -1 Willpower.\nResponse: Exhaust Dark Knowledge to look at 1 shadow card that was just dealt to an enemy attacking you.",
     "name_norm": "Dark Knowledge",
+    "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9071"
   },
   {
@@ -1417,6 +1476,7 @@
     "flavor": null,
     "textc": "Attach to a character.\nAction: Exhaust Self Preservation to heal 2 points of damage from attached character.",
     "name_norm": "Self Preservation",
+    "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9072"
   },
   {
@@ -1439,6 +1499,7 @@
     "flavor": null,
     "textc": "At the end of the round, discard Gandalf from play.\nResponse: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.",
     "name_norm": "Gandalf",
+    "corequantity": 4,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9073"
   },
   {

@@ -52,6 +52,14 @@
       }
       $localStorage.pack = this.filtersettings.pack;
     };
+    this.toggleonecore = function(){
+      if(this.filtersettings.onecore){
+        this.filtersettings.onecore=false;
+      } else {
+        this.filtersettings.onecore=true;
+      }
+      $localStorage.onecore = this.filtersettings.onecore;
+    }
     this.selectNone=function(){
       this.filtersettings.pack=[];
       $localStorage.pack = this.filtersettings.pack;
@@ -151,6 +159,7 @@
   
   app.factory('filtersettings',["$localStorage",function ($localStorage) {
     var filtersettings={};
+    filtersettings.onecore = $localStorage.onecore;
     filtersettings.pack= $localStorage.pack || ["core"];
     filtersettings.type={'1hero': true, '2ally': false, '3attachment': false, '4event': false, '5quest': false};
     filtersettings.spheres={'1leadership': true, '4lore': true, '3spirit': true, '2tactics': true, '5neutral': true, '6baggins':false, '7fellowship':false};
@@ -219,8 +228,9 @@
   
   
   
-  app.factory('deck', function(){
+  app.factory('deck', function(filtersettings){
     var deck={};
+    deck.filtersettings = filtersettings;
     deck['1hero']=[];
     deck['2ally']=[];
     deck['3attachment']=[];
@@ -346,7 +356,6 @@
   
   app.controller('deckController',['$scope','deck','image',function($scope,deck,image){
     $scope.deck=deck;
-    
     this.changepreview = function(card){
       image.update(card);
     }
