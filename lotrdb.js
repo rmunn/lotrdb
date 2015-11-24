@@ -725,7 +725,7 @@
           h = deck["1hero"].sort(function(a,b){return a.name>b.name?1:-1})[i];
           text+="    ";
           text+="[url=http://hallofbeorn.com/Cards/Details/";
-          text+=h.name_norm.replace(/ /g,'-');
+          text+=h.name_norm.replace(/ /g,'-').replace(/'/g,'%27');
           text+='-';
           text+=h.exp;
           text+="]";
@@ -765,7 +765,7 @@
             text+=t[i].quantity;
             text+="x ";
             text+="[url=http://hallofbeorn.com/Cards/Details/";
-            text+=t[i].name_norm.replace(/ /g,'-');
+            text+=t[i].name_norm.replace(/ /g,'-').replace(/'/g,'%27');
             text+='-';
             text+=t[i].exp;
             text+="]";
