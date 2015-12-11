@@ -575,6 +575,97 @@
       return ret
     };
     
+    this.plaintext = function(deckArray,deckname,compressed) {
+      var deck={};
+      deck["1hero"] = [];
+      deck["2ally"] = [];
+      deck["3attachment"] = [];
+      deck["4event"] = [];
+      deck["5quest"] = [];
+      
+      deck.deckname = deckArray[0];
+      for (var i=1; i<deckArray.length; i++) {
+        for (var j in cardObject) {
+          if (deckArray[i][0]==cardObject[j].cycle
+          &&  deckArray[i][1]==cardObject[j].no) {
+            var card = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            card.quantity = deckArray[i][2];
+            deck[card.type].push(card);
+          }
+        }
+      }
+      
+      var text="";
+      text+=deckname;
+      text+="\r\n\r\nTotal Cards: ";
+      var total = 0;
+      var types = ["2ally","3attachment","4event","5quest"]
+      for (var t in types) {
+        var type = types[t];
+        for (var i in deck[type]) {
+          total += deck[type][i].quantity;
+        }
+      }
+      text+=total;
+      text+="\r\n\r\n";
+      if (deck["1hero"].length){
+        text+="Heroes (starting threat: ";
+        var threat=0;
+        for (var i in deck["1hero"]) {
+          threat += deck["1hero"][i].cost;
+        }
+        text+=threat;
+        text+=")\r\n"
+        for (var i in deck["1hero"]) {
+          h = deck["1hero"].sort(function(a,b){return a.name>b.name ? 1 : -1})[i];
+          text+="     ";
+          text+=h.name;
+          text+=" (";
+          text+=translate[h.exp];
+          text+=")\r\n";
+        }
+      }
+      for (var t in types){
+        var type = types[t];
+        if (deck[type].length){
+          switch (type){
+            case "2ally":
+              text+="Allies";
+              break;
+            case "3attachment":
+              text+="Attachments";
+              break;
+            case "4event":
+              text+="Events";
+              break;
+            case "5quest":
+              text+="Quests";
+              break;
+          }
+          text+=" (";
+          var number=0;
+          for (var i in deck[type]) {
+            number += deck[type][i].quantity;
+          }
+          text+=number;
+          text+=")\r\n"
+          var t = deck[type].sort(function(a,b){return (a.sphere==b.sphere) ? ((a.name>b.name)?1:-1) : ((a.sphere>b.sphere)?1:-1) });
+          for (var i in deck[type]) {
+            text+="  ";
+            text+=t[i].quantity;
+            text+="x ";
+            text+=t[i].name;
+            text+=" (";
+            text+=translate[t[i].exp];
+            text+=")\r\n";
+          }
+        }
+      }
+      
+      return text;
+    }
+
+
     this.markdown = function(deckArray,deckname,compressed) {
       var deck={};
       deck["1hero"] = [];
@@ -789,9 +880,12 @@
       var CompressedDeck=LZString.compressToEncodedURIComponent(JSON.stringify(deck));
       var text="++++++++++++\r\n+For Reddit+\r\n++++++++++++ \r\n\r\n";
       text+=this.markdown(deck,deckname,CompressedDeck);
+      
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++++++++++ \r\n+For Boardgamegeek+\r\n+++++++++++++++++++  \r\n\r\n";
       text+=this.bbcode(deck,deckname,CompressedDeck);
       
+      text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Plaintext+\r\n+++++++++++  \r\n\r\n";
+      text+=this.plaintext(deck,deckname,CompressedDeck);
       
       
       
@@ -851,12 +945,20 @@
     
     this.octgn = function(deckname) {
       var deck = {"1hero":[],"2ally":[],"3attachment":[],"4event":[],"5quest":[]};
+      var warned = false;
       for (var c = 1; c < $localStorage.decks[deckname].deck.length; c++) {
         var card = $localStorage.decks[deckname].deck[c];
         for (var j in cardObject) {
           if (card[0]==cardObject[j].cycle
           &&  card[1]==cardObject[j].no) {
             var fullcard = cardObject.slice(+j,+j+1)[0]; //create a copy of the card, not changing the cardObject
+            if (fullcard.octgn==""){
+              if (!warned){
+                window.alert("Warning: Omitting cards that are not yet available in OCTGN.");
+                warned = true;
+              }
+              continue;
+            }
             fullcard.quantity = card[2];
             deck[fullcard.type].push(fullcard);
           }
