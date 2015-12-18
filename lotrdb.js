@@ -1420,6 +1420,7 @@
     translate.ate="Across the Ettenmoors";
     translate.ttor="The Treachery of Rhudaur";
     translate.tbocd=unescape("The Battle of Carn D%FBm");
+    translate.tdr="The Dread Realm";
     return translate;
   });
   
