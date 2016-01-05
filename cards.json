@@ -5622,7 +5622,7 @@
     "exp": "tmv",
     "no": 142,
     "img": "http://www.cardgamedb.com/forums/uploads/lotr/scroll-of-isildur-tmv.jpg",
-    "unique": false,
+    "unique": true,
     "traits": "Record.",
     "keywords": "",
     "text": "Attach to a Lore hero.\nReduce the cost to play Scroll of Isildur by 1 for each hero you control with a printed Lore resource icon.\nAction: Discard Scroll of Isildur to play any Lore event card in your discard pile as if it were in your hand. Then, place that event on the bottom of your deck.",
