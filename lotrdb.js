@@ -331,10 +331,11 @@
     deck.empty = function() {
       return (deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests()+deck.countHeroes())==0;
     };
-    
-    deck.load = function(deckArray,cardObject,deckname) {
+
+    deck.load = function(deckArray,cardObject,deckname,decknotes) {
       if (Object.prototype.toString.apply(deckArray) == "[object Object]") {
         deck.deckname = deckname;
+        deck.decknotes = decknotes;
         deck.loadLegacy(deckArray);
         return 0;
         
@@ -345,6 +346,7 @@
       deck['4event']=[];
       deck['5quest']=[];
       deck.deckname = deckArray[0];
+      deck.decknotes = decknotes;
       for (var i=1; i<deckArray.length; i++) {
         for (var j in cardObject) {
           if (deckArray[i][0]==cardObject[j].cycle
@@ -507,12 +509,13 @@
     this.decks = $localStorage.decks;
     this.currentdeck = deck;
     this.deckname="";
+    this.decknotes="";
 
     this.numberOfDecks = function() {
       return Object.keys(this.decks).length;
     };
 
-    this.saveDeck = function(deckname) {
+    this.saveDeck = function(deckname, decknotes) {
       if (deck.empty()) {
         return alert('Deck is empty!');
       };
@@ -538,6 +541,7 @@
       $localStorage.decks[deckname] = {};
       $localStorage.decks[deckname].deck = CompressedDeck;
       $localStorage.decks[deckname].deckname = deckname;
+      $localStorage.decks[deckname].decknotes = decknotes;
       $localStorage.decks[deckname].dateUTC = new Date().valueOf().toString();
       
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
@@ -545,7 +549,11 @@
     };
 
     this.loadDeck = function(deckname) {
-      deck.load($localStorage.decks[deckname].deck,cardObject,deckname);
+      var decknotes = "";
+      if ($localstorage.decks[deckname].decknotes !== undefined) {
+        decknotes = $localstorage.decks[deckname].decknotes;
+      }
+      deck.load($localStorage.decks[deckname].deck,cardObject,deckname,decknotes);
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
       $location.url("/#"+compressed);
     };
@@ -566,6 +574,7 @@
         deck["4event"] = [];
         deck["5quest"] = [];
         deck.deckname = "";
+        deck.decknotes = "";
       //};
     };
     
@@ -901,9 +910,11 @@
       
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Plaintext+\r\n+++++++++++  \r\n\r\n";
       text+=this.plaintext(deck,deckname,CompressedDeck);
-      
-      
-      
+
+      text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Deck notes+\r\n+++++++++++  \r\n\r\n";
+      text+=deck.decknotes;
+
+
       text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
       text+=CompressedDeck.chunk(80).join("\r\n");
@@ -949,7 +960,15 @@
               }
             }
           }
-          
+          // Element looks like: <notes><![CDATA[]]></notes>
+          var notesRegexp = /<notes><![CDATA[(.*?)]]><\/notes>/i;
+          // TODO: Continue this
+          if (match = notesRegexp.match(e.target.result)) {
+            var cdata = match[1];
+            cdata = cdata.replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
+          }
+
+
           deck.load(deckArray,cardObject);
           $scope.$apply();
         };
@@ -961,6 +980,10 @@
     this.octgn = function(deckname) {
       var deck = {"1hero":[],"2ally":[],"3attachment":[],"4event":[],"5quest":[]};
       var warned = false;
+      var notes = $localStorage.decks[deckname].decknotes;
+      if (notes === undefined) {
+        notes = "";
+      }
       for (var c = 1; c < $localStorage.decks[deckname].deck.length; c++) {
         var card = $localStorage.decks[deckname].deck[c];
         for (var j in cardObject) {
@@ -1049,9 +1072,11 @@
       text+='  <section name="Encounter" shared="True" />\n'
       text+='  <section name="Special" shared="True" />\n'
       text+='  <section name="Setup" shared="True" />\n'
-      
-      
-      text+='  <notes><![CDATA[]]></notes>';
+
+
+      text+='  <notes><![CDATA[';
+      text+=notes.replace(/]]>/g, "]]]]><![CDATA[>");  // See http://stackoverflow.com/a/223773/2314532
+      text+=']]></notes>';
       text+='</deck>';
       
       this.download(deckname+".o8d",text);
