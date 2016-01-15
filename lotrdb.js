@@ -510,9 +510,9 @@
     this.decks = $localStorage.decks;
     this.currentdeck = deck;
     this.deckname="";
-    if (this.currentdeck.decknotes === undefined)
-      this.currentdeck.decknotes="";
-    console.log("Just set this.decknotes to", this.currentdeck.decknotes);
+    if ($scope.decknotes === undefined)
+      $scope.decknotes="";
+    console.log("Just set this.decknotes to", $scope.decknotes);
 
     this.numberOfDecks = function() {
       return Object.keys(this.decks).length;
@@ -545,7 +545,7 @@
       $localStorage.decks[deckname] = {};
       $localStorage.decks[deckname].deck = CompressedDeck;
       $localStorage.decks[deckname].deckname = deckname;
-      $localStorage.decks[deckname].decknotes = this.currentdeck.decknotes;
+      $localStorage.decks[deckname].decknotes = decknotes;
       $localStorage.decks[deckname].dateUTC = new Date().valueOf().toString();
       
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
@@ -559,7 +559,7 @@
       }
       console.log("Just got $localStorage.decks[", deckname, "], which was", decknotes);
       deck.load($localStorage.decks[deckname].deck,cardObject,deckname,decknotes);
-      this.currentdeck.decknotes = decknotes;
+      $scope.decknotes = decknotes;
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
       $location.url("/#"+compressed);
     };
