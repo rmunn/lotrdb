@@ -550,8 +550,8 @@
 
     this.loadDeck = function(deckname) {
       var decknotes = "";
-      if ($localstorage.decks[deckname].decknotes !== undefined) {
-        decknotes = $localstorage.decks[deckname].decknotes;
+      if ($localStorage.decks[deckname].decknotes !== undefined) {
+        decknotes = $localStorage.decks[deckname].decknotes;
       }
       deck.load($localStorage.decks[deckname].deck,cardObject,deckname,decknotes);
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
