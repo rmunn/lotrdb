@@ -973,8 +973,10 @@
 
 
           deck.load(deckArray,cardObject,deckname,notes);
+          console.log("Setting decknotes to", notes);
           $scope.decknotes = notes;
           $scope.$apply();
+          console.log("Just finished applying scope.");
         };
         r.readAsText(file);
       };
