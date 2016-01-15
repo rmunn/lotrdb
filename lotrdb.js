@@ -966,14 +966,14 @@
           }
           // Element looks like: <notes><![CDATA[]]></notes>
           var notesRegexp = /<notes><![CDATA[(.*?)]]><\/notes>/i;
-          // TODO: Continue this
           if (match = notesRegexp.match(e.target.result)) {
-            var cdata = match[1];
-            cdata = cdata.replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
+            var notes = match[1];
+            notes = notes.replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
           }
 
 
-          deck.load(deckArray,cardObject);
+          deck.load(deckArray,cardObject,deckname,notes);
+          $scope.decknotes = notes;
           $scope.$apply();
         };
         r.readAsText(file);
