@@ -907,6 +907,7 @@
     
     this.downloadDeck = function(deckname){
       var deck= $localStorage.decks[deckname].deck;
+      var notes=$localStorage.decks[deckname].decknotes;
       var CompressedDeck=LZString.compressToEncodedURIComponent(JSON.stringify(deck));
       var text="++++++++++++\r\n+For Reddit+\r\n++++++++++++ \r\n\r\n";
       text+=this.markdown(deck,deckname,CompressedDeck);
@@ -916,10 +917,11 @@
       
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Plaintext+\r\n+++++++++++  \r\n\r\n";
       text+=this.plaintext(deck,deckname,CompressedDeck);
-
-      text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Deck notes+\r\n+++++++++++  \r\n\r\n";
-      text+=deck.decknotes;
-
+      
+      if (notes !== undefined) {
+        text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Deck notes+\r\n+++++++++++  \r\n\r\n";
+        text+=notes;
+      }
 
       text+="\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDo not remove the part below, you will be unable to upload the deck if you do!\r\n";
       text+="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r\n";
