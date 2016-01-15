@@ -918,8 +918,8 @@
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Plaintext+\r\n+++++++++++  \r\n\r\n";
       text+=this.plaintext(deck,deckname,CompressedDeck);
       
-      if (notes !== undefined) {
-        text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Deck notes+\r\n+++++++++++  \r\n\r\n";
+      if (notes) {
+        text+="\r\n\r\n\r\n\r\n\r\n++++++++++++ \r\n+Deck notes+\r\n++++++++++++  \r\n\r\n";
         text+=notes;
       }
 
