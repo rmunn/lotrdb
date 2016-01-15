@@ -1,11 +1,9 @@
-#The Last Homely House's Councilroom
+#Rivendell Councilroom
 
 ##[Live version](http://ddddirk.github.io/lotrdb)
 
 A deck builder for the Lord of the Rings Living Card Game by Fantasy Flight Games.  
 Built on Angular.js, requires nothing more than a web server.
-
-(This is a fork of the official repo, found [here](https://github.com/ddddirk/lotrdb))
 
 ##Features
 * Single page interface
