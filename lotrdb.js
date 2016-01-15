@@ -969,6 +969,7 @@
           var notes;
           if (match = e.target.result.match(notesRegexp)) {
             notes = match[1].replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
+            console.log("Found decknotes:", notes);
           }
 
 
