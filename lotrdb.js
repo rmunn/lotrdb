@@ -333,6 +333,7 @@
     };
 
     deck.load = function(deckArray,cardObject,deckname,decknotes) {
+      console.log("deck.load with notes", decknotes);
       if (Object.prototype.toString.apply(deckArray) == "[object Object]") {
         deck.deckname = deckname;
         deck.decknotes = decknotes;
@@ -510,12 +511,14 @@
     this.currentdeck = deck;
     this.deckname="";
     this.decknotes="";
+    console.log("Just set this.decknotes to", this.decknotes);
 
     this.numberOfDecks = function() {
       return Object.keys(this.decks).length;
     };
 
     this.saveDeck = function(deckname, decknotes) {
+      console.log("Saving deck with notes", decknotes);
       if (deck.empty()) {
         return alert('Deck is empty!');
       };
@@ -554,6 +557,7 @@
       } else {
         this.decknotes = $localStorage.decks[deckname].decknotes;
       }
+      console.log("Just set this.decknotes to", this.decknotes);
       deck.load($localStorage.decks[deckname].deck,cardObject,deckname,this.decknotes);
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
       $location.url("/#"+compressed);
