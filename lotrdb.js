@@ -549,11 +549,12 @@
     };
 
     this.loadDeck = function(deckname) {
-      var decknotes = "";
-      if ($localStorage.decks[deckname].decknotes !== undefined) {
-        decknotes = $localStorage.decks[deckname].decknotes;
+      if ($localStorage.decks[deckname].decknotes === undefined) {
+        this.decknotes = "";
+      } else {
+        this.decknotes = $localStorage.decks[deckname].decknotes;
       }
-      deck.load($localStorage.decks[deckname].deck,cardObject,deckname,decknotes);
+      deck.load($localStorage.decks[deckname].deck,cardObject,deckname,this.decknotes);
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
       $location.url("/#"+compressed);
     };
