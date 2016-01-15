@@ -966,9 +966,9 @@
           }
           // Element looks like: <notes><![CDATA[]]></notes>
           var notesRegexp = /<notes><![CDATA[(.*?)]]><\/notes>/i;
+          var notes;
           if (match = e.target.result.match(notesRegexp)) {
-            var notes = match[1];
-            notes = notes.replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
+            notes = match[1].replace(/]]]]><!\[CDATA\[>/g, "]]>");  // See http://stackoverflow.com/a/223773/2314532
           }
 
 
