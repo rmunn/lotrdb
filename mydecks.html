@@ -17,7 +17,7 @@
         <input name="deckname" placeholder="Deck name" ng-model="mydecks.currentdeck.deckname" style="width:95%;">
       </td>
       <td class="decks">
-        <button class="savebutton"  ng-click="mydecks.saveDeck(mydecks.currentdeck.deckname, decknotes)">Save</button>
+        <button class="savebutton"  ng-click="mydecks.saveDeck(mydecks.currentdeck.deckname, mydecks.decknotes)">Save</button>
       </td>
       <td class="decks">
         <label class="savebutton"><div class="upload">Upload</div><input name="upload" type="file" style="display:none;" onchange="angular.element(this).scope().mydecks.uploadDeck(event)" accept=".txt,.o8d"></label>
@@ -28,7 +28,7 @@
     </tr>
     <tr>
       <td colspan="2">
-        <textarea ng-model="decknotes" style="width: 95%" rows="5" placeholder="You can type notes about your deck here. Use this for strategy tips, notes about proxies for future cards, or whatever you want."></textarea>
+        <textarea ng-model="mydecks.decknotes" style="width: 95%" rows="5" placeholder="You can type notes about your deck here. Use this for strategy tips, notes about proxies for future cards, or whatever you want."></textarea>
       </td>
     </tr>
     <tr ng-show="mydecks.numberOfDecks()">
