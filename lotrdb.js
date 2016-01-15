@@ -333,7 +333,6 @@
     };
 
     deck.load = function(deckArray,cardObject,deckname,decknotes) {
-      console.log("deck.load with notes", decknotes);
       if (Object.prototype.toString.apply(deckArray) == "[object Object]") {
         deck.deckname = deckname;
         deck.decknotes = decknotes;
@@ -512,14 +511,12 @@
     this.deckname="";
     if ($scope.decknotes === undefined)
       $scope.decknotes="";
-    console.log("Just set this.decknotes to", $scope.decknotes);
 
     this.numberOfDecks = function() {
       return Object.keys(this.decks).length;
     };
 
     this.saveDeck = function(deckname, decknotes) {
-      console.log("Saving deck with notes", decknotes);
       if (deck.empty()) {
         return alert('Deck is empty!');
       };
@@ -557,7 +554,6 @@
       if ($localStorage.decks[deckname].decknotes !== undefined) {
         decknotes = $localStorage.decks[deckname].decknotes;
       }
-      console.log("Just got $localStorage.decks[", deckname, "], which was", decknotes);
       deck.load($localStorage.decks[deckname].deck,cardObject,deckname,decknotes);
       $scope.decknotes = decknotes;
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
